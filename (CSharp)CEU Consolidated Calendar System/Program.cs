@@ -14,7 +14,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RadForm1());
+            Application.Run(new Login());
         }
     }
 }
