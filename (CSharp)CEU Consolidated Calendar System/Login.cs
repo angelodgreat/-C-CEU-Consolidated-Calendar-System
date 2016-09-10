@@ -17,7 +17,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
 
         string connstring = Globals.connstring;
         string query;
-
+        bool a;
         MySqlCommand command = Globals.command;
         MySqlDataReader reader = Globals.reader;
         
@@ -26,43 +26,97 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
         public Login()
         {
             InitializeComponent();
+            timerandstatus();
         }
 
-        private void btn_testconnection_Click(object sender, EventArgs e)
+       // private void btn_testconnection_Click(object sender, EventArgs e)
+       // {
+       //     try
+       //     {
+       //         conn = new MySqlConnection();
+       //         conn.ConnectionString = connstring;
+       //         conn.Open();
+       //         MessageBox.Show("Connection Success");
+
+       //         query = "SELECT * FROM saouserinfo";
+       //         command = new MySqlCommand(query, conn);
+       //         reader = command.ExecuteReader();
+
+       //         while (reader.Read())
+       //         {
+       //             lbl_test.Text = (reader["id"] + "");
+       //         }
+       //         conn.Close();
+
+
+       //     }
+       //     catch (Exception ex)
+       //     {
+       //         MessageBox.Show(ex.Message);
+       //     }
+       //     finally
+       //     {
+       //         conn.Dispose();
+       //     }
+                   
+       //}
+
+        public void timerandstatus()
         {
+            log_timer.Enabled = true;
+
+            a = new bool();
+            a = false;
+            conn = new MySqlConnection();
+            conn.ConnectionString = connstring;
+
             try
             {
-                conn = new MySqlConnection();
-                conn.ConnectionString = connstring;
                 conn.Open();
-                MessageBox.Show("Connection Success");
-
-                query = "SELECT * FROM saouserinfo";
-                command = new MySqlCommand(query, conn);
-                reader = command.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    lbl_test.Text = (reader["id"] + "");
-                }
+                a = true;
                 conn.Close();
-
-
             }
-            catch (MySql.Data.MySqlClient.MySqlException ex)
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+
             }
+
             finally
             {
                 conn.Dispose();
+                if (a == true) {
+                    log_lbl_status.Text = "Online";
+                    log_lbl_status.ForeColor = Color.Green;
+
+                }
+                else
+                {
+                    log_lbl_status.Text = "Offline";
+                    log_lbl_status.ForeColor = Color.Red;
+                }
             }
-                   
-       }
+            
+        }
 
         private void log_btn_login_Click(object sender, EventArgs e)
         {
+            try
+            {
+                //Codes Here
+                conn = new MySqlConnection();
+                conn.ConnectionString = connstring;
+                conn.Open();
 
+
+            }
+            catch
+            {
+                //Codes Here
+            }
+            finally
+            {
+                //Codes Here
+            }
         }
     }
 }

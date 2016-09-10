@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_testconnection = new Telerik.WinControls.UI.RadButton();
-            this.lbl_test = new Telerik.WinControls.UI.RadLabel();
+            this.components = new System.ComponentModel.Container();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.log_lbl_status = new Telerik.WinControls.UI.RadLabel();
             this.log_btn_login = new Telerik.WinControls.UI.RadButton();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.log_tb_password = new Telerik.WinControls.UI.RadTextBox();
             this.log_tb_username = new Telerik.WinControls.UI.RadTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_testconnection)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_test)).BeginInit();
+            this.log_timer = new System.Windows.Forms.Timer(this.components);
+            this.visualStudio2012DarkTheme1 = new Telerik.WinControls.Themes.VisualStudio2012DarkTheme();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.log_lbl_status)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.log_btn_login)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
@@ -48,37 +49,29 @@
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_testconnection
-            // 
-            this.btn_testconnection.Location = new System.Drawing.Point(178, 12);
-            this.btn_testconnection.Name = "btn_testconnection";
-            this.btn_testconnection.Size = new System.Drawing.Size(115, 38);
-            this.btn_testconnection.TabIndex = 0;
-            this.btn_testconnection.Text = "Test Connection";
-            this.btn_testconnection.Click += new System.EventHandler(this.btn_testconnection_Click);
-            // 
-            // lbl_test
-            // 
-            this.lbl_test.Location = new System.Drawing.Point(12, 12);
-            this.lbl_test.Name = "lbl_test";
-            this.lbl_test.Size = new System.Drawing.Size(55, 18);
-            this.lbl_test.TabIndex = 1;
-            this.lbl_test.Text = "radLabel1";
-            // 
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.Controls.Add(this.log_lbl_status);
             this.radGroupBox1.Controls.Add(this.log_btn_login);
             this.radGroupBox1.Controls.Add(this.radLabel2);
             this.radGroupBox1.Controls.Add(this.radLabel1);
             this.radGroupBox1.Controls.Add(this.log_tb_password);
             this.radGroupBox1.Controls.Add(this.log_tb_username);
             this.radGroupBox1.HeaderText = "Login";
-            this.radGroupBox1.Location = new System.Drawing.Point(12, 56);
+            this.radGroupBox1.Location = new System.Drawing.Point(12, 12);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(281, 162);
+            this.radGroupBox1.Size = new System.Drawing.Size(276, 162);
             this.radGroupBox1.TabIndex = 2;
             this.radGroupBox1.Text = "Login";
+            // 
+            // log_lbl_status
+            // 
+            this.log_lbl_status.Location = new System.Drawing.Point(195, 21);
+            this.log_lbl_status.Name = "log_lbl_status";
+            this.log_lbl_status.Size = new System.Drawing.Size(37, 18);
+            this.log_lbl_status.TabIndex = 5;
+            this.log_lbl_status.Text = "Status";
             // 
             // log_btn_login
             // 
@@ -123,21 +116,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 224);
+            this.ClientSize = new System.Drawing.Size(300, 185);
             this.Controls.Add(this.radGroupBox1);
-            this.Controls.Add(this.lbl_test);
-            this.Controls.Add(this.btn_testconnection);
             this.Name = "Login";
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.btn_testconnection)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_test)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.log_lbl_status)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.log_btn_login)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
@@ -145,19 +135,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.log_tb_username)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private Telerik.WinControls.UI.RadButton btn_testconnection;
-        private Telerik.WinControls.UI.RadLabel lbl_test;
         private Telerik.WinControls.UI.RadButton log_btn_login;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private Telerik.WinControls.UI.RadLabel radLabel2;
         private Telerik.WinControls.UI.RadLabel radLabel1;
         private Telerik.WinControls.UI.RadTextBox log_tb_password;
         private Telerik.WinControls.UI.RadTextBox log_tb_username;
+        private System.Windows.Forms.Timer log_timer;
+        private Telerik.WinControls.Themes.VisualStudio2012DarkTheme visualStudio2012DarkTheme1;
+        private Telerik.WinControls.UI.RadLabel log_lbl_status;
     }
 }
