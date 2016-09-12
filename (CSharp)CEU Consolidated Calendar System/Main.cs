@@ -21,7 +21,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
        
 
         DialogResult addyn;
-
+        MySqlDataAdapter sda = Globals.adapter;
         MySqlCommand command = Globals.command;
         MySqlDataReader reader = Globals.reader;
 
@@ -29,6 +29,60 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
         {
             InitializeComponent();
         }
+        private void Main_Load(object sender, EventArgs e)
+        {
+            load_accounts_table();
+        }
+
+        public void load_accounts_table()
+        {
+            conn = new MySqlConnection();
+            conn.ConnectionString = connstring;
+
+            sda = new MySqlDataAdapter();
+            DataTable dbdataset = new DataTable();
+            BindingSource bsource = new BindingSource();
+
+            if (conn.State == ConnectionState.Open)
+            {
+                conn.Close();
+            }
+
+
+            try
+            {
+                //Code Here
+                conn.Open();
+
+                query = "SELECT id as 'ID',lname as 'Last Name', username as 'Username' from accounts";
+                command = new MySqlCommand(query, conn);
+                sda.SelectCommand = command;
+                sda.Fill(dbdataset);
+                bsource.DataSource = dbdataset;
+                acc_rgv_accounts.DataSource = bsource;
+                acc_rgv_accounts.ReadOnly = true;
+                sda.Update(dbdataset);
+
+                conn.Close();
+
+            }
+
+            catch (Exception ex)
+            {
+                //Code Here
+                RadMessageBox.Show(this, ex.Message, "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
+            }
+
+            finally
+            {
+                //Code Here
+                conn.Dispose();
+            }
+
+
+        }
+
+
 
         private void acc_btn_save_Click(object sender, EventArgs e)
         {
@@ -43,7 +97,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
 
             if ((string.IsNullOrEmpty(acc_tb_id.Text)) | (string.IsNullOrEmpty(acc_tb_fname.Text)) | (string.IsNullOrEmpty(acc_tb_lname.Text)) | (string.IsNullOrEmpty(acc_cb_schoolorg.Text)) | (string.IsNullOrEmpty(acc_cb_usertype.Text)) | (string.IsNullOrEmpty(acc_tb_username.Text)) | (string.IsNullOrEmpty(acc_tb_password.Text)) | (string.IsNullOrEmpty(acc_tb_retypepassword.Text)))
             {
-                RadMessageBox.Show(this, "Please complete the fields to update!", "TLTD Scheduling Management", MessageBoxButtons.OK, RadMessageIcon.Error);
+                RadMessageBox.Show(this, "Please complete the fields to register!", "TLTD Scheduling Management", MessageBoxButtons.OK, RadMessageIcon.Error);
             }else
             {
                 try
@@ -108,5 +162,12 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
 
 
             }
+
+        private void acc_btn_delete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

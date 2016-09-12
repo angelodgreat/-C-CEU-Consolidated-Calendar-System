@@ -64,6 +64,7 @@
             this.radGroupBox1.Size = new System.Drawing.Size(276, 162);
             this.radGroupBox1.TabIndex = 2;
             this.radGroupBox1.Text = "Login";
+            this.radGroupBox1.ThemeName = "VisualStudio2012Dark";
             // 
             // log_lbl_status
             // 
@@ -72,6 +73,7 @@
             this.log_lbl_status.Size = new System.Drawing.Size(37, 18);
             this.log_lbl_status.TabIndex = 5;
             this.log_lbl_status.Text = "Status";
+            this.log_lbl_status.ThemeName = "VisualStudio2012Dark";
             // 
             // log_btn_login
             // 
@@ -80,6 +82,7 @@
             this.log_btn_login.Size = new System.Drawing.Size(97, 26);
             this.log_btn_login.TabIndex = 4;
             this.log_btn_login.Text = "Login";
+            this.log_btn_login.ThemeName = "VisualStudio2012Dark";
             this.log_btn_login.Click += new System.EventHandler(this.log_btn_login_Click);
             // 
             // radLabel2
@@ -89,6 +92,7 @@
             this.radLabel2.Size = new System.Drawing.Size(56, 18);
             this.radLabel2.TabIndex = 3;
             this.radLabel2.Text = "Password:";
+            this.radLabel2.ThemeName = "VisualStudio2012Dark";
             // 
             // radLabel1
             // 
@@ -97,20 +101,23 @@
             this.radLabel1.Size = new System.Drawing.Size(59, 18);
             this.radLabel1.TabIndex = 1;
             this.radLabel1.Text = "Username:";
+            this.radLabel1.ThemeName = "VisualStudio2012Dark";
             // 
             // log_tb_password
             // 
             this.log_tb_password.Location = new System.Drawing.Point(101, 89);
             this.log_tb_password.Name = "log_tb_password";
-            this.log_tb_password.Size = new System.Drawing.Size(148, 20);
+            this.log_tb_password.Size = new System.Drawing.Size(148, 21);
             this.log_tb_password.TabIndex = 2;
+            this.log_tb_password.ThemeName = "VisualStudio2012Dark";
             // 
             // log_tb_username
             // 
             this.log_tb_username.Location = new System.Drawing.Point(101, 63);
             this.log_tb_username.Name = "log_tb_username";
-            this.log_tb_username.Size = new System.Drawing.Size(148, 20);
+            this.log_tb_username.Size = new System.Drawing.Size(148, 21);
             this.log_tb_username.TabIndex = 0;
+            this.log_tb_username.ThemeName = "VisualStudio2012Dark";
             // 
             // Login
             // 
@@ -118,12 +125,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(300, 185);
             this.Controls.Add(this.radGroupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Login";
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.ThemeName = "VisualStudio2012Dark";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();

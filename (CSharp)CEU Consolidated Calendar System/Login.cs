@@ -27,40 +27,45 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
         public Login()
         {
             InitializeComponent();
+           
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
             timerandstatus();
         }
 
-       // private void btn_testconnection_Click(object sender, EventArgs e)
-       // {
-       //     try
-       //     {
-       //         conn = new MySqlConnection();
-       //         conn.ConnectionString = connstring;
-       //         conn.Open();
-       //         MessageBox.Show("Connection Success");
+        // private void btn_testconnection_Click(object sender, EventArgs e)
+        // {
+        //     try
+        //     {
+        //         conn = new MySqlConnection();
+        //         conn.ConnectionString = connstring;
+        //         conn.Open();
+        //         MessageBox.Show("Connection Success");
 
-       //         query = "SELECT * FROM saouserinfo";
-       //         command = new MySqlCommand(query, conn);
-       //         reader = command.ExecuteReader();
+        //         query = "SELECT * FROM saouserinfo";
+        //         command = new MySqlCommand(query, conn);
+        //         reader = command.ExecuteReader();
 
-       //         while (reader.Read())
-       //         {
-       //             lbl_test.Text = (reader["id"] + "");
-       //         }
-       //         conn.Close();
+        //         while (reader.Read())
+        //         {
+        //             lbl_test.Text = (reader["id"] + "");
+        //         }
+        //         conn.Close();
 
 
-       //     }
-       //     catch (Exception ex)
-       //     {
-       //         MessageBox.Show(ex.Message);
-       //     }
-       //     finally
-       //     {
-       //         conn.Dispose();
-       //     }
-                   
-       //}
+        //     }
+        //     catch (Exception ex)
+        //     {
+        //         MessageBox.Show(ex.Message);
+        //     }
+        //     finally
+        //     {
+        //         conn.Dispose();
+        //     }
+
+        //}
 
         public void timerandstatus()
         {
@@ -125,5 +130,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
                 //Codes Here
             }
         }
+
+      
     }
 }
