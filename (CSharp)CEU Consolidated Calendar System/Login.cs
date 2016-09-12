@@ -20,8 +20,9 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
         bool a;
         MySqlCommand command = Globals.command;
         MySqlDataReader reader = Globals.reader;
-        
 
+        Main main = new Main();
+       
 
         public Login()
         {
@@ -100,6 +101,12 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
 
         private void log_btn_login_Click(object sender, EventArgs e)
         {
+
+          
+            main.Show();
+            this.Hide();
+
+
             try
             {
                 //Codes Here
