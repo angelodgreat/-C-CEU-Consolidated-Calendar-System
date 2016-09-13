@@ -33,6 +33,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
         private void Login_Load(object sender, EventArgs e)
         {
             timerandstatus();
+            ThemeResolutionService.ApplicationThemeName = "VisualStudio2012Dark";
         }
 
         // private void btn_testconnection_Click(object sender, EventArgs e)

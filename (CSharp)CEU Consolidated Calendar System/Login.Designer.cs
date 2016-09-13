@@ -77,7 +77,7 @@
             // 
             // log_btn_login
             // 
-            this.log_btn_login.Location = new System.Drawing.Point(152, 115);
+            this.log_btn_login.Location = new System.Drawing.Point(152, 119);
             this.log_btn_login.Name = "log_btn_login";
             this.log_btn_login.Size = new System.Drawing.Size(97, 26);
             this.log_btn_login.TabIndex = 4;
@@ -106,16 +106,26 @@
             // log_tb_password
             // 
             this.log_tb_password.Location = new System.Drawing.Point(101, 89);
+            this.log_tb_password.MinimumSize = new System.Drawing.Size(0, 24);
             this.log_tb_password.Name = "log_tb_password";
-            this.log_tb_password.Size = new System.Drawing.Size(148, 21);
+            // 
+            // 
+            // 
+            this.log_tb_password.RootElement.MinSize = new System.Drawing.Size(0, 24);
+            this.log_tb_password.Size = new System.Drawing.Size(148, 24);
             this.log_tb_password.TabIndex = 2;
             this.log_tb_password.ThemeName = "VisualStudio2012Dark";
             // 
             // log_tb_username
             // 
             this.log_tb_username.Location = new System.Drawing.Point(101, 63);
+            this.log_tb_username.MinimumSize = new System.Drawing.Size(0, 24);
             this.log_tb_username.Name = "log_tb_username";
-            this.log_tb_username.Size = new System.Drawing.Size(148, 21);
+            // 
+            // 
+            // 
+            this.log_tb_username.RootElement.MinSize = new System.Drawing.Size(0, 24);
+            this.log_tb_username.Size = new System.Drawing.Size(148, 24);
             this.log_tb_username.TabIndex = 0;
             this.log_tb_username.ThemeName = "VisualStudio2012Dark";
             // 
@@ -123,7 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 185);
+            this.ClientSize = new System.Drawing.Size(300, 186);
             this.Controls.Add(this.radGroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
