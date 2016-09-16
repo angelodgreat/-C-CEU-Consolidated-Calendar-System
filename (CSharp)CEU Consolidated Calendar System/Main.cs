@@ -37,17 +37,14 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
         }
         private void Main_Load(object sender, EventArgs e)
         {
-            load_accounts_table();
+            load_existing_accounts();
         }
 
-        public void load_accounts_table()
+        public void load_existing_accounts()
         {
             conn = new MySqlConnection();
             conn.ConnectionString = connstring;
-
-            sda = new MySqlDataAdapter();
-            DataTable dbdataset = new DataTable();
-            BindingSource bsource = new BindingSource();
+            MySqlDataReader reader = default(MySqlDataReader);
 
             if (conn.State == ConnectionState.Open)
             {
@@ -56,35 +53,32 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
 
             try
             {
-                //Code Here
                 conn.Open();
-
-                query = "SELECT id as 'ID',lname as 'Last Name', username as 'Username' from accounts";
+                query = "SELECT username from accounts";
                 command = new MySqlCommand(query, conn);
-                sda.SelectCommand = command;
-                sda.Fill(dbdataset);
-                bsource.DataSource = dbdataset;
-                acc_rgv_accounts.DataSource = bsource;
-                acc_rgv_accounts.ReadOnly = true;
-                sda.Update(dbdataset);
+                reader = command.ExecuteReader();
 
+                acc_rlv_accounts.Items.Clear();
+                while (reader.Read())
+                {
+                    acc_rlv_accounts.Items.Add(reader["username"]+"");
+                    
+                }
                 conn.Close();
-
+                
             }
-
-            catch (Exception ex)
+            catch(Exception ex)
             {
-                //Code Here
                 RadMessageBox.Show(this, ex.Message, "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
             }
-
             finally
             {
-                //Code Here
                 conn.Dispose();
+
             }
-            
         }
+
+      
         
         private void acc_btn_save_Click(object sender, EventArgs e)
         {
@@ -116,7 +110,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
                         {
                             //Code Here
                             conn.Open();
-                            query = "SELECT * FROM accounts WHERE (id=@acc_id) and (username=@acc_username)";
+                            query = "SELECT * FROM accounts WHERE (id=@acc_id) or (username=@acc_username)";
                             command = new MySqlCommand(query, conn);
                             command.Parameters.AddWithValue("acc_id", acc_tb_id.Text);
                             command.Parameters.AddWithValue("acc_username", acc_tb_username.Text);
@@ -169,11 +163,12 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
                         finally
                         {
                             conn.Dispose();
-                            load_accounts_table();
+                            load_existing_accounts();
                         }
                     }             
                 }
             }
+           
         }
 
 
@@ -272,29 +267,20 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
                         finally
                         {
                             conn.Dispose();
-                            acc_tb_id.Text = "";
-                            acc_tb_username.Text = "";
-                            load_accounts_table();
+                            acc_clearall_fields();
+                            load_existing_accounts();
                         }
                     }
                 }
             }
         }
 
-        private void acc_rgv_accounts_CellDoubleClick(object sender, GridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                Telerik.WinControls.UI.GridViewRowInfo row;
-
-                row = this.acc_rgv_accounts.Rows[e.RowIndex];
-
-                acc_tb_id.Text = row.Cells["ID"].Value.ToString();
-                acc_tb_username.Text = row.Cells["Username"].Value.ToString();
-            }
-        }
-
+     
         private void acc_btn_clear_Click(object sender, EventArgs e)
+        {
+            acc_clearall_fields();
+        }
+        public void acc_clearall_fields()
         {
             acc_tb_id.Text = "";
             acc_tb_lname.Text = "";
@@ -304,6 +290,53 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
             acc_tb_retypepassword.Text = "";
             acc_cb_usertype.Text = "";
             acc_cb_schoolorg.Text = "";
+            acc_tb_id.Enabled = true;
+            acc_tb_username.Enabled = true;
+        }
+
+        private void acc_rlv_accounts_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            conn = new MySqlConnection();
+            conn.ConnectionString = connstring;
+            command = new MySqlCommand();
+            MySqlDataReader reader = default(MySqlDataReader);
+
+            if (conn.State == ConnectionState.Open)
+            {
+                conn.Close();
+            }
+
+            try
+            {
+                conn.Open();
+                query = "SELECT * from accounts where username=@acc_username";
+                command = new MySqlCommand(query, conn);
+                command.Parameters.AddWithValue("acc_username", acc_rlv_accounts.SelectedItem);
+                reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    acc_tb_id.Enabled = false;
+                    acc_tb_id.Text = reader.GetString("id");
+                    acc_cb_usertype.Text = reader.GetString("usertype");
+                    acc_tb_fname.Text = reader.GetString("fname");
+                    acc_tb_lname.Text = reader.GetString("lname");
+                    acc_cb_schoolorg.Text = reader.GetString("schoolorg");
+                    acc_tb_username.Enabled = false;
+                    acc_tb_username.Text = reader.GetString("username");
+                   
+                }
+                conn.Close();
+            }
+
+            catch (Exception ex)
+            {
+                RadMessageBox.Show(this, ex.Message, "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
+            }
+            finally
+            {
+                conn.Dispose();
+            }
         }
     }    
 }

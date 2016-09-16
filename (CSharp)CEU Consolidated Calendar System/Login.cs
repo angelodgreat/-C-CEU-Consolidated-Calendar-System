@@ -85,7 +85,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
             }
             catch (Exception ex)
             {
-
+                RadMessageBox.Show(this, ex.Message, "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
             }
 
             finally

@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radPageView1 = new Telerik.WinControls.UI.RadPageView();
             this.rpv_main = new Telerik.WinControls.UI.RadPageViewPage();
             this.rpv_notes = new Telerik.WinControls.UI.RadPageViewPage();
             this.rpv_events = new Telerik.WinControls.UI.RadPageViewPage();
             this.rpv_accounts = new Telerik.WinControls.UI.RadPageViewPage();
             this.radGroupBox5 = new Telerik.WinControls.UI.RadGroupBox();
-            this.acc_rgv_accounts = new Telerik.WinControls.UI.RadGridView();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.radGroupBox4 = new Telerik.WinControls.UI.RadGroupBox();
             this.acc_btn_clear = new Telerik.WinControls.UI.RadButton();
@@ -60,13 +58,12 @@
             this.acc_tb_id = new Telerik.WinControls.UI.RadTextBox();
             this.acc_cb_schoolorg = new Telerik.WinControls.UI.RadDropDownList();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
+            this.acc_rlv_accounts = new Telerik.WinControls.UI.RadListControl();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             this.rpv_accounts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox5)).BeginInit();
             this.radGroupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.acc_rgv_accounts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.acc_rgv_accounts.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox4)).BeginInit();
@@ -95,6 +92,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.acc_tb_id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.acc_cb_schoolorg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acc_rlv_accounts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,7 +149,7 @@
             // radGroupBox5
             // 
             this.radGroupBox5.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox5.Controls.Add(this.acc_rgv_accounts);
+            this.radGroupBox5.Controls.Add(this.acc_rlv_accounts);
             this.radGroupBox5.HeaderText = "Accounts";
             this.radGroupBox5.Location = new System.Drawing.Point(26, 95);
             this.radGroupBox5.Name = "radGroupBox5";
@@ -159,26 +157,6 @@
             this.radGroupBox5.TabIndex = 1;
             this.radGroupBox5.Text = "Accounts";
             this.radGroupBox5.ThemeName = "VisualStudio2012Dark";
-            // 
-            // acc_rgv_accounts
-            // 
-            this.acc_rgv_accounts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.acc_rgv_accounts.Location = new System.Drawing.Point(2, 18);
-            // 
-            // 
-            // 
-            this.acc_rgv_accounts.MasterTemplate.AllowAddNewRow = false;
-            this.acc_rgv_accounts.MasterTemplate.AllowDeleteRow = false;
-            this.acc_rgv_accounts.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.acc_rgv_accounts.MasterTemplate.EnableGrouping = false;
-            this.acc_rgv_accounts.MasterTemplate.ShowRowHeaderColumn = false;
-            this.acc_rgv_accounts.MasterTemplate.ViewDefinition = tableViewDefinition3;
-            this.acc_rgv_accounts.Name = "acc_rgv_accounts";
-            this.acc_rgv_accounts.ReadOnly = true;
-            this.acc_rgv_accounts.Size = new System.Drawing.Size(528, 491);
-            this.acc_rgv_accounts.TabIndex = 0;
-            this.acc_rgv_accounts.ThemeName = "VisualStudio2012Dark";
-            this.acc_rgv_accounts.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.acc_rgv_accounts_CellDoubleClick);
             // 
             // radGroupBox1
             // 
@@ -426,6 +404,7 @@
             // acc_tb_id
             // 
             this.acc_tb_id.Location = new System.Drawing.Point(245, 32);
+            this.acc_tb_id.MaxLength = 8;
             this.acc_tb_id.MinimumSize = new System.Drawing.Size(0, 24);
             this.acc_tb_id.Name = "acc_tb_id";
             // 
@@ -453,6 +432,16 @@
             this.radLabel1.Text = "School/Organization:";
             this.radLabel1.ThemeName = "VisualStudio2012Dark";
             // 
+            // acc_rlv_accounts
+            // 
+            this.acc_rlv_accounts.Location = new System.Drawing.Point(5, 23);
+            this.acc_rlv_accounts.Name = "acc_rlv_accounts";
+            this.acc_rlv_accounts.Size = new System.Drawing.Size(522, 483);
+            this.acc_rlv_accounts.TabIndex = 0;
+            this.acc_rlv_accounts.Text = "radListControl1";
+            this.acc_rlv_accounts.ThemeName = "VisualStudio2012Dark";
+            this.acc_rlv_accounts.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.acc_rlv_accounts_SelectedIndexChanged);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -472,8 +461,6 @@
             this.rpv_accounts.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox5)).EndInit();
             this.radGroupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.acc_rgv_accounts.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.acc_rgv_accounts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox4)).EndInit();
@@ -504,6 +491,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.acc_tb_id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.acc_cb_schoolorg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acc_rlv_accounts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -541,6 +529,6 @@
         private Telerik.WinControls.UI.RadDropDownList acc_cb_schoolorg;
         private Telerik.WinControls.UI.RadLabel radLabel1;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox5;
-        private Telerik.WinControls.UI.RadGridView acc_rgv_accounts;
+        private Telerik.WinControls.UI.RadListControl acc_rlv_accounts;
     }
 }
