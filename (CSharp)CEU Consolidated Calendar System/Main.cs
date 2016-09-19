@@ -38,6 +38,8 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
         private void Main_Load(object sender, EventArgs e)
         {
             load_existing_accounts();
+            acc_btn_delete.Hide();
+            acc_btn_update.Hide();
         }
 
         public void load_existing_accounts()
@@ -292,6 +294,8 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
             acc_cb_schoolorg.Text = "";
             acc_tb_id.Enabled = true;
             acc_tb_username.Enabled = true;
+            acc_btn_delete.Hide();
+            acc_btn_update.Hide();
         }
 
         private void acc_rlv_accounts_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
@@ -336,6 +340,8 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
             finally
             {
                 conn.Dispose();
+                acc_btn_update.Show();
+                acc_btn_delete.Show();
             }
         }
     }    
