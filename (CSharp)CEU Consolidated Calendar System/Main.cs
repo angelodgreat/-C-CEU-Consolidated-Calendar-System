@@ -342,7 +342,10 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
                 conn.Dispose();
                 acc_btn_update.Show();
                 acc_btn_delete.Show();
+               
             }
         }
+
+        
     }    
 }
