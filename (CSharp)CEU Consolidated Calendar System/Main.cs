@@ -23,9 +23,11 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
         DialogResult addYN;
         DialogResult delYN;
         DialogResult updateYN;
+        DialogResult reserveYN;
+        
 
-
-
+        public string identifier_reservationno;
+        public System.Random random = new System.Random();
 
         MySqlDataAdapter sda = Globals.adapter;
         MySqlCommand command = Globals.command;
@@ -37,11 +39,17 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
         }
         private void Main_Load(object sender, EventArgs e)
         {
+            //Accounts
             load_existing_accounts();
             acc_btn_delete.Hide();
             acc_btn_update.Hide();
+
+            //Events
+            auto_generate_eventid();
         }
 
+      //Account Management Code loading all existing accounts in Listbox
+        
         public void load_existing_accounts()
         {
             conn = new MySqlConnection();
@@ -80,8 +88,8 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
             }
         }
 
-      
-        
+        //Account Management Code button to save account
+
         private void acc_btn_save_Click(object sender, EventArgs e)
         {
             conn = new MySqlConnection();
@@ -178,54 +186,65 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
 
         private void acc_btn_update_Click(object sender, EventArgs e)
         {
-            //conn = new MySqlConnection();
-            //conn.ConnectionString = connstring;
-            //MySqlDataReader reader = default(MySqlDataReader);
+            conn = new MySqlConnection();
+            conn.ConnectionString = connstring;
+            MySqlDataReader reader = default(MySqlDataReader);
 
-            //if (conn.State == ConnectionState.Open)
-            //{
-            //    conn.Close();
-            //}
+            if (conn.State == ConnectionState.Open)
+            {
+                conn.Close();
+            }
 
-            //updateYN = RadMessageBox.Show(this, "Are you sure you want to update this user?", "CEU Consolidated Calendar", MessageBoxButtons.YesNo, RadMessageIcon.Question);
-            //if (updateYN == DialogResult.Yes)
-            //{
+            updateYN = RadMessageBox.Show(this, "Are you sure you want to update this user?", "CEU Consolidated Calendar", MessageBoxButtons.YesNo, RadMessageIcon.Question);
+            if (updateYN == DialogResult.Yes)
+            {
 
-            //    if ((string.IsNullOrEmpty(acc_tb_fname.Text)) | (string.IsNullOrEmpty(acc_tb_lname.Text)) | (string.IsNullOrEmpty(acc_cb_schoolorg.Text)) | (string.IsNullOrEmpty(acc_cb_usertype.Text)) | (string.IsNullOrEmpty(acc_tb_username.Text)) | (string.IsNullOrEmpty(acc_tb_password.Text)) | (string.IsNullOrEmpty(acc_tb_retypepassword.Text)))
-            //    {
-            //        RadMessageBox.Show(this, "Please fill all fields!", "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
-            //    }
-                
-            //        try
-            //        {
-            //            conn.Open();
-            //            query = "UPDATE accounts SET password=@acc_password,schoolorg=@acc_schoolorg,fname=@acc_fname,lname=@acc_lname,usertype=@acc_usertype";
-            //            command = new MySqlCommand(query, conn);
-            //            command.Parameters.AddWithValue("acc_password", acc_tb_password.Text);
-            //            command.Parameters.AddWithValue("acc_schoolorg", acc_cb_schoolorg.Text);
-            //            command.Parameters.AddWithValue("acc_fname", acc_tb_fname.Text);
-            //            command.Parameters.AddWithValue("acc_lname", acc_tb_lname.Text);
-            //            command.Parameters.AddWithValue("acc_usertype", acc_cb_usertype.Text);
+                if ((string.IsNullOrEmpty(acc_tb_fname.Text)) | (string.IsNullOrEmpty(acc_tb_lname.Text)) | (string.IsNullOrEmpty(acc_cb_schoolorg.Text)) | (string.IsNullOrEmpty(acc_cb_usertype.Text)) | (string.IsNullOrEmpty(acc_tb_username.Text)) | (string.IsNullOrEmpty(acc_tb_password.Text)) | (string.IsNullOrEmpty(acc_tb_retypepassword.Text)))
+                {
+                    RadMessageBox.Show(this, "Please fill all fields!", "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
+                }
+                else
+                {
+                       try
+                        {
+                            conn.Open();
+                            query = "UPDATE accounts SET password=@acc_password,schoolorg=@acc_schoolorg,fname=@acc_fname,lname=@acc_lname,usertype=@acc_usertype";
+                            command = new MySqlCommand(query, conn);
+                            command.Parameters.AddWithValue("acc_password", acc_tb_password.Text);
+                            command.Parameters.AddWithValue("acc_schoolorg", acc_cb_schoolorg.Text);
+                            command.Parameters.AddWithValue("acc_fname", acc_tb_fname.Text);
+                            command.Parameters.AddWithValue("acc_lname", acc_tb_lname.Text);
+                            command.Parameters.AddWithValue("acc_usertype", acc_cb_usertype.Text);
 
-            //            reader = command.ExecuteReader();
+                        if (acc_tb_password.Text != acc_tb_retypepassword.Text)
+                        {
+                            RadMessageBox.Show(this, "Password do not match!", "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
+                        }
+                        else
+                        {
+                            reader = command.ExecuteReader();
+                            RadMessageBox.Show(this, "Update Complete!", "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Info);
+                        }
 
-            //            RadMessageBox.Show(this, "Update Complete!", "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Info);
+                        }
+                        catch (Exception ex)
+                        {
+                            RadMessageBox.Show(this, ex.Message, "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
+                        }
+                        finally
+                        {
+                            conn.Dispose();
+                            load_existing_accounts();
+                        }
+                    
+                                   
+                }
+                                          
+                                             
+            }
+        }
 
-            //        }
-            //        catch (Exception ex)
-            //        {
-            //            RadMessageBox.Show(this, ex.Message, "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
-            //        }
-            //        finally
-            //        {
-            //            conn.Dispose();
-            //            acc_tb_id.Text = "";
-            //            acc_tb_username.Text = "";
-            //            load_accounts_table();
-            //        }
-            //}
-}
-
+        //Account Management Code Deleting account
         private void acc_btn_delete_Click(object sender, EventArgs e)
         {
             {
@@ -277,11 +296,14 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
             }
         }
 
-     
+
+        //Account Management Code Clearing all fields
         private void acc_btn_clear_Click(object sender, EventArgs e)
         {
             acc_clearall_fields();
         }
+
+        //Account Management Code Clearing all fields main code
         public void acc_clearall_fields()
         {
             acc_tb_id.Text = "";
@@ -296,8 +318,11 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
             acc_tb_username.Enabled = true;
             acc_btn_delete.Hide();
             acc_btn_update.Hide();
+            load_existing_accounts();
         }
 
+
+        //Account Management Code selected index change
         private void acc_rlv_accounts_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
             conn = new MySqlConnection();
@@ -343,30 +368,145 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
                 acc_btn_update.Show();
                 acc_btn_delete.Show();
                
+
             }
         }
 
-        // Unfinished
+        public void auto_generate_eventid()
+        {
+            identifier_reservationno = DateTime.Today.ToString("MMddyyyy"+"-");
+            identifier_reservationno = identifier_reservationno + random.Next(1, 1000000).ToString();
+            evt_tb_eventno.Text = identifier_reservationno;
+        }
+
         private void evt_btn_save_Click(object sender, EventArgs e)
         {
-            conn = new MySqlConnection();
-            conn.ConnectionString = connstring;
-            command = new MySqlCommand();
 
-            try
+            if (conn.State == ConnectionState.Open)
             {
-                query = "SELECT * FROM `saoevent` WHERE (location=@evt_location) AND (('@mvl_dtp_date @mvl_timefrom' BETWEEN CONCAT(date,'',timefrom) AND CONCAT(date,'',timeto)) OR ('@mvl_dtp_date @mvl_timeto'  BETWEEN CONCAT(date,'',timefrom) AND CONCAT(date,'',timeto)))";
+                conn.Close();
             }
 
-            catch(Exception ex)
+
+
+            reserveYN = RadMessageBox.Show(this, "Are you sure you want to reserver?", "CEU Consolidated Calendar", MessageBoxButtons.YesNo, RadMessageIcon.Question);
+            if (reserveYN == DialogResult.Yes)
             {
+                conn.ConnectionString = connstring;
 
-            }
+                if ((string.IsNullOrEmpty(evt_cb_kpi.Text)) | (string.IsNullOrEmpty(evt_cb_noa.Text)) | (string.IsNullOrEmpty(evt_cb_venue.Text)) | (string.IsNullOrEmpty(evt_cb_schoolorg.Text)) | (string.IsNullOrEmpty(evt_rtb_event.Text)))
+                {
+                    RadMessageBox.Show(this, "Please fill all fields!", "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
+                }
+                else
+                {
 
-            finally
-            {
+                    try
+                    {
+                        conn.Open();
+                        var dorv = evt_dtp_date.Value;
+                        var date1 = dorv.ToString("yyyy-MM-dd");
 
+                        var st = evt_dtp_starttime.Value;
+                        var stm = st.ToString("HH:mm:01");
+
+                        var et = evt_dtp_endtime.Value;
+                        var etm = et.ToString("HH:mm:01");
+
+
+                        //query = "SELECT * FROM events WHERE location=@location AND ((@date @starttime BETWEEN CONCAT(date,'',starttime) AND CONCAT(date,'',endtime)) OR (@date @endtime BETWEEN CONCAT(date,'',starttime) AND CONCAT(date,'',endtime)))";
+
+                      
+
+                        command = new MySqlCommand(query, conn);
+                        command.Parameters.AddWithValue("location", evt_cb_venue.Text);
+                        command.Parameters.AddWithValue("date", date1);
+                        command.Parameters.AddWithValue("starttime", stm);
+                        command.Parameters.AddWithValue("endtime", etm);
+
+                        reader = command.ExecuteReader();
+
+                        int count = 0;
+
+                        while (reader.Read())
+                        {
+                            count = count+ 1;
+
+                        }
+                        if (count > 0)
+                        {
+                            RadMessageBox.Show(this, "This is already taken", "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
+                        }
+                        else
+                        {
+                            conn.Close();
+                            conn.Open();
+
+                            var sti = evt_dtp_starttime.Value;
+                            var stim = sti.ToString("HH:mm");
+
+                            var eti = evt_dtp_endtime.Value;
+                            var etim = eti.ToString("HH:mm");
+
+
+                            query = "INSERT INTO `events` VALUES (@eventid,@date,@location,@events,@starttime,@endtime,@school,@kpi,@noa,@remarks)";
+                            command = new MySqlCommand(query, conn);
+                            command.Parameters.AddWithValue("eventid", evt_tb_eventno.Text);
+                            command.Parameters.AddWithValue("date", date1);
+                            //command.Parameters.AddWithValue("date", evt_dtp_date.Text=evt_dtp_date.Value.ToString("yyyy-MM-dd"));
+                            command.Parameters.AddWithValue("location", evt_cb_venue.Text);
+                            command.Parameters.AddWithValue("events", evt_rtb_event.Text);
+                            command.Parameters.AddWithValue("starttime", stim);
+                            command.Parameters.AddWithValue("endtime", etim);
+                            command.Parameters.AddWithValue("school", evt_cb_schoolorg.Text);
+                            command.Parameters.AddWithValue("kpi", evt_cb_kpi.Text);
+                            command.Parameters.AddWithValue("noa", evt_cb_noa.Text);
+                            command.Parameters.AddWithValue("remarks", evt_cb_remarks.Text);
+
+                            reader = command.ExecuteReader();
+                            conn.Close();
+                        }
+                    }
+
+
+                    catch (Exception ex)
+                    {
+                        RadMessageBox.Show(this, ex.Message, "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
+                    }
+                    finally
+                    {
+                        conn.Dispose();
+                    }
+                }
             }
         }
+
+
+
+
+
+
+
+
+                    //TimeSpan elapsedTime = DateTime.Parse(string.Format(evt_dtp_date.Value.ToString(), "yyyy-MM-dd") + " " + evt_dtp_starttime.Text).Subtract(DateTime.Parse(string.Format(evt_dtp_date.Value.ToString(), "yyyy-MM-dd") + " " + evt_dtp_starttime.Text));
+
+                    //TimeSpan elapsedTime = DateTime.Parse(Convert.ToDateTime(evt_dtp_date.Text).ToString("yyyy-MM-dd") + " " + evt_dtp_starttime.Text);
+                    //DateTime.Parse(Convert.ToDateTime(evt_dtp_date.Text).ToString("yyyy-MM-dd"));
+
+                    //if (elapsedTime.CompareTo(TimeSpan.Zero) <= 0)
+                    //{
+                    //    RadMessageBox.Show(this, "The Starting Time can't be the same or later on the Ending Time.", "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
+                    //}
+                    //else
+                    //{ string shit = DateTime.Parse(evt_dtp_date.Text).ToString("yyyy-MM-dd");
+
+     
+
+        private void evt_btn_clear_Click(object sender, EventArgs e)
+        {
+            auto_generate_eventid();
+        }
+
+        
     }    
 }
