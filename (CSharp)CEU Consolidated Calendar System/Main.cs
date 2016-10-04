@@ -346,6 +346,27 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
             }
         }
 
-        
+        // Unfinished
+        private void evt_btn_save_Click(object sender, EventArgs e)
+        {
+            conn = new MySqlConnection();
+            conn.ConnectionString = connstring;
+            command = new MySqlCommand();
+
+            try
+            {
+                query = "SELECT * FROM `saoevent` WHERE (location=@evt_location) AND (('@mvl_dtp_date @mvl_timefrom' BETWEEN CONCAT(date,'',timefrom) AND CONCAT(date,'',timeto)) OR ('@mvl_dtp_date @mvl_timeto'  BETWEEN CONCAT(date,'',timefrom) AND CONCAT(date,'',timeto)))";
+            }
+
+            catch(Exception ex)
+            {
+
+            }
+
+            finally
+            {
+
+            }
+        }
     }    
 }
