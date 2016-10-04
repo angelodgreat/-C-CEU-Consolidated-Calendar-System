@@ -416,13 +416,15 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
 
                         //query = "SELECT * FROM events WHERE location=@location AND ((@date @starttime BETWEEN CONCAT(date,'',starttime) AND CONCAT(date,'',endtime)) OR (@date @endtime BETWEEN CONCAT(date,'',starttime) AND CONCAT(date,'',endtime)))";
 
-                      
+                        query = "SELECT * FROM events WHERE location=@location AND ((((@a) BETWEEN CONCAT (date,' ',starttime) AND CONCAT(date,' ',endtime)) OR (@b BETWEEN CONCAT(date,' ',starttime) AND CONCAT(date,'',endtime))) OR ((DATE_FORMAT(@a,'%Y-%m-%d %H:%i:%s') <= CONCAT(date,' ',starttime)) AND (DATE_FORMAT(@b,'%Y-%m-%d %H:%i:%s') >= CONCAT(date,' ',endtime)) AND CONCAT(date,' ',endtime) >= DATE_FORMAT(@a,'%Y-%m-%d %H:%i:%s'))) AND (res_status='Reserved' OR res_status='Released')";
+
 
                         command = new MySqlCommand(query, conn);
+                        command.Parameters.AddWithValue("@a", evt_dtp_date.Value.ToString("yyyy-MM-dd") + " " + evt_dtp_starttime.Value.ToString("HH:mm:01"));
+                        command.Parameters.AddWithValue("b", evt_dtp_date.Value.ToString("yyyy-MM-dd") + " " + evt_dtp_endtime.Value.ToString("HH:mm:01"));
                         command.Parameters.AddWithValue("location", evt_cb_venue.Text);
-                        command.Parameters.AddWithValue("date", date1);
-                        command.Parameters.AddWithValue("starttime", stm);
-                        command.Parameters.AddWithValue("endtime", etm);
+                      
+                     
 
                         reader = command.ExecuteReader();
 
