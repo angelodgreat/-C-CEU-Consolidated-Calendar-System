@@ -401,86 +401,103 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
                 else
                 {
 
-                    try
+                    String st = (evt_dtp_date.Value.ToString("yyyy/MM/dd") + " " + evt_dtp_starttime.Text);
+                    String et = (evt_dtp_date.Value.ToString("yyyy/MM/dd") + " " + evt_dtp_endtime.Text);
+
+                    DateTime startTime = DateTime.Parse(st);
+                    DateTime endTime = DateTime.Parse(et);
+
+                    TimeSpan elapsedTime = endTime - startTime;
+
+                    if (elapsedTime.CompareTo(TimeSpan.Zero) <= 0)
                     {
-                        conn.Open();
-                        var dorv = evt_dtp_date.Value;
-                        var date1 = dorv.ToString("yyyy-MM-dd");
+                        RadMessageBox.Show(this, "The Starting Time can't be the same or later on the Ending Time.", "CEU TLTD Reservation System", MessageBoxButtons.OK, RadMessageIcon.Error);
+                    }
+                    else
+                    {
 
-                        var st = evt_dtp_starttime.Value;
-                        var stm = st.ToString("HH:mm:01");
-
-                        var et = evt_dtp_endtime.Value;
-                        var etm = et.ToString("HH:mm:01");
-
-
-                        //query = "SELECT * FROM events WHERE location=@location AND ((@date @starttime BETWEEN CONCAT(date,'',starttime) AND CONCAT(date,'',endtime)) OR (@date @endtime BETWEEN CONCAT(date,'',starttime) AND CONCAT(date,'',endtime)))";
-
-                      
-
-                        command = new MySqlCommand(query, conn);
-                        command.Parameters.AddWithValue("location", evt_cb_venue.Text);
-                        command.Parameters.AddWithValue("date", date1);
-                        command.Parameters.AddWithValue("starttime", stm);
-                        command.Parameters.AddWithValue("endtime", etm);
-
-                        reader = command.ExecuteReader();
-
-                        int count = 0;
-
-                        while (reader.Read())
+                        try
                         {
-                            count = count+ 1;
-
-                        }
-                        if (count > 0)
-                        {
-                            RadMessageBox.Show(this, "This is already taken", "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
-                        }
-                        else
-                        {
-                            conn.Close();
                             conn.Open();
+                            //var dorv = evt_dtp_date.Value;
+                            //var date1 = dorv.ToString("yyyy-MM-dd");
 
-                            var sti = evt_dtp_starttime.Value;
-                            var stim = sti.ToString("HH:mm");
+                            //var st = evt_dtp_starttime.Value;
+                            //var stm = st.ToString("HH:mm:01");
 
-                            var eti = evt_dtp_endtime.Value;
-                            var etim = eti.ToString("HH:mm");
+                            //var et = evt_dtp_endtime.Value;
+                            //var etm = et.ToString("HH:mm:01");
 
 
-                            query = "INSERT INTO `events` VALUES (@eventid,@date,@location,@events,@starttime,@endtime,@school,@kpi,@noa,@remarks)";
+                            //query = "SELECT * FROM events WHERE location=@location AND ((@date @starttime BETWEEN CONCAT(date,'',starttime) AND CONCAT(date,'',endtime)) OR (@date @endtime BETWEEN CONCAT(date,'',starttime) AND CONCAT(date,'',endtime)))";
+
+                            query = "SELECT * FROM events WHERE location=@location AND ((((@a) BETWEEN CONCAT(date,' ',starttime) AND CONCAT(date,' ',endtime)) OR (@b BETWEEN CONCAT(date,' ',starttime) AND CONCAT(date,' ',endtime))) OR ((DATE_FORMAT(@a,'%Y-%m-%d %H:%i:%s') <= CONCAT(date,' ',starttime)) AND (DATE_FORMAT(@b,'%Y-%m-%d %H:%i:%s') >= CONCAT(date,' ',endtime)) AND CONCAT(date,' ',endtime) >= DATE_FORMAT(@a,'%Y-%m-%d %H:%i:%s')))";
+
+                            //RAW
+                            ////query = "SELECT * FROM events WHERE location='" + evt_cb_venue.Text + "' AND (((('" + evt_dtp_date.Value.ToString("yyyy-MM-dd") + " " + evt_dtp_starttime.Value.ToString("HH:mm:01") + "') BETWEEN CONCAT(date,' ',starttime) AND CONCAT(date,' ',endtime)) OR ('" + evt_dtp_date.Value.ToString("yyyy-MM-dd") + " " + evt_dtp_endtime.Value.ToString("HH:mm:01") + "' BETWEEN CONCAT(date,' ',starttime) AND CONCAT(date,' ',endtime))) OR ((DATE_FORMAT('" + evt_dtp_date.Value.ToString("yyyy-MM-dd") + " " + evt_dtp_starttime.Value.ToString("HH:mm:01") + "','%Y-%m-%d %H:%i:%s') <= CONCAT(date,' ',starttime)) AND (DATE_FORMAT('" + evt_dtp_date.Value.ToString("yyyy-MM-dd") + " " + evt_dtp_endtime.Value.ToString("HH:mm:01") + "','%Y-%m-%d %H:%i:%s') >= CONCAT(date,' ',endtime)) AND CONCAT(date,' ',endtime) >= DATE_FORMAT('" + evt_dtp_date.Value.ToString("yyyy-MM-dd") + " " + evt_dtp_starttime.Value.ToString("HH:mm:01") + "','%Y-%m-%d %H:%i:%s')))";
+
                             command = new MySqlCommand(query, conn);
-                            command.Parameters.AddWithValue("eventid", evt_tb_eventno.Text);
-                            command.Parameters.AddWithValue("date", date1);
-                            //command.Parameters.AddWithValue("date", evt_dtp_date.Text=evt_dtp_date.Value.ToString("yyyy-MM-dd"));
+
+                            command.Parameters.AddWithValue("a", evt_dtp_date.Value.ToString("yyyy-MM-dd") + " " + evt_dtp_starttime.Text);
+                            command.Parameters.AddWithValue("b", evt_dtp_date.Value.ToString("yyyy-MM-dd") + " " + evt_dtp_endtime.Text);
                             command.Parameters.AddWithValue("location", evt_cb_venue.Text);
-                            command.Parameters.AddWithValue("events", evt_rtb_event.Text);
-                            command.Parameters.AddWithValue("starttime", stim);
-                            command.Parameters.AddWithValue("endtime", etim);
-                            command.Parameters.AddWithValue("school", evt_cb_schoolorg.Text);
-                            command.Parameters.AddWithValue("kpi", evt_cb_kpi.Text);
-                            command.Parameters.AddWithValue("noa", evt_cb_noa.Text);
-                            command.Parameters.AddWithValue("remarks", evt_cb_remarks.Text);
+
 
                             reader = command.ExecuteReader();
-                            conn.Close();
+
+                            int count = 0;
+
+                            while (reader.Read())
+                            {
+                                count += 1;
+
+                            }
+                            if (count > 0)
+                            {
+                                RadMessageBox.Show(this, "This is already taken", "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
+                            }
+                            else
+                            {
+
+                                conn.Close();
+                                conn.Open();
+
+
+
+
+                                query = "INSERT INTO `events` VALUES (@eventid,@date,@location,@events,@starttime,@endtime,@school,@kpi,@noa,@remarks)";
+                                command = new MySqlCommand(query, conn);
+                                command.Parameters.AddWithValue("eventid", evt_tb_eventno.Text);
+                                command.Parameters.AddWithValue("date", evt_dtp_date.Value.ToString("yyyy-MM-dd"));
+                                command.Parameters.AddWithValue("location", evt_cb_venue.Text);
+                                command.Parameters.AddWithValue("events", evt_rtb_event.Text);
+                                command.Parameters.AddWithValue("starttime", evt_dtp_starttime.Text);
+                                command.Parameters.AddWithValue("endtime", evt_dtp_endtime.Text);
+                                command.Parameters.AddWithValue("school", evt_cb_schoolorg.Text);
+                                command.Parameters.AddWithValue("kpi", evt_cb_kpi.Text);
+                                command.Parameters.AddWithValue("noa", evt_cb_noa.Text);
+                                command.Parameters.AddWithValue("remarks", evt_cb_remarks.Text);
+
+                                RadMessageBox.Show(this, "Successfully Reserved", "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Info);
+
+                                reader = command.ExecuteReader();
+                                conn.Close();
+                            }
                         }
-                    }
 
 
-                    catch (Exception ex)
-                    {
-                        RadMessageBox.Show(this, ex.Message, "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
-                    }
-                    finally
-                    {
-                        conn.Dispose();
+                        catch (Exception ex)
+                        {
+                            RadMessageBox.Show(this, ex.Message, "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
+                        }
+                        finally
+                        {
+                            conn.Dispose();
+                        }
                     }
                 }
             }
         }
-
 
 
 
