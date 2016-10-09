@@ -333,6 +333,10 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
             evt_tb_eventno.Text = identifier_reservationno;
         }
 
+        private void evt_btn_eventid_Click(object sender, EventArgs e) {
+            auto_generate_eventid();
+        }
+
 
         public void evt_load_datafromgrid() {
             conn = new MySqlConnection();
@@ -601,12 +605,21 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
             finally {
                 conn.Dispose();
                 evt_load_datafromgrid();
+                auto_generate_eventid();
+                evt_cb_kpi.Text = "";
+                evt_cb_noa.Text = "";
+                evt_cb_remarks.Text = "";
+                evt_cb_schoolorg.Text = "";
+                evt_cb_venue.Text = "";
+                evt_dtp_date.Value = System.DateTime.Now;
+                evt_dtp_starttime.Text = "";
+                evt_dtp_endtime.Text = "";
+                evt_rtb_event.Text = "";
+               
             }
         }
 
-        private void evt_btn_eventid_Click(object sender, EventArgs e) {
-            auto_generate_eventid();
-        }
+       
     }
 }
 
