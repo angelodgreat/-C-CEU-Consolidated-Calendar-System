@@ -28,9 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition14 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition15 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem63 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem64 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem65 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem66 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem67 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem68 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem69 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem70 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem71 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem72 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem73 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem74 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem75 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem76 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem77 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem78 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem79 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem80 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem81 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem82 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem83 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem84 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem85 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem86 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem87 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem88 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem89 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem90 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem91 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem92 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem93 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
@@ -62,37 +92,7 @@
             Telerik.WinControls.UI.RadListDataItem radListDataItem29 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem30 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem31 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem32 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem33 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem34 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem35 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem36 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem37 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem38 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem39 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem40 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem41 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem42 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem43 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem44 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem45 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem46 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem47 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem48 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem49 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem50 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem51 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem52 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem53 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem54 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem55 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem56 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem57 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem58 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem59 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem60 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem61 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem62 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition13 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radPageView1 = new Telerik.WinControls.UI.RadPageView();
             this.rpv_main = new Telerik.WinControls.UI.RadPageViewPage();
             this.radGroupBox14 = new Telerik.WinControls.UI.RadGroupBox();
@@ -120,6 +120,8 @@
             this.rpv_events = new Telerik.WinControls.UI.RadPageViewPage();
             this.radGroupBox8 = new Telerik.WinControls.UI.RadGroupBox();
             this.radGroupBox7 = new Telerik.WinControls.UI.RadGroupBox();
+            this.evt_dtp_endtime = new Telerik.WinControls.UI.RadDropDownList();
+            this.evt_dtp_starttime = new Telerik.WinControls.UI.RadDropDownList();
             this.radGroupBox9 = new Telerik.WinControls.UI.RadGroupBox();
             this.evt_btn_clear = new Telerik.WinControls.UI.RadButton();
             this.evt_btn_delete = new Telerik.WinControls.UI.RadButton();
@@ -144,7 +146,7 @@
             this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
             this.evt_tb_eventno = new Telerik.WinControls.UI.RadTextBox();
             this.radGroupBox6 = new Telerik.WinControls.UI.RadGroupBox();
-            this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
+            this.evt_rgv_events = new Telerik.WinControls.UI.RadGridView();
             this.rpv_accounts = new Telerik.WinControls.UI.RadPageViewPage();
             this.radGroupBox5 = new Telerik.WinControls.UI.RadGroupBox();
             this.acc_rlv_accounts = new Telerik.WinControls.UI.RadListControl();
@@ -172,8 +174,6 @@
             this.acc_tb_id = new Telerik.WinControls.UI.RadTextBox();
             this.acc_cb_schoolorg = new Telerik.WinControls.UI.RadDropDownList();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
-            this.evt_dtp_endtime = new Telerik.WinControls.UI.RadDropDownList();
-            this.evt_dtp_starttime = new Telerik.WinControls.UI.RadDropDownList();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             this.rpv_main.SuspendLayout();
@@ -209,6 +209,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox7)).BeginInit();
             this.radGroupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.evt_dtp_endtime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.evt_dtp_starttime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox9)).BeginInit();
             this.radGroupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.evt_btn_clear)).BeginInit();
@@ -235,8 +237,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.evt_tb_eventno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox6)).BeginInit();
             this.radGroupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.evt_rgv_events)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.evt_rgv_events.MasterTemplate)).BeginInit();
             this.rpv_accounts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox5)).BeginInit();
             this.radGroupBox5.SuspendLayout();
@@ -269,8 +271,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.acc_tb_id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.acc_cb_schoolorg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.evt_dtp_endtime)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.evt_dtp_starttime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -330,7 +330,7 @@
             // 
             // 
             this.radGridView3.MasterTemplate.AllowAddNewRow = false;
-            this.radGridView3.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.radGridView3.MasterTemplate.ViewDefinition = tableViewDefinition14;
             this.radGridView3.Name = "radGridView3";
             this.radGridView3.ReadOnly = true;
             this.radGridView3.Size = new System.Drawing.Size(981, 410);
@@ -521,7 +521,7 @@
             // 
             // 
             this.radGridView2.MasterTemplate.AllowAddNewRow = false;
-            this.radGridView2.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.radGridView2.MasterTemplate.ViewDefinition = tableViewDefinition15;
             this.radGridView2.Name = "radGridView2";
             this.radGridView2.ReadOnly = true;
             this.radGridView2.Size = new System.Drawing.Size(1279, 191);
@@ -542,10 +542,12 @@
             // radGroupBox8
             // 
             this.radGroupBox8.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.radGroupBox8.HeaderText = "Help";
             this.radGroupBox8.Location = new System.Drawing.Point(3, 99);
             this.radGroupBox8.Name = "radGroupBox8";
-            this.radGroupBox8.Size = new System.Drawing.Size(240, 371);
+            this.radGroupBox8.Size = new System.Drawing.Size(240, 484);
             this.radGroupBox8.TabIndex = 2;
             this.radGroupBox8.Text = "Help";
             this.radGroupBox8.ThemeName = "VisualStudio2012Dark";
@@ -553,6 +555,7 @@
             // radGroupBox7
             // 
             this.radGroupBox7.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.radGroupBox7.Controls.Add(this.evt_dtp_endtime);
             this.radGroupBox7.Controls.Add(this.evt_dtp_starttime);
             this.radGroupBox7.Controls.Add(this.radGroupBox9);
@@ -581,6 +584,150 @@
             this.radGroupBox7.TabIndex = 1;
             this.radGroupBox7.Text = "Event Details";
             this.radGroupBox7.ThemeName = "VisualStudio2012Dark";
+            // 
+            // evt_dtp_endtime
+            // 
+            this.evt_dtp_endtime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.evt_dtp_endtime.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            radListDataItem63.Text = "06:00";
+            radListDataItem64.Text = "06:30";
+            radListDataItem65.Text = "07:00";
+            radListDataItem66.Text = "07:30";
+            radListDataItem67.Text = "08:00";
+            radListDataItem68.Text = "08:30";
+            radListDataItem69.Text = "09:00";
+            radListDataItem70.Text = "09:30";
+            radListDataItem71.Text = "10:00";
+            radListDataItem72.Text = "10:30";
+            radListDataItem73.Text = "11:00";
+            radListDataItem74.Text = "11:30";
+            radListDataItem75.Text = "12:00";
+            radListDataItem76.Text = "12:30";
+            radListDataItem77.Text = "13:00";
+            radListDataItem78.Text = "13:30";
+            radListDataItem79.Text = "14:00";
+            radListDataItem80.Text = "14:30";
+            radListDataItem81.Text = "15:00";
+            radListDataItem82.Text = "15:30";
+            radListDataItem83.Text = "16:00";
+            radListDataItem84.Text = "16:30";
+            radListDataItem85.Text = "17:00";
+            radListDataItem86.Text = "17:30";
+            radListDataItem87.Text = "18:00";
+            radListDataItem88.Text = "18:30";
+            radListDataItem89.Text = "19:00";
+            radListDataItem90.Text = "19:30";
+            radListDataItem91.Text = "20:00";
+            radListDataItem92.Text = "20:30";
+            radListDataItem93.Text = "21:00";
+            this.evt_dtp_endtime.Items.Add(radListDataItem63);
+            this.evt_dtp_endtime.Items.Add(radListDataItem64);
+            this.evt_dtp_endtime.Items.Add(radListDataItem65);
+            this.evt_dtp_endtime.Items.Add(radListDataItem66);
+            this.evt_dtp_endtime.Items.Add(radListDataItem67);
+            this.evt_dtp_endtime.Items.Add(radListDataItem68);
+            this.evt_dtp_endtime.Items.Add(radListDataItem69);
+            this.evt_dtp_endtime.Items.Add(radListDataItem70);
+            this.evt_dtp_endtime.Items.Add(radListDataItem71);
+            this.evt_dtp_endtime.Items.Add(radListDataItem72);
+            this.evt_dtp_endtime.Items.Add(radListDataItem73);
+            this.evt_dtp_endtime.Items.Add(radListDataItem74);
+            this.evt_dtp_endtime.Items.Add(radListDataItem75);
+            this.evt_dtp_endtime.Items.Add(radListDataItem76);
+            this.evt_dtp_endtime.Items.Add(radListDataItem77);
+            this.evt_dtp_endtime.Items.Add(radListDataItem78);
+            this.evt_dtp_endtime.Items.Add(radListDataItem79);
+            this.evt_dtp_endtime.Items.Add(radListDataItem80);
+            this.evt_dtp_endtime.Items.Add(radListDataItem81);
+            this.evt_dtp_endtime.Items.Add(radListDataItem82);
+            this.evt_dtp_endtime.Items.Add(radListDataItem83);
+            this.evt_dtp_endtime.Items.Add(radListDataItem84);
+            this.evt_dtp_endtime.Items.Add(radListDataItem85);
+            this.evt_dtp_endtime.Items.Add(radListDataItem86);
+            this.evt_dtp_endtime.Items.Add(radListDataItem87);
+            this.evt_dtp_endtime.Items.Add(radListDataItem88);
+            this.evt_dtp_endtime.Items.Add(radListDataItem89);
+            this.evt_dtp_endtime.Items.Add(radListDataItem90);
+            this.evt_dtp_endtime.Items.Add(radListDataItem91);
+            this.evt_dtp_endtime.Items.Add(radListDataItem92);
+            this.evt_dtp_endtime.Items.Add(radListDataItem93);
+            this.evt_dtp_endtime.Location = new System.Drawing.Point(324, 77);
+            this.evt_dtp_endtime.Name = "evt_dtp_endtime";
+            this.evt_dtp_endtime.Size = new System.Drawing.Size(105, 24);
+            this.evt_dtp_endtime.TabIndex = 24;
+            this.evt_dtp_endtime.ThemeName = "VisualStudio2012Dark";
+            // 
+            // evt_dtp_starttime
+            // 
+            this.evt_dtp_starttime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.evt_dtp_starttime.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            radListDataItem1.Text = "06:00";
+            radListDataItem2.Text = "06:30";
+            radListDataItem3.Text = "07:00";
+            radListDataItem4.Text = "07:30";
+            radListDataItem5.Text = "08:00";
+            radListDataItem6.Text = "08:30";
+            radListDataItem7.Text = "09:00";
+            radListDataItem8.Text = "09:30";
+            radListDataItem9.Text = "10:00";
+            radListDataItem10.Text = "10:30";
+            radListDataItem11.Text = "11:00";
+            radListDataItem12.Text = "11:30";
+            radListDataItem13.Text = "12:00";
+            radListDataItem14.Text = "12:30";
+            radListDataItem15.Text = "13:00";
+            radListDataItem16.Text = "13:30";
+            radListDataItem17.Text = "14:00";
+            radListDataItem18.Text = "14:30";
+            radListDataItem19.Text = "15:00";
+            radListDataItem20.Text = "15:30";
+            radListDataItem21.Text = "16:00";
+            radListDataItem22.Text = "16:30";
+            radListDataItem23.Text = "17:00";
+            radListDataItem24.Text = "17:30";
+            radListDataItem25.Text = "18:00";
+            radListDataItem26.Text = "18:30";
+            radListDataItem27.Text = "19:00";
+            radListDataItem28.Text = "19:30";
+            radListDataItem29.Text = "20:00";
+            radListDataItem30.Text = "20:30";
+            radListDataItem31.Text = "21:00";
+            this.evt_dtp_starttime.Items.Add(radListDataItem1);
+            this.evt_dtp_starttime.Items.Add(radListDataItem2);
+            this.evt_dtp_starttime.Items.Add(radListDataItem3);
+            this.evt_dtp_starttime.Items.Add(radListDataItem4);
+            this.evt_dtp_starttime.Items.Add(radListDataItem5);
+            this.evt_dtp_starttime.Items.Add(radListDataItem6);
+            this.evt_dtp_starttime.Items.Add(radListDataItem7);
+            this.evt_dtp_starttime.Items.Add(radListDataItem8);
+            this.evt_dtp_starttime.Items.Add(radListDataItem9);
+            this.evt_dtp_starttime.Items.Add(radListDataItem10);
+            this.evt_dtp_starttime.Items.Add(radListDataItem11);
+            this.evt_dtp_starttime.Items.Add(radListDataItem12);
+            this.evt_dtp_starttime.Items.Add(radListDataItem13);
+            this.evt_dtp_starttime.Items.Add(radListDataItem14);
+            this.evt_dtp_starttime.Items.Add(radListDataItem15);
+            this.evt_dtp_starttime.Items.Add(radListDataItem16);
+            this.evt_dtp_starttime.Items.Add(radListDataItem17);
+            this.evt_dtp_starttime.Items.Add(radListDataItem18);
+            this.evt_dtp_starttime.Items.Add(radListDataItem19);
+            this.evt_dtp_starttime.Items.Add(radListDataItem20);
+            this.evt_dtp_starttime.Items.Add(radListDataItem21);
+            this.evt_dtp_starttime.Items.Add(radListDataItem22);
+            this.evt_dtp_starttime.Items.Add(radListDataItem23);
+            this.evt_dtp_starttime.Items.Add(radListDataItem24);
+            this.evt_dtp_starttime.Items.Add(radListDataItem25);
+            this.evt_dtp_starttime.Items.Add(radListDataItem26);
+            this.evt_dtp_starttime.Items.Add(radListDataItem27);
+            this.evt_dtp_starttime.Items.Add(radListDataItem28);
+            this.evt_dtp_starttime.Items.Add(radListDataItem29);
+            this.evt_dtp_starttime.Items.Add(radListDataItem30);
+            this.evt_dtp_starttime.Items.Add(radListDataItem31);
+            this.evt_dtp_starttime.Location = new System.Drawing.Point(123, 77);
+            this.evt_dtp_starttime.Name = "evt_dtp_starttime";
+            this.evt_dtp_starttime.Size = new System.Drawing.Size(105, 24);
+            this.evt_dtp_starttime.TabIndex = 23;
+            this.evt_dtp_starttime.ThemeName = "VisualStudio2012Dark";
             // 
             // radGroupBox9
             // 
@@ -624,6 +771,7 @@
             this.evt_btn_update.TabIndex = 10;
             this.evt_btn_update.Text = "Update";
             this.evt_btn_update.ThemeName = "VisualStudio2012Dark";
+            this.evt_btn_update.Click += new System.EventHandler(this.evt_btn_update_Click);
             // 
             // evt_btn_save
             // 
@@ -807,7 +955,10 @@
             // radGroupBox6
             // 
             this.radGroupBox6.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox6.Controls.Add(this.radGridView1);
+            this.radGroupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radGroupBox6.Controls.Add(this.evt_rgv_events);
             this.radGroupBox6.HeaderText = "Activities";
             this.radGroupBox6.Location = new System.Drawing.Point(249, 99);
             this.radGroupBox6.Name = "radGroupBox6";
@@ -816,40 +967,50 @@
             this.radGroupBox6.Text = "Activities";
             this.radGroupBox6.ThemeName = "VisualStudio2012Dark";
             // 
-            // radGridView1
+            // evt_rgv_events
             // 
-            this.radGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radGridView1.Location = new System.Drawing.Point(2, 18);
+            this.evt_rgv_events.AutoSizeRows = true;
+            this.evt_rgv_events.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.evt_rgv_events.EnableGestures = false;
+            this.evt_rgv_events.Location = new System.Drawing.Point(2, 18);
             // 
             // 
             // 
-            this.radGridView1.MasterTemplate.AllowAddNewRow = false;
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition3;
-            this.radGridView1.Name = "radGridView1";
-            this.radGridView1.ReadOnly = true;
-            this.radGridView1.Size = new System.Drawing.Size(1033, 215);
-            this.radGridView1.TabIndex = 0;
-            this.radGridView1.Text = "radGridView1";
-            this.radGridView1.ThemeName = "VisualStudio2012Dark";
+            this.evt_rgv_events.MasterTemplate.AllowAddNewRow = false;
+            this.evt_rgv_events.MasterTemplate.AllowEditRow = false;
+            this.evt_rgv_events.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            this.evt_rgv_events.MasterTemplate.EnableGrouping = false;
+            this.evt_rgv_events.MasterTemplate.ShowRowHeaderColumn = false;
+            this.evt_rgv_events.MasterTemplate.ViewDefinition = tableViewDefinition13;
+            this.evt_rgv_events.Name = "evt_rgv_events";
+            this.evt_rgv_events.ReadOnly = true;
+            this.evt_rgv_events.Size = new System.Drawing.Size(1033, 215);
+            this.evt_rgv_events.TabIndex = 0;
+            this.evt_rgv_events.Text = "radGridView1";
+            this.evt_rgv_events.ThemeName = "VisualStudio2012Dark";
+            this.evt_rgv_events.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.evt_rgv_events_CellDoubleClick);
             // 
             // rpv_accounts
             // 
             this.rpv_accounts.Controls.Add(this.radGroupBox5);
             this.rpv_accounts.Controls.Add(this.radGroupBox1);
             this.rpv_accounts.ItemSize = new System.Drawing.SizeF(123F, 24F);
-            this.rpv_accounts.Location = new System.Drawing.Point(10, 37);
+            this.rpv_accounts.Location = new System.Drawing.Point(5, 30);
             this.rpv_accounts.Name = "rpv_accounts";
-            this.rpv_accounts.Size = new System.Drawing.Size(1289, 586);
+            this.rpv_accounts.Size = new System.Drawing.Size(1300, 599);
             this.rpv_accounts.Text = "Account Management";
             // 
             // radGroupBox5
             // 
             this.radGroupBox5.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.radGroupBox5.Controls.Add(this.acc_rlv_accounts);
             this.radGroupBox5.HeaderText = "Accounts";
-            this.radGroupBox5.Location = new System.Drawing.Point(35, 99);
+            this.radGroupBox5.Location = new System.Drawing.Point(7, 3);
             this.radGroupBox5.Name = "radGroupBox5";
-            this.radGroupBox5.Size = new System.Drawing.Size(400, 403);
+            this.radGroupBox5.Size = new System.Drawing.Size(1286, 114);
             this.radGroupBox5.TabIndex = 1;
             this.radGroupBox5.Text = "Accounts";
             this.radGroupBox5.ThemeName = "VisualStudio2012Dark";
@@ -859,7 +1020,7 @@
             this.acc_rlv_accounts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.acc_rlv_accounts.Location = new System.Drawing.Point(2, 18);
             this.acc_rlv_accounts.Name = "acc_rlv_accounts";
-            this.acc_rlv_accounts.Size = new System.Drawing.Size(396, 383);
+            this.acc_rlv_accounts.Size = new System.Drawing.Size(1282, 94);
             this.acc_rlv_accounts.TabIndex = 0;
             this.acc_rlv_accounts.Text = "radListControl1";
             this.acc_rlv_accounts.ThemeName = "VisualStudio2012Dark";
@@ -868,13 +1029,15 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.radGroupBox1.Controls.Add(this.radGroupBox4);
             this.radGroupBox1.Controls.Add(this.radGroupBox3);
             this.radGroupBox1.Controls.Add(this.radGroupBox2);
             this.radGroupBox1.HeaderText = "Register Form";
-            this.radGroupBox1.Location = new System.Drawing.Point(441, 99);
+            this.radGroupBox1.Location = new System.Drawing.Point(7, 123);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(760, 481);
+            this.radGroupBox1.Size = new System.Drawing.Size(1286, 469);
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.Text = "Register Form";
             this.radGroupBox1.ThemeName = "VisualStudio2012Dark";
@@ -882,23 +1045,26 @@
             // radGroupBox4
             // 
             this.radGroupBox4.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.radGroupBox4.Controls.Add(this.acc_btn_clear);
             this.radGroupBox4.Controls.Add(this.acc_btn_delete);
             this.radGroupBox4.Controls.Add(this.acc_btn_update);
             this.radGroupBox4.Controls.Add(this.acc_btn_save);
             this.radGroupBox4.HeaderText = "Controls";
-            this.radGroupBox4.Location = new System.Drawing.Point(21, 390);
+            this.radGroupBox4.Location = new System.Drawing.Point(21, 387);
             this.radGroupBox4.Name = "radGroupBox4";
-            this.radGroupBox4.Size = new System.Drawing.Size(708, 77);
+            this.radGroupBox4.Size = new System.Drawing.Size(1234, 77);
             this.radGroupBox4.TabIndex = 1;
             this.radGroupBox4.Text = "Controls";
             this.radGroupBox4.ThemeName = "VisualStudio2012Dark";
             // 
             // acc_btn_clear
             // 
-            this.acc_btn_clear.Location = new System.Drawing.Point(13, 21);
+            this.acc_btn_clear.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.acc_btn_clear.Location = new System.Drawing.Point(59, 21);
             this.acc_btn_clear.Name = "acc_btn_clear";
-            this.acc_btn_clear.Size = new System.Drawing.Size(110, 38);
+            this.acc_btn_clear.Size = new System.Drawing.Size(173, 38);
             this.acc_btn_clear.TabIndex = 11;
             this.acc_btn_clear.Text = "Clear";
             this.acc_btn_clear.ThemeName = "VisualStudio2012Dark";
@@ -906,9 +1072,10 @@
             // 
             // acc_btn_delete
             // 
-            this.acc_btn_delete.Location = new System.Drawing.Point(356, 21);
+            this.acc_btn_delete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.acc_btn_delete.Location = new System.Drawing.Point(238, 21);
             this.acc_btn_delete.Name = "acc_btn_delete";
-            this.acc_btn_delete.Size = new System.Drawing.Size(110, 38);
+            this.acc_btn_delete.Size = new System.Drawing.Size(173, 38);
             this.acc_btn_delete.TabIndex = 10;
             this.acc_btn_delete.Text = "Delete";
             this.acc_btn_delete.ThemeName = "VisualStudio2012Dark";
@@ -916,9 +1083,10 @@
             // 
             // acc_btn_update
             // 
-            this.acc_btn_update.Location = new System.Drawing.Point(472, 21);
+            this.acc_btn_update.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.acc_btn_update.Location = new System.Drawing.Point(882, 21);
             this.acc_btn_update.Name = "acc_btn_update";
-            this.acc_btn_update.Size = new System.Drawing.Size(110, 38);
+            this.acc_btn_update.Size = new System.Drawing.Size(173, 38);
             this.acc_btn_update.TabIndex = 9;
             this.acc_btn_update.Text = "Update";
             this.acc_btn_update.ThemeName = "VisualStudio2012Dark";
@@ -926,9 +1094,10 @@
             // 
             // acc_btn_save
             // 
-            this.acc_btn_save.Location = new System.Drawing.Point(588, 21);
+            this.acc_btn_save.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.acc_btn_save.Location = new System.Drawing.Point(1061, 21);
             this.acc_btn_save.Name = "acc_btn_save";
-            this.acc_btn_save.Size = new System.Drawing.Size(110, 38);
+            this.acc_btn_save.Size = new System.Drawing.Size(173, 38);
             this.acc_btn_save.TabIndex = 8;
             this.acc_btn_save.Text = "Save";
             this.acc_btn_save.ThemeName = "VisualStudio2012Dark";
@@ -937,6 +1106,8 @@
             // radGroupBox3
             // 
             this.radGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.radGroupBox3.Controls.Add(this.radLabel8);
             this.radGroupBox3.Controls.Add(this.acc_tb_retypepassword);
             this.radGroupBox3.Controls.Add(this.radLabel6);
@@ -948,14 +1119,14 @@
             this.radGroupBox3.HeaderText = "Account Information";
             this.radGroupBox3.Location = new System.Drawing.Point(21, 211);
             this.radGroupBox3.Name = "radGroupBox3";
-            this.radGroupBox3.Size = new System.Drawing.Size(708, 173);
+            this.radGroupBox3.Size = new System.Drawing.Size(1234, 170);
             this.radGroupBox3.TabIndex = 1;
             this.radGroupBox3.Text = "Account Information";
             this.radGroupBox3.ThemeName = "VisualStudio2012Dark";
             // 
             // radLabel8
             // 
-            this.radLabel8.Location = new System.Drawing.Point(139, 126);
+            this.radLabel8.Location = new System.Drawing.Point(322, 113);
             this.radLabel8.Name = "radLabel8";
             this.radLabel8.Size = new System.Drawing.Size(100, 18);
             this.radLabel8.TabIndex = 23;
@@ -964,7 +1135,7 @@
             // 
             // acc_tb_retypepassword
             // 
-            this.acc_tb_retypepassword.Location = new System.Drawing.Point(245, 124);
+            this.acc_tb_retypepassword.Location = new System.Drawing.Point(428, 111);
             this.acc_tb_retypepassword.MinimumSize = new System.Drawing.Size(0, 24);
             this.acc_tb_retypepassword.Name = "acc_tb_retypepassword";
             this.acc_tb_retypepassword.PasswordChar = '*';
@@ -978,7 +1149,7 @@
             // 
             // radLabel6
             // 
-            this.radLabel6.Location = new System.Drawing.Point(183, 96);
+            this.radLabel6.Location = new System.Drawing.Point(366, 83);
             this.radLabel6.Name = "radLabel6";
             this.radLabel6.Size = new System.Drawing.Size(56, 18);
             this.radLabel6.TabIndex = 21;
@@ -987,7 +1158,7 @@
             // 
             // acc_tb_password
             // 
-            this.acc_tb_password.Location = new System.Drawing.Point(245, 94);
+            this.acc_tb_password.Location = new System.Drawing.Point(428, 81);
             this.acc_tb_password.MinimumSize = new System.Drawing.Size(0, 24);
             this.acc_tb_password.Name = "acc_tb_password";
             this.acc_tb_password.PasswordChar = '*';
@@ -1001,7 +1172,7 @@
             // 
             // radLabel7
             // 
-            this.radLabel7.Location = new System.Drawing.Point(180, 66);
+            this.radLabel7.Location = new System.Drawing.Point(363, 53);
             this.radLabel7.Name = "radLabel7";
             this.radLabel7.Size = new System.Drawing.Size(59, 18);
             this.radLabel7.TabIndex = 19;
@@ -1010,7 +1181,7 @@
             // 
             // acc_tb_username
             // 
-            this.acc_tb_username.Location = new System.Drawing.Point(245, 64);
+            this.acc_tb_username.Location = new System.Drawing.Point(428, 51);
             this.acc_tb_username.MinimumSize = new System.Drawing.Size(0, 24);
             this.acc_tb_username.Name = "acc_tb_username";
             // 
@@ -1023,15 +1194,15 @@
             // 
             // acc_cb_usertype
             // 
-            this.acc_cb_usertype.Location = new System.Drawing.Point(245, 34);
+            this.acc_cb_usertype.Location = new System.Drawing.Point(428, 21);
             this.acc_cb_usertype.Name = "acc_cb_usertype";
-            this.acc_cb_usertype.Size = new System.Drawing.Size(422, 20);
+            this.acc_cb_usertype.Size = new System.Drawing.Size(422, 24);
             this.acc_cb_usertype.TabIndex = 4;
             this.acc_cb_usertype.ThemeName = "VisualStudio2012Dark";
             // 
             // radLabel5
             // 
-            this.radLabel5.Location = new System.Drawing.Point(186, 36);
+            this.radLabel5.Location = new System.Drawing.Point(369, 23);
             this.radLabel5.Name = "radLabel5";
             this.radLabel5.Size = new System.Drawing.Size(53, 18);
             this.radLabel5.TabIndex = 16;
@@ -1041,6 +1212,8 @@
             // radGroupBox2
             // 
             this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.radGroupBox2.Controls.Add(this.radLabel4);
             this.radGroupBox2.Controls.Add(this.radLabel3);
             this.radGroupBox2.Controls.Add(this.acc_tb_lname);
@@ -1052,14 +1225,14 @@
             this.radGroupBox2.HeaderText = "Personal Information";
             this.radGroupBox2.Location = new System.Drawing.Point(21, 32);
             this.radGroupBox2.Name = "radGroupBox2";
-            this.radGroupBox2.Size = new System.Drawing.Size(708, 173);
+            this.radGroupBox2.Size = new System.Drawing.Size(1234, 161);
             this.radGroupBox2.TabIndex = 1;
             this.radGroupBox2.Text = "Personal Information";
             this.radGroupBox2.ThemeName = "VisualStudio2012Dark";
             // 
             // radLabel4
             // 
-            this.radLabel4.Location = new System.Drawing.Point(178, 94);
+            this.radLabel4.Location = new System.Drawing.Point(361, 83);
             this.radLabel4.Name = "radLabel4";
             this.radLabel4.Size = new System.Drawing.Size(61, 18);
             this.radLabel4.TabIndex = 21;
@@ -1068,7 +1241,7 @@
             // 
             // radLabel3
             // 
-            this.radLabel3.Location = new System.Drawing.Point(176, 64);
+            this.radLabel3.Location = new System.Drawing.Point(359, 53);
             this.radLabel3.Name = "radLabel3";
             this.radLabel3.Size = new System.Drawing.Size(63, 18);
             this.radLabel3.TabIndex = 22;
@@ -1077,7 +1250,7 @@
             // 
             // acc_tb_lname
             // 
-            this.acc_tb_lname.Location = new System.Drawing.Point(245, 92);
+            this.acc_tb_lname.Location = new System.Drawing.Point(428, 81);
             this.acc_tb_lname.MinimumSize = new System.Drawing.Size(0, 24);
             this.acc_tb_lname.Name = "acc_tb_lname";
             // 
@@ -1090,7 +1263,7 @@
             // 
             // acc_tb_fname
             // 
-            this.acc_tb_fname.Location = new System.Drawing.Point(245, 62);
+            this.acc_tb_fname.Location = new System.Drawing.Point(428, 51);
             this.acc_tb_fname.MinimumSize = new System.Drawing.Size(0, 24);
             this.acc_tb_fname.Name = "acc_tb_fname";
             // 
@@ -1103,7 +1276,7 @@
             // 
             // radLabel2
             // 
-            this.radLabel2.Location = new System.Drawing.Point(196, 34);
+            this.radLabel2.Location = new System.Drawing.Point(379, 23);
             this.radLabel2.Name = "radLabel2";
             this.radLabel2.Size = new System.Drawing.Size(43, 18);
             this.radLabel2.TabIndex = 18;
@@ -1112,7 +1285,7 @@
             // 
             // acc_tb_id
             // 
-            this.acc_tb_id.Location = new System.Drawing.Point(245, 32);
+            this.acc_tb_id.Location = new System.Drawing.Point(428, 21);
             this.acc_tb_id.MaxLength = 8;
             this.acc_tb_id.MinimumSize = new System.Drawing.Size(0, 24);
             this.acc_tb_id.Name = "acc_tb_id";
@@ -1126,164 +1299,20 @@
             // 
             // acc_cb_schoolorg
             // 
-            this.acc_cb_schoolorg.Location = new System.Drawing.Point(245, 122);
+            this.acc_cb_schoolorg.Location = new System.Drawing.Point(428, 111);
             this.acc_cb_schoolorg.Name = "acc_cb_schoolorg";
-            this.acc_cb_schoolorg.Size = new System.Drawing.Size(422, 20);
+            this.acc_cb_schoolorg.Size = new System.Drawing.Size(422, 24);
             this.acc_cb_schoolorg.TabIndex = 3;
             this.acc_cb_schoolorg.ThemeName = "VisualStudio2012Dark";
             // 
             // radLabel1
             // 
-            this.radLabel1.Location = new System.Drawing.Point(128, 124);
+            this.radLabel1.Location = new System.Drawing.Point(311, 113);
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.Size = new System.Drawing.Size(111, 18);
             this.radLabel1.TabIndex = 15;
             this.radLabel1.Text = "School/Organization:";
             this.radLabel1.ThemeName = "VisualStudio2012Dark";
-            // 
-            // evt_dtp_endtime
-            // 
-            this.evt_dtp_endtime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.evt_dtp_endtime.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            radListDataItem1.Text = "06:00";
-            radListDataItem2.Text = "06:30";
-            radListDataItem3.Text = "07:00";
-            radListDataItem4.Text = "07:30";
-            radListDataItem5.Text = "08:00";
-            radListDataItem6.Text = "08:30";
-            radListDataItem7.Text = "09:00";
-            radListDataItem8.Text = "09:30";
-            radListDataItem9.Text = "10:00";
-            radListDataItem10.Text = "10:30";
-            radListDataItem11.Text = "11:00";
-            radListDataItem12.Text = "11:30";
-            radListDataItem13.Text = "12:00";
-            radListDataItem14.Text = "12:30";
-            radListDataItem15.Text = "13:00";
-            radListDataItem16.Text = "13:30";
-            radListDataItem17.Text = "14:00";
-            radListDataItem18.Text = "14:30";
-            radListDataItem19.Text = "15:00";
-            radListDataItem20.Text = "15:30";
-            radListDataItem21.Text = "16:00";
-            radListDataItem22.Text = "16:30";
-            radListDataItem23.Text = "17:00";
-            radListDataItem24.Text = "17:30";
-            radListDataItem25.Text = "18:00";
-            radListDataItem26.Text = "18:30";
-            radListDataItem27.Text = "19:00";
-            radListDataItem28.Text = "19:30";
-            radListDataItem29.Text = "20:00";
-            radListDataItem30.Text = "20:30";
-            radListDataItem31.Text = "21:00";
-            this.evt_dtp_endtime.Items.Add(radListDataItem1);
-            this.evt_dtp_endtime.Items.Add(radListDataItem2);
-            this.evt_dtp_endtime.Items.Add(radListDataItem3);
-            this.evt_dtp_endtime.Items.Add(radListDataItem4);
-            this.evt_dtp_endtime.Items.Add(radListDataItem5);
-            this.evt_dtp_endtime.Items.Add(radListDataItem6);
-            this.evt_dtp_endtime.Items.Add(radListDataItem7);
-            this.evt_dtp_endtime.Items.Add(radListDataItem8);
-            this.evt_dtp_endtime.Items.Add(radListDataItem9);
-            this.evt_dtp_endtime.Items.Add(radListDataItem10);
-            this.evt_dtp_endtime.Items.Add(radListDataItem11);
-            this.evt_dtp_endtime.Items.Add(radListDataItem12);
-            this.evt_dtp_endtime.Items.Add(radListDataItem13);
-            this.evt_dtp_endtime.Items.Add(radListDataItem14);
-            this.evt_dtp_endtime.Items.Add(radListDataItem15);
-            this.evt_dtp_endtime.Items.Add(radListDataItem16);
-            this.evt_dtp_endtime.Items.Add(radListDataItem17);
-            this.evt_dtp_endtime.Items.Add(radListDataItem18);
-            this.evt_dtp_endtime.Items.Add(radListDataItem19);
-            this.evt_dtp_endtime.Items.Add(radListDataItem20);
-            this.evt_dtp_endtime.Items.Add(radListDataItem21);
-            this.evt_dtp_endtime.Items.Add(radListDataItem22);
-            this.evt_dtp_endtime.Items.Add(radListDataItem23);
-            this.evt_dtp_endtime.Items.Add(radListDataItem24);
-            this.evt_dtp_endtime.Items.Add(radListDataItem25);
-            this.evt_dtp_endtime.Items.Add(radListDataItem26);
-            this.evt_dtp_endtime.Items.Add(radListDataItem27);
-            this.evt_dtp_endtime.Items.Add(radListDataItem28);
-            this.evt_dtp_endtime.Items.Add(radListDataItem29);
-            this.evt_dtp_endtime.Items.Add(radListDataItem30);
-            this.evt_dtp_endtime.Items.Add(radListDataItem31);
-            this.evt_dtp_endtime.Location = new System.Drawing.Point(324, 77);
-            this.evt_dtp_endtime.Name = "evt_dtp_endtime";
-            this.evt_dtp_endtime.Size = new System.Drawing.Size(105, 24);
-            this.evt_dtp_endtime.TabIndex = 24;
-            this.evt_dtp_endtime.ThemeName = "VisualStudio2012Dark";
-            // 
-            // evt_dtp_starttime
-            // 
-            this.evt_dtp_starttime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.evt_dtp_starttime.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            radListDataItem32.Text = "06:00";
-            radListDataItem33.Text = "06:30";
-            radListDataItem34.Text = "07:00";
-            radListDataItem35.Text = "07:30";
-            radListDataItem36.Text = "08:00";
-            radListDataItem37.Text = "08:30";
-            radListDataItem38.Text = "09:00";
-            radListDataItem39.Text = "09:30";
-            radListDataItem40.Text = "10:00";
-            radListDataItem41.Text = "10:30";
-            radListDataItem42.Text = "11:00";
-            radListDataItem43.Text = "11:30";
-            radListDataItem44.Text = "12:00";
-            radListDataItem45.Text = "12:30";
-            radListDataItem46.Text = "13:00";
-            radListDataItem47.Text = "13:30";
-            radListDataItem48.Text = "14:00";
-            radListDataItem49.Text = "14:30";
-            radListDataItem50.Text = "15:00";
-            radListDataItem51.Text = "15:30";
-            radListDataItem52.Text = "16:00";
-            radListDataItem53.Text = "16:30";
-            radListDataItem54.Text = "17:00";
-            radListDataItem55.Text = "17:30";
-            radListDataItem56.Text = "18:00";
-            radListDataItem57.Text = "18:30";
-            radListDataItem58.Text = "19:00";
-            radListDataItem59.Text = "19:30";
-            radListDataItem60.Text = "20:00";
-            radListDataItem61.Text = "20:30";
-            radListDataItem62.Text = "21:00";
-            this.evt_dtp_starttime.Items.Add(radListDataItem32);
-            this.evt_dtp_starttime.Items.Add(radListDataItem33);
-            this.evt_dtp_starttime.Items.Add(radListDataItem34);
-            this.evt_dtp_starttime.Items.Add(radListDataItem35);
-            this.evt_dtp_starttime.Items.Add(radListDataItem36);
-            this.evt_dtp_starttime.Items.Add(radListDataItem37);
-            this.evt_dtp_starttime.Items.Add(radListDataItem38);
-            this.evt_dtp_starttime.Items.Add(radListDataItem39);
-            this.evt_dtp_starttime.Items.Add(radListDataItem40);
-            this.evt_dtp_starttime.Items.Add(radListDataItem41);
-            this.evt_dtp_starttime.Items.Add(radListDataItem42);
-            this.evt_dtp_starttime.Items.Add(radListDataItem43);
-            this.evt_dtp_starttime.Items.Add(radListDataItem44);
-            this.evt_dtp_starttime.Items.Add(radListDataItem45);
-            this.evt_dtp_starttime.Items.Add(radListDataItem46);
-            this.evt_dtp_starttime.Items.Add(radListDataItem47);
-            this.evt_dtp_starttime.Items.Add(radListDataItem48);
-            this.evt_dtp_starttime.Items.Add(radListDataItem49);
-            this.evt_dtp_starttime.Items.Add(radListDataItem50);
-            this.evt_dtp_starttime.Items.Add(radListDataItem51);
-            this.evt_dtp_starttime.Items.Add(radListDataItem52);
-            this.evt_dtp_starttime.Items.Add(radListDataItem53);
-            this.evt_dtp_starttime.Items.Add(radListDataItem54);
-            this.evt_dtp_starttime.Items.Add(radListDataItem55);
-            this.evt_dtp_starttime.Items.Add(radListDataItem56);
-            this.evt_dtp_starttime.Items.Add(radListDataItem57);
-            this.evt_dtp_starttime.Items.Add(radListDataItem58);
-            this.evt_dtp_starttime.Items.Add(radListDataItem59);
-            this.evt_dtp_starttime.Items.Add(radListDataItem60);
-            this.evt_dtp_starttime.Items.Add(radListDataItem61);
-            this.evt_dtp_starttime.Items.Add(radListDataItem62);
-            this.evt_dtp_starttime.Location = new System.Drawing.Point(123, 77);
-            this.evt_dtp_starttime.Name = "evt_dtp_starttime";
-            this.evt_dtp_starttime.Size = new System.Drawing.Size(105, 24);
-            this.evt_dtp_starttime.TabIndex = 23;
-            this.evt_dtp_starttime.ThemeName = "VisualStudio2012Dark";
             // 
             // Main
             // 
@@ -1337,6 +1366,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox7)).EndInit();
             this.radGroupBox7.ResumeLayout(false);
             this.radGroupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.evt_dtp_endtime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.evt_dtp_starttime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox9)).EndInit();
             this.radGroupBox9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.evt_btn_clear)).EndInit();
@@ -1363,8 +1394,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.evt_tb_eventno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox6)).EndInit();
             this.radGroupBox6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.evt_rgv_events.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.evt_rgv_events)).EndInit();
             this.rpv_accounts.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox5)).EndInit();
             this.radGroupBox5.ResumeLayout(false);
@@ -1399,8 +1430,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.acc_tb_id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.acc_cb_schoolorg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.evt_dtp_endtime)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.evt_dtp_starttime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -1465,7 +1494,7 @@
         private Telerik.WinControls.UI.RadLabel radLabel9;
         private Telerik.WinControls.UI.RadTextBox evt_tb_eventno;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox6;
-        private Telerik.WinControls.UI.RadGridView radGridView1;
+        private Telerik.WinControls.UI.RadGridView evt_rgv_events;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox11;
         private Telerik.WinControls.UI.RadLabel radLabel10;
         private Telerik.WinControls.UI.RadTextBoxControl radTextBoxControl1;

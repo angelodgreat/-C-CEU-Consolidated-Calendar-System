@@ -29,7 +29,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
         public string identifier_reservationno;
         public System.Random random = new System.Random();
 
-        MySqlDataAdapter sda = Globals.adapter;
+       
         MySqlCommand command = Globals.command;
         MySqlDataReader reader = Globals.reader;
 
@@ -40,17 +40,19 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
         private void Main_Load(object sender, EventArgs e)
         {
             //Accounts
-            load_existing_accounts();
+            acc_load_existing_accounts();
             acc_btn_delete.Hide();
             acc_btn_update.Hide();
 
             //Events
             auto_generate_eventid();
+            evt_load_datafromgrid();
+            evt_dtp_date.Value = System.DateTime.Now;
         }
 
       //Account Management Code loading all existing accounts in Listbox
         
-        public void load_existing_accounts()
+        public void acc_load_existing_accounts()
         {
             conn = new MySqlConnection();
             conn.ConnectionString = connstring;
@@ -173,7 +175,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
                         finally
                         {
                             conn.Dispose();
-                            load_existing_accounts();
+                            acc_load_existing_accounts();
                         }
                     }             
                 }
@@ -234,7 +236,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
                         finally
                         {
                             conn.Dispose();
-                            load_existing_accounts();
+                        acc_load_existing_accounts();
                         }
                     
                                    
@@ -289,7 +291,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
                         {
                             conn.Dispose();
                             acc_clearall_fields();
-                            load_existing_accounts();
+                            acc_load_existing_accounts();
                         }
                     }
                 }
@@ -306,6 +308,10 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
         //Account Management Code Clearing all fields main code
         public void acc_clearall_fields()
         {
+            acc_tb_id.Enabled = true;
+            acc_tb_username.Enabled = true;
+            acc_btn_delete.Hide();
+            acc_btn_update.Hide();
             acc_tb_id.Text = "";
             acc_tb_lname.Text = "";
             acc_tb_fname.Text = "";
@@ -314,11 +320,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
             acc_tb_retypepassword.Text = "";
             acc_cb_usertype.Text = "";
             acc_cb_schoolorg.Text = "";
-            acc_tb_id.Enabled = true;
-            acc_tb_username.Enabled = true;
-            acc_btn_delete.Hide();
-            acc_btn_update.Hide();
-            load_existing_accounts();
+          
         }
 
 
@@ -419,17 +421,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
                         try
                         {
                             conn.Open();
-                            //var dorv = evt_dtp_date.Value;
-                            //var date1 = dorv.ToString("yyyy-MM-dd");
-
-                            //var st = evt_dtp_starttime.Value;
-                            //var stm = st.ToString("HH:mm:01");
-
-                            //var et = evt_dtp_endtime.Value;
-                            //var etm = et.ToString("HH:mm:01");
-
-
-                            //query = "SELECT * FROM events WHERE location=@location AND ((@date @starttime BETWEEN CONCAT(date,'',starttime) AND CONCAT(date,'',endtime)) OR (@date @endtime BETWEEN CONCAT(date,'',starttime) AND CONCAT(date,'',endtime)))";
+                          
 
                             query = "SELECT * FROM events WHERE location=@location AND ((((@a) BETWEEN CONCAT(date,' ',starttime) AND CONCAT(date,' ',endtime)) OR (@b BETWEEN CONCAT(date,' ',starttime) AND CONCAT(date,' ',endtime))) OR ((DATE_FORMAT(@a,'%Y-%m-%d %H:%i:%s') <= CONCAT(date,' ',starttime)) AND (DATE_FORMAT(@b,'%Y-%m-%d %H:%i:%s') >= CONCAT(date,' ',endtime)) AND CONCAT(date,' ',endtime) >= DATE_FORMAT(@a,'%Y-%m-%d %H:%i:%s')))";
 
@@ -461,10 +453,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
 
                                 conn.Close();
                                 conn.Open();
-
-
-
-
+                                
                                 query = "INSERT INTO `events` VALUES (@eventid,@date,@location,@events,@starttime,@endtime,@school,@kpi,@noa,@remarks)";
                                 command = new MySqlCommand(query, conn);
                                 command.Parameters.AddWithValue("eventid", evt_tb_eventno.Text);
@@ -493,37 +482,90 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
                         finally
                         {
                             conn.Dispose();
+                            evt_load_datafromgrid();
                         }
                     }
                 }
             }
         }
 
+        public void evt_load_datafromgrid()
+        {
+            conn = new MySqlConnection();
+            conn.ConnectionString = connstring;
+            MySqlDataReader reader = default(MySqlDataReader);
+            DataTable dbdataset = new DataTable();
+            BindingSource bsource = new BindingSource();
+            MySqlDataAdapter sda = new MySqlDataAdapter();
 
+            if (conn.State == ConnectionState.Open)
+            {
+                conn.Close();
+            }
 
+            try
+            {
+                conn.Open();
+                query = "SELECT eventid as 'Event ID',  DATE_FORMAT(date,'%M %d %Y') as 'Date', events as 'Events', location as 'Venue', TIME_FORMAT(starttime, '%H:%i') as 'Start Time', TIME_FORMAT(endtime, '%H:%i') as 'End Time', school as 'School',kpi as 'KPI',noa as 'NOA',remarks as 'Remarks' from events";
+                command = new MySqlCommand(query, conn);
+                sda.SelectCommand = command;
+                sda.Fill(dbdataset);
+                bsource.DataSource = dbdataset;
+                evt_rgv_events.DataSource = bsource;
+                sda.Update(dbdataset);
+                               
+              
+                conn.Close();
 
+            }
+            catch (Exception ex)
+            {
+                RadMessageBox.Show(this, ex.Message, "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
+            }
+            finally
+            {
+                conn.Dispose();
 
-
-
-                    //TimeSpan elapsedTime = DateTime.Parse(string.Format(evt_dtp_date.Value.ToString(), "yyyy-MM-dd") + " " + evt_dtp_starttime.Text).Subtract(DateTime.Parse(string.Format(evt_dtp_date.Value.ToString(), "yyyy-MM-dd") + " " + evt_dtp_starttime.Text));
-
-                    //TimeSpan elapsedTime = DateTime.Parse(Convert.ToDateTime(evt_dtp_date.Text).ToString("yyyy-MM-dd") + " " + evt_dtp_starttime.Text);
-                    //DateTime.Parse(Convert.ToDateTime(evt_dtp_date.Text).ToString("yyyy-MM-dd"));
-
-                    //if (elapsedTime.CompareTo(TimeSpan.Zero) <= 0)
-                    //{
-                    //    RadMessageBox.Show(this, "The Starting Time can't be the same or later on the Ending Time.", "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
-                    //}
-                    //else
-                    //{ string shit = DateTime.Parse(evt_dtp_date.Text).ToString("yyyy-MM-dd");
-
-     
-
+            }
+        }
+                   
+            
+        private void evt_rgv_events_CellDoubleClick(object sender, GridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                Telerik.WinControls.UI.GridViewRowInfo row = this.evt_rgv_events.Rows[e.RowIndex];
+                row = this.evt_rgv_events.Rows[e.RowIndex];
+                evt_cb_kpi.Text = row.Cells["KPI"].Value.ToString();
+                evt_cb_noa.Text = row.Cells["NOA"].Value.ToString();
+                evt_cb_remarks.Text = row.Cells["Remarks"].Value.ToString();
+                evt_cb_schoolorg.Text = row.Cells["School"].Value.ToString();
+                evt_cb_venue.Text = row.Cells["Venue"].Value.ToString();
+                evt_dtp_date.Text = row.Cells["Date"].Value.ToString();
+                evt_dtp_starttime.Text = row.Cells["Start Time"].Value.ToString();
+                evt_dtp_endtime.Text = row.Cells["End Time"].Value.ToString();
+                evt_rtb_event.Text = row.Cells["Events"].Value.ToString();
+                evt_tb_eventno.Text = row.Cells["Event ID"].Value.ToString();
+               
+            }
+        }
         private void evt_btn_clear_Click(object sender, EventArgs e)
         {
             auto_generate_eventid();
+            evt_cb_kpi.Text = "";
+            evt_cb_noa.Text = "";
+            evt_cb_remarks.Text = "";
+            evt_cb_schoolorg.Text = "";
+            evt_cb_venue.Text = "";
+            evt_dtp_date.Value = System.DateTime.Now;
+            evt_dtp_starttime.Text = "";
+            evt_dtp_endtime.Text = "";
+            evt_rtb_event.Text = "";
+           
         }
-
-        
+        private void evt_btn_update_Click(object sender, EventArgs e)
+        {
+          
+        }
     }    
 }
