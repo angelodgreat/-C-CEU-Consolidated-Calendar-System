@@ -45,6 +45,9 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
             evt_load_datafromgrid();
             evt_dtp_date.Value = System.DateTime.Now;
             evt_tb_eventno.Enabled = false;
+
+            //Home
+            home_load_datafromgrid();
         }
 
         //Account Management Code loading all existing accounts in Listbox
@@ -389,7 +392,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
                 evt_rtb_event.Text = row.Cells["Events"].Value.ToString();
                 evt_tb_eventno.Text = row.Cells["Event ID"].Value.ToString();
 
-             
+
 
             }
         }
@@ -503,6 +506,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
                         finally {
                             conn.Dispose();
                             evt_load_datafromgrid();
+                            home_load_datafromgrid();
                         }
                     }
                 }
@@ -563,6 +567,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
                         finally {
                             conn.Dispose();
                             evt_load_datafromgrid();
+                            home_load_datafromgrid();
                         }
                     }
                 }
@@ -604,7 +609,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
             }
             finally {
                 conn.Dispose();
-                evt_load_datafromgrid();
+               
                 auto_generate_eventid();
                 evt_cb_kpi.Text = "";
                 evt_cb_noa.Text = "";
@@ -615,14 +620,55 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
                 evt_dtp_starttime.Text = "";
                 evt_dtp_endtime.Text = "";
                 evt_rtb_event.Text = "";
-               
+
+                //Refreshing Data
+                evt_load_datafromgrid();
+                home_load_datafromgrid();
+
             }
         }
 
-       
+        public void home_load_datafromgrid() {
+            conn = new MySqlConnection();
+            conn.ConnectionString = connstring;
+            MySqlDataReader reader = default(MySqlDataReader);
+            DataTable dbdataset = new DataTable();
+            BindingSource bsource = new BindingSource();
+            MySqlDataAdapter sda = new MySqlDataAdapter();
+
+            if(conn.State == ConnectionState.Open) {
+                conn.Close();
+            }
+
+            try {
+                conn.Open();
+                query = "SELECT eventid as 'Event ID',  DATE_FORMAT(date,'%M %d %Y') as 'Date', events as 'Events', location as 'Venue', TIME_FORMAT(starttime, '%H:%i') as 'Start Time', TIME_FORMAT(endtime, '%H:%i') as 'End Time', school as 'School',kpi as 'KPI',noa as 'NOA',remarks as 'Remarks' from events";
+                command = new MySqlCommand(query, conn);
+                sda.SelectCommand = command;
+                sda.Fill(dbdataset);
+                bsource.DataSource = dbdataset;
+                home_rgv_eventdata.DataSource = bsource;
+                sda.Update(dbdataset);
+
+
+                conn.Close();
+
+            }
+            catch(Exception ex) {
+                RadMessageBox.Show(this, ex.Message, "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
+            }
+            finally {
+                conn.Dispose();
+
+            }
+        }
+
+
+
+
+        //ENDING HERE
     }
 }
-
 
               
 
