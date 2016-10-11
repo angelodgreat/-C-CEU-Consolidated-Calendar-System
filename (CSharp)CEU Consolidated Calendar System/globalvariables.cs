@@ -20,7 +20,8 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
         public static MySqlCommand command;
         public static MySqlDataReader reader;
         public static MySqlDataAdapter adapter;
-
+       
     }
+   
 
 }

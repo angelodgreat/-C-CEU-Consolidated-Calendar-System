@@ -38,6 +38,7 @@
             this.log_tb_username = new Telerik.WinControls.UI.RadTextBox();
             this.log_timer = new System.Windows.Forms.Timer(this.components);
             this.visualStudio2012DarkTheme1 = new Telerik.WinControls.Themes.VisualStudio2012DarkTheme();
+            this.log_btn_bypass = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.log_lbl_status)).BeginInit();
@@ -46,12 +47,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.log_tb_password)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.log_tb_username)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.log_btn_bypass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.Controls.Add(this.log_btn_bypass);
             this.radGroupBox1.Controls.Add(this.log_lbl_status);
             this.radGroupBox1.Controls.Add(this.log_btn_login);
             this.radGroupBox1.Controls.Add(this.radLabel2);
@@ -61,14 +64,14 @@
             this.radGroupBox1.HeaderText = "Login";
             this.radGroupBox1.Location = new System.Drawing.Point(12, 12);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(276, 162);
+            this.radGroupBox1.Size = new System.Drawing.Size(341, 176);
             this.radGroupBox1.TabIndex = 2;
             this.radGroupBox1.Text = "Login";
             this.radGroupBox1.ThemeName = "VisualStudio2012Dark";
             // 
             // log_lbl_status
             // 
-            this.log_lbl_status.Location = new System.Drawing.Point(195, 21);
+            this.log_lbl_status.Location = new System.Drawing.Point(299, 21);
             this.log_lbl_status.Name = "log_lbl_status";
             this.log_lbl_status.Size = new System.Drawing.Size(37, 18);
             this.log_lbl_status.TabIndex = 5;
@@ -77,7 +80,7 @@
             // 
             // log_btn_login
             // 
-            this.log_btn_login.Location = new System.Drawing.Point(152, 119);
+            this.log_btn_login.Location = new System.Drawing.Point(221, 119);
             this.log_btn_login.Name = "log_btn_login";
             this.log_btn_login.Size = new System.Drawing.Size(97, 26);
             this.log_btn_login.TabIndex = 4;
@@ -87,7 +90,7 @@
             // 
             // radLabel2
             // 
-            this.radLabel2.Location = new System.Drawing.Point(39, 91);
+            this.radLabel2.Location = new System.Drawing.Point(21, 95);
             this.radLabel2.Name = "radLabel2";
             this.radLabel2.Size = new System.Drawing.Size(56, 18);
             this.radLabel2.TabIndex = 3;
@@ -96,7 +99,7 @@
             // 
             // radLabel1
             // 
-            this.radLabel1.Location = new System.Drawing.Point(36, 65);
+            this.radLabel1.Location = new System.Drawing.Point(18, 65);
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.Size = new System.Drawing.Size(59, 18);
             this.radLabel1.TabIndex = 1;
@@ -105,35 +108,46 @@
             // 
             // log_tb_password
             // 
-            this.log_tb_password.Location = new System.Drawing.Point(101, 89);
+            this.log_tb_password.Location = new System.Drawing.Point(83, 89);
             this.log_tb_password.MinimumSize = new System.Drawing.Size(0, 24);
             this.log_tb_password.Name = "log_tb_password";
+            this.log_tb_password.PasswordChar = '*';
             // 
             // 
             // 
             this.log_tb_password.RootElement.MinSize = new System.Drawing.Size(0, 24);
-            this.log_tb_password.Size = new System.Drawing.Size(148, 24);
+            this.log_tb_password.Size = new System.Drawing.Size(235, 24);
             this.log_tb_password.TabIndex = 2;
             this.log_tb_password.ThemeName = "VisualStudio2012Dark";
             // 
             // log_tb_username
             // 
-            this.log_tb_username.Location = new System.Drawing.Point(101, 63);
+            this.log_tb_username.Location = new System.Drawing.Point(83, 59);
             this.log_tb_username.MinimumSize = new System.Drawing.Size(0, 24);
             this.log_tb_username.Name = "log_tb_username";
             // 
             // 
             // 
             this.log_tb_username.RootElement.MinSize = new System.Drawing.Size(0, 24);
-            this.log_tb_username.Size = new System.Drawing.Size(148, 24);
+            this.log_tb_username.Size = new System.Drawing.Size(235, 24);
             this.log_tb_username.TabIndex = 0;
             this.log_tb_username.ThemeName = "VisualStudio2012Dark";
+            // 
+            // log_btn_bypass
+            // 
+            this.log_btn_bypass.Location = new System.Drawing.Point(118, 119);
+            this.log_btn_bypass.Name = "log_btn_bypass";
+            this.log_btn_bypass.Size = new System.Drawing.Size(97, 26);
+            this.log_btn_bypass.TabIndex = 6;
+            this.log_btn_bypass.Text = "Bypass Login";
+            this.log_btn_bypass.ThemeName = "VisualStudio2012Dark";
+            this.log_btn_bypass.Click += new System.EventHandler(this.log_btn_bypass_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 186);
+            this.ClientSize = new System.Drawing.Size(365, 200);
             this.Controls.Add(this.radGroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -155,6 +169,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.log_tb_password)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.log_tb_username)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.log_btn_bypass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -170,5 +185,6 @@
         private System.Windows.Forms.Timer log_timer;
         private Telerik.WinControls.Themes.VisualStudio2012DarkTheme visualStudio2012DarkTheme1;
         private Telerik.WinControls.UI.RadLabel log_lbl_status;
+        private Telerik.WinControls.UI.RadButton log_btn_bypass;
     }
 }

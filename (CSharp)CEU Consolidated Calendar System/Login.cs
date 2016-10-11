@@ -11,10 +11,9 @@ using Telerik.WinControls.UI;
 
 namespace _CSharp_CEU_Consolidated_Calendar_System
 {
-    public partial class Login : Telerik.WinControls.UI.RadForm
-    {
+    public partial class Login : Telerik.WinControls.UI.RadForm {
         MySqlConnection conn;
-
+        int db_is_deadCount = 0;
         string connstring = Globals.connstring;
         string query;
         bool a;
@@ -22,16 +21,14 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
         MySqlDataReader reader = Globals.reader;
 
         Main main = new Main();
-       
 
-        public Login()
-        {
+
+        public Login() {
             InitializeComponent();
-           
+
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
+        private void Login_Load(object sender, EventArgs e) {
             timerandstatus();
             ThemeResolutionService.ApplicationThemeName = "VisualStudio2012Dark";
         }
@@ -68,8 +65,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
 
         //}
 
-        public void timerandstatus()
-        {
+        public void timerandstatus() {
             log_timer.Enabled = true;
 
             a = new bool();
@@ -77,61 +73,88 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
             conn = new MySqlConnection();
             conn.ConnectionString = connstring;
 
-            try
-            {
+            try {
                 conn.Open();
                 a = true;
                 conn.Close();
             }
-            catch (Exception ex)
-            {
+            catch(Exception ex) {
                 RadMessageBox.Show(this, ex.Message, "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
             }
 
-            finally
-            {
+            finally {
                 conn.Dispose();
-                if (a == true) {
+                if(a == true) {
                     log_lbl_status.Text = "Online";
                     log_lbl_status.ForeColor = Color.Green;
 
                 }
-                else
-                {
+                else {
                     log_lbl_status.Text = "Offline";
                     log_lbl_status.ForeColor = Color.Red;
                 }
             }
-            
+
         }
 
-        private void log_btn_login_Click(object sender, EventArgs e)
-        {
+        private void log_btn_login_Click(object sender, EventArgs e) {
 
-          
+            try {
+                int looper = 0;
+                if(conn.State == ConnectionState.Open) {
+                    conn.Close();
+                }
+
+
+                if((string.IsNullOrEmpty(log_tb_username.Text) | (string.IsNullOrEmpty(log_tb_password.Text)))) {
+                    RadMessageBox.Show(this, "Please enter username and password.", "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
+                }
+                else {
+
+
+
+
+                    conn.ConnectionString = connstring;
+                    conn.Open();
+
+                    query = "SELECT * from accounts WHERE username=@username AND password=@password";
+                    command = new MySqlCommand(query, conn);
+                    command.Parameters.AddWithValue("username", log_tb_username.Text);
+                    command.Parameters.AddWithValue("password", log_tb_password.Text);
+                    reader = command.ExecuteReader();
+
+                    while(reader.Read()) {
+                        looper += 1;
+                        log_tb_username.Text = reader.GetString("username");
+                        log_tb_password.Text = reader.GetString("password");
+                    }
+
+                    conn.Close();
+                    log_tb_username.Text = string.Empty;
+                    log_tb_password.Text = string.Empty;
+                    log_tb_username.Select();
+
+                    if(looper == 1) {
+                        main.Show();
+                        this.Hide();
+                    }
+                    else {
+                        RadMessageBox.Show(this, "Incorrect Username or Password.", "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
+                    }
+
+                }
+            }
+            catch(Exception ex) {
+                RadMessageBox.Show(this, ex.Message, "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
+            }
+            finally {
+                conn.Dispose();
+            }
+        }
+
+        private void log_btn_bypass_Click(object sender, EventArgs e) {
             main.Show();
             this.Hide();
-
-
-            try
-            {
-                //Codes Here
-                conn = new MySqlConnection();
-                conn.ConnectionString = connstring;
-                conn.Open();
-
-
-            }
-            catch
-            {
-                //Codes Here
-            }
-            finally
-            {
-                //Codes Here
-            }
         }
-
-      
     }
 }
