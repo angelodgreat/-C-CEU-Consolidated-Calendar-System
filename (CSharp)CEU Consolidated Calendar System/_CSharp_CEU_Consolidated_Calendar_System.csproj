@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>_CSharp_CEU_Consolidated_Calendar_System</RootNamespace>
-    <AssemblyName>_CSharp_CEU_Consolidated_Calendar_System</AssemblyName>
+    <AssemblyName>CEU SAO Consolidated Calendar System</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
