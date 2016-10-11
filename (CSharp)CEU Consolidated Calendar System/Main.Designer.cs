@@ -97,7 +97,7 @@
             this.rpv_main = new Telerik.WinControls.UI.RadPageViewPage();
             this.radGroupBox14 = new Telerik.WinControls.UI.RadGroupBox();
             this.radGroupBox13 = new Telerik.WinControls.UI.RadGroupBox();
-            this.radGridView3 = new Telerik.WinControls.UI.RadGridView();
+            this.home_rgv_eventdata = new Telerik.WinControls.UI.RadGridView();
             this.radGroupBox12 = new Telerik.WinControls.UI.RadGroupBox();
             this.radButton1 = new Telerik.WinControls.UI.RadButton();
             this.radDateTimePicker3 = new Telerik.WinControls.UI.RadDateTimePicker();
@@ -123,6 +123,7 @@
             this.evt_dtp_endtime = new Telerik.WinControls.UI.RadDropDownList();
             this.evt_dtp_starttime = new Telerik.WinControls.UI.RadDropDownList();
             this.radGroupBox9 = new Telerik.WinControls.UI.RadGroupBox();
+            this.evt_btn_eventid = new Telerik.WinControls.UI.RadButton();
             this.evt_btn_clear = new Telerik.WinControls.UI.RadButton();
             this.evt_btn_delete = new Telerik.WinControls.UI.RadButton();
             this.evt_btn_update = new Telerik.WinControls.UI.RadButton();
@@ -174,15 +175,14 @@
             this.acc_tb_id = new Telerik.WinControls.UI.RadTextBox();
             this.acc_cb_schoolorg = new Telerik.WinControls.UI.RadDropDownList();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
-            this.evt_btn_eventid = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             this.rpv_main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox13)).BeginInit();
             this.radGroupBox13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView3.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.home_rgv_eventdata)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.home_rgv_eventdata.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox12)).BeginInit();
             this.radGroupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
@@ -214,6 +214,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.evt_dtp_starttime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox9)).BeginInit();
             this.radGroupBox9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.evt_btn_eventid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.evt_btn_clear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.evt_btn_delete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.evt_btn_update)).BeginInit();
@@ -272,7 +273,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.acc_tb_id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.acc_cb_schoolorg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.evt_btn_eventid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -285,7 +285,7 @@
             this.radPageView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radPageView1.Location = new System.Drawing.Point(0, 0);
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.rpv_events;
+            this.radPageView1.SelectedPage = this.rpv_main;
             this.radPageView1.Size = new System.Drawing.Size(1310, 634);
             this.radPageView1.TabIndex = 0;
             this.radPageView1.Text = "radPageView1";
@@ -298,9 +298,9 @@
             this.rpv_main.Controls.Add(this.radGroupBox13);
             this.rpv_main.Controls.Add(this.radGroupBox12);
             this.rpv_main.ItemSize = new System.Drawing.SizeF(43F, 24F);
-            this.rpv_main.Location = new System.Drawing.Point(10, 37);
+            this.rpv_main.Location = new System.Drawing.Point(5, 30);
             this.rpv_main.Name = "rpv_main";
-            this.rpv_main.Size = new System.Drawing.Size(1289, 586);
+            this.rpv_main.Size = new System.Drawing.Size(1300, 599);
             this.rpv_main.Text = "Home";
             // 
             // radGroupBox14
@@ -312,32 +312,35 @@
             this.radGroupBox14.Size = new System.Drawing.Size(295, 167);
             this.radGroupBox14.TabIndex = 2;
             this.radGroupBox14.Text = "radGroupBox14";
+            this.radGroupBox14.ThemeName = "VisualStudio2012Dark";
             // 
             // radGroupBox13
             // 
             this.radGroupBox13.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox13.Controls.Add(this.radGridView3);
+            this.radGroupBox13.Controls.Add(this.home_rgv_eventdata);
             this.radGroupBox13.HeaderText = "radGroupBox13";
             this.radGroupBox13.Location = new System.Drawing.Point(301, 99);
             this.radGroupBox13.Name = "radGroupBox13";
             this.radGroupBox13.Size = new System.Drawing.Size(985, 430);
             this.radGroupBox13.TabIndex = 1;
             this.radGroupBox13.Text = "radGroupBox13";
+            this.radGroupBox13.ThemeName = "VisualStudio2012Dark";
             // 
-            // radGridView3
+            // home_rgv_eventdata
             // 
-            this.radGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radGridView3.Location = new System.Drawing.Point(2, 18);
+            this.home_rgv_eventdata.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.home_rgv_eventdata.Location = new System.Drawing.Point(2, 18);
             // 
             // 
             // 
-            this.radGridView3.MasterTemplate.AllowAddNewRow = false;
-            this.radGridView3.MasterTemplate.ViewDefinition = tableViewDefinition1;
-            this.radGridView3.Name = "radGridView3";
-            this.radGridView3.ReadOnly = true;
-            this.radGridView3.Size = new System.Drawing.Size(981, 410);
-            this.radGridView3.TabIndex = 0;
-            this.radGridView3.Text = "radGridView3";
+            this.home_rgv_eventdata.MasterTemplate.AllowAddNewRow = false;
+            this.home_rgv_eventdata.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.home_rgv_eventdata.Name = "home_rgv_eventdata";
+            this.home_rgv_eventdata.ReadOnly = true;
+            this.home_rgv_eventdata.Size = new System.Drawing.Size(981, 410);
+            this.home_rgv_eventdata.TabIndex = 0;
+            this.home_rgv_eventdata.Text = "radGridView3";
+            this.home_rgv_eventdata.ThemeName = "VisualStudio2012Dark";
             // 
             // radGroupBox12
             // 
@@ -356,6 +359,7 @@
             this.radGroupBox12.Size = new System.Drawing.Size(292, 257);
             this.radGroupBox12.TabIndex = 0;
             this.radGroupBox12.Text = "radGroupBox12";
+            this.radGroupBox12.ThemeName = "VisualStudio2012Dark";
             // 
             // radButton1
             // 
@@ -372,10 +376,11 @@
             this.radDateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.radDateTimePicker3.Location = new System.Drawing.Point(60, 121);
             this.radDateTimePicker3.Name = "radDateTimePicker3";
-            this.radDateTimePicker3.Size = new System.Drawing.Size(149, 20);
+            this.radDateTimePicker3.Size = new System.Drawing.Size(149, 21);
             this.radDateTimePicker3.TabIndex = 18;
             this.radDateTimePicker3.TabStop = false;
             this.radDateTimePicker3.Text = "09/19/2016";
+            this.radDateTimePicker3.ThemeName = "VisualStudio2012Dark";
             this.radDateTimePicker3.Value = new System.DateTime(2016, 9, 19, 10, 39, 50, 697);
             // 
             // radLabel22
@@ -385,13 +390,15 @@
             this.radLabel22.Size = new System.Drawing.Size(91, 18);
             this.radLabel22.TabIndex = 17;
             this.radLabel22.Text = "Search by School";
+            this.radLabel22.ThemeName = "VisualStudio2012Dark";
             // 
             // radDropDownList1
             // 
             this.radDropDownList1.Location = new System.Drawing.Point(19, 215);
             this.radDropDownList1.Name = "radDropDownList1";
-            this.radDropDownList1.Size = new System.Drawing.Size(230, 20);
+            this.radDropDownList1.Size = new System.Drawing.Size(230, 24);
             this.radDropDownList1.TabIndex = 16;
+            this.radDropDownList1.ThemeName = "VisualStudio2012Dark";
             // 
             // radLabel23
             // 
@@ -400,6 +407,7 @@
             this.radLabel23.Size = new System.Drawing.Size(81, 18);
             this.radLabel23.TabIndex = 15;
             this.radLabel23.Text = "Search by Date";
+            this.radLabel23.ThemeName = "VisualStudio2012Dark";
             // 
             // radDateTimePicker2
             // 
@@ -407,10 +415,11 @@
             this.radDateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.radDateTimePicker2.Location = new System.Drawing.Point(60, 95);
             this.radDateTimePicker2.Name = "radDateTimePicker2";
-            this.radDateTimePicker2.Size = new System.Drawing.Size(149, 20);
+            this.radDateTimePicker2.Size = new System.Drawing.Size(149, 21);
             this.radDateTimePicker2.TabIndex = 14;
             this.radDateTimePicker2.TabStop = false;
             this.radDateTimePicker2.Text = "09/19/2016";
+            this.radDateTimePicker2.ThemeName = "VisualStudio2012Dark";
             this.radDateTimePicker2.Value = new System.DateTime(2016, 9, 19, 10, 39, 50, 697);
             // 
             // radLabel24
@@ -420,13 +429,15 @@
             this.radLabel24.Size = new System.Drawing.Size(90, 18);
             this.radLabel24.TabIndex = 13;
             this.radLabel24.Text = "Search by Venue";
+            this.radLabel24.ThemeName = "VisualStudio2012Dark";
             // 
             // radTextBox2
             // 
             this.radTextBox2.Location = new System.Drawing.Point(19, 45);
             this.radTextBox2.Name = "radTextBox2";
-            this.radTextBox2.Size = new System.Drawing.Size(230, 20);
+            this.radTextBox2.Size = new System.Drawing.Size(230, 21);
             this.radTextBox2.TabIndex = 12;
+            this.radTextBox2.ThemeName = "VisualStudio2012Dark";
             // 
             // rpv_notes
             // 
@@ -549,7 +560,7 @@
             this.radGroupBox8.HeaderText = "Help";
             this.radGroupBox8.Location = new System.Drawing.Point(3, 99);
             this.radGroupBox8.Name = "radGroupBox8";
-            this.radGroupBox8.Size = new System.Drawing.Size(240, 484);
+            this.radGroupBox8.Size = new System.Drawing.Size(240, 497);
             this.radGroupBox8.TabIndex = 2;
             this.radGroupBox8.Text = "Help";
             this.radGroupBox8.ThemeName = "VisualStudio2012Dark";
@@ -580,7 +591,7 @@
             this.radGroupBox7.Controls.Add(this.radLabel9);
             this.radGroupBox7.Controls.Add(this.evt_tb_eventno);
             this.radGroupBox7.HeaderText = "Event Details";
-            this.radGroupBox7.Location = new System.Drawing.Point(249, 340);
+            this.radGroupBox7.Location = new System.Drawing.Point(249, 353);
             this.radGroupBox7.Name = "radGroupBox7";
             this.radGroupBox7.Size = new System.Drawing.Size(1037, 243);
             this.radGroupBox7.TabIndex = 1;
@@ -746,6 +757,16 @@
             this.radGroupBox9.TabIndex = 22;
             this.radGroupBox9.Text = "Controls";
             this.radGroupBox9.ThemeName = "VisualStudio2012Dark";
+            // 
+            // evt_btn_eventid
+            // 
+            this.evt_btn_eventid.Location = new System.Drawing.Point(220, 21);
+            this.evt_btn_eventid.Name = "evt_btn_eventid";
+            this.evt_btn_eventid.Size = new System.Drawing.Size(110, 26);
+            this.evt_btn_eventid.TabIndex = 13;
+            this.evt_btn_eventid.Text = "New Event ID";
+            this.evt_btn_eventid.ThemeName = "VisualStudio2012Dark";
+            this.evt_btn_eventid.Click += new System.EventHandler(this.evt_btn_eventid_Click);
             // 
             // evt_btn_clear
             // 
@@ -966,7 +987,7 @@
             this.radGroupBox6.HeaderText = "Activities";
             this.radGroupBox6.Location = new System.Drawing.Point(249, 99);
             this.radGroupBox6.Name = "radGroupBox6";
-            this.radGroupBox6.Size = new System.Drawing.Size(1037, 235);
+            this.radGroupBox6.Size = new System.Drawing.Size(1048, 248);
             this.radGroupBox6.TabIndex = 0;
             this.radGroupBox6.Text = "Activities";
             this.radGroupBox6.ThemeName = "VisualStudio2012Dark";
@@ -988,7 +1009,7 @@
             this.evt_rgv_events.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.evt_rgv_events.Name = "evt_rgv_events";
             this.evt_rgv_events.ReadOnly = true;
-            this.evt_rgv_events.Size = new System.Drawing.Size(1033, 215);
+            this.evt_rgv_events.Size = new System.Drawing.Size(1044, 228);
             this.evt_rgv_events.TabIndex = 0;
             this.evt_rgv_events.Text = "radGridView1";
             this.evt_rgv_events.ThemeName = "VisualStudio2012Dark";
@@ -1318,16 +1339,6 @@
             this.radLabel1.Text = "School/Organization:";
             this.radLabel1.ThemeName = "VisualStudio2012Dark";
             // 
-            // evt_btn_eventid
-            // 
-            this.evt_btn_eventid.Location = new System.Drawing.Point(220, 21);
-            this.evt_btn_eventid.Name = "evt_btn_eventid";
-            this.evt_btn_eventid.Size = new System.Drawing.Size(110, 26);
-            this.evt_btn_eventid.TabIndex = 13;
-            this.evt_btn_eventid.Text = "New Event ID";
-            this.evt_btn_eventid.ThemeName = "VisualStudio2012Dark";
-            this.evt_btn_eventid.Click += new System.EventHandler(this.evt_btn_eventid_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1348,8 +1359,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox13)).EndInit();
             this.radGroupBox13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView3.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.home_rgv_eventdata.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.home_rgv_eventdata)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox12)).EndInit();
             this.radGroupBox12.ResumeLayout(false);
             this.radGroupBox12.PerformLayout();
@@ -1384,6 +1395,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.evt_dtp_starttime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox9)).EndInit();
             this.radGroupBox9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.evt_btn_eventid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.evt_btn_clear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.evt_btn_delete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.evt_btn_update)).EndInit();
@@ -1444,7 +1456,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.acc_tb_id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.acc_cb_schoolorg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.evt_btn_eventid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -1521,7 +1532,7 @@
         private Telerik.WinControls.UI.RadGridView radGridView2;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox14;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox13;
-        private Telerik.WinControls.UI.RadGridView radGridView3;
+        private Telerik.WinControls.UI.RadGridView home_rgv_eventdata;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox12;
         private Telerik.WinControls.UI.RadButton radButton1;
         private Telerik.WinControls.UI.RadDateTimePicker radDateTimePicker3;
