@@ -22,11 +22,13 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
         DialogResult delYN;
         DialogResult updateYN;
         DialogResult reserveYN;
-
+        DialogResult closeYN;
 
         public string identifier_reservationno;
         public System.Random random = new System.Random();
-
+       
+      
+        
 
         MySqlCommand command = Globals.command;
         MySqlDataReader reader = Globals.reader;
@@ -816,6 +818,21 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
         private void home_btn_refreshgrid_Click(object sender, EventArgs e) {
             home_load_datafromgrid();
         }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e) {
+            Login login = new Login();
+
+            closeYN = RadMessageBox.Show(this, "Are you sure you want to Log-Out?", "CEU Consolidated Calendar", MessageBoxButtons.YesNo, RadMessageIcon.Exclamation);
+            if(closeYN == DialogResult.Yes) {
+                this.Dispose();
+                login.Show();
+            }
+            else {
+                e.Cancel = true;
+            }
+
+        }
+
 
 
 

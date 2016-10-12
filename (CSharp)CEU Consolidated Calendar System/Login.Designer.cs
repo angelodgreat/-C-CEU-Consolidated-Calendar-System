@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.log_btn_bypass = new Telerik.WinControls.UI.RadButton();
             this.log_lbl_status = new Telerik.WinControls.UI.RadLabel();
             this.log_btn_login = new Telerik.WinControls.UI.RadButton();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
@@ -38,16 +39,15 @@
             this.log_tb_username = new Telerik.WinControls.UI.RadTextBox();
             this.log_timer = new System.Windows.Forms.Timer(this.components);
             this.visualStudio2012DarkTheme1 = new Telerik.WinControls.Themes.VisualStudio2012DarkTheme();
-            this.log_btn_bypass = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.log_btn_bypass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.log_lbl_status)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.log_btn_login)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.log_tb_password)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.log_tb_username)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.log_btn_bypass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +68,16 @@
             this.radGroupBox1.TabIndex = 2;
             this.radGroupBox1.Text = "Login";
             this.radGroupBox1.ThemeName = "VisualStudio2012Dark";
+            // 
+            // log_btn_bypass
+            // 
+            this.log_btn_bypass.Location = new System.Drawing.Point(118, 119);
+            this.log_btn_bypass.Name = "log_btn_bypass";
+            this.log_btn_bypass.Size = new System.Drawing.Size(97, 26);
+            this.log_btn_bypass.TabIndex = 6;
+            this.log_btn_bypass.Text = "Bypass Login";
+            this.log_btn_bypass.ThemeName = "VisualStudio2012Dark";
+            this.log_btn_bypass.Click += new System.EventHandler(this.log_btn_bypass_Click);
             // 
             // log_lbl_status
             // 
@@ -133,16 +143,6 @@
             this.log_tb_username.TabIndex = 0;
             this.log_tb_username.ThemeName = "VisualStudio2012Dark";
             // 
-            // log_btn_bypass
-            // 
-            this.log_btn_bypass.Location = new System.Drawing.Point(118, 119);
-            this.log_btn_bypass.Name = "log_btn_bypass";
-            this.log_btn_bypass.Size = new System.Drawing.Size(97, 26);
-            this.log_btn_bypass.TabIndex = 6;
-            this.log_btn_bypass.Text = "Bypass Login";
-            this.log_btn_bypass.ThemeName = "VisualStudio2012Dark";
-            this.log_btn_bypass.Click += new System.EventHandler(this.log_btn_bypass_Click);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,17 +159,18 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ThemeName = "VisualStudio2012Dark";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.log_btn_bypass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.log_lbl_status)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.log_btn_login)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.log_tb_password)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.log_tb_username)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.log_btn_bypass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
