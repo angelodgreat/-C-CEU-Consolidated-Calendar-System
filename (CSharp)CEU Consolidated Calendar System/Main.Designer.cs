@@ -28,8 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition7 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem118 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem119 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem120 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem121 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem122 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem123 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem124 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem125 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem126 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem127 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem128 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem129 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem130 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem131 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem132 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem133 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem134 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem135 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem136 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem137 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem138 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem139 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem140 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem141 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem142 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem143 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem144 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem145 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem146 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem147 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem148 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem149 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem150 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem151 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem152 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem153 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem154 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem155 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem156 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem157 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem158 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition8 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem159 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem160 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem161 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem162 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem163 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem164 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem165 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem166 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem167 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem168 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem169 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem170 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem171 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem172 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem173 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem174 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem175 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem176 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem177 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem178 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem179 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem180 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem181 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem182 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem183 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem184 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem185 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem186 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem187 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem188 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem189 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
@@ -92,21 +164,45 @@
             Telerik.WinControls.UI.RadListDataItem radListDataItem60 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem61 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem62 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem63 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem64 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem65 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem66 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem190 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem191 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem192 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem193 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem194 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem195 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem196 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem197 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem198 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem199 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem67 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem68 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem69 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem70 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem71 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem72 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem73 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem74 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem75 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem76 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition9 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radPageView1 = new Telerik.WinControls.UI.RadPageView();
             this.rpv_main = new Telerik.WinControls.UI.RadPageViewPage();
             this.radGroupBox14 = new Telerik.WinControls.UI.RadGroupBox();
             this.radGroupBox13 = new Telerik.WinControls.UI.RadGroupBox();
             this.home_rgv_eventdata = new Telerik.WinControls.UI.RadGridView();
             this.radGroupBox12 = new Telerik.WinControls.UI.RadGroupBox();
-            this.radButton1 = new Telerik.WinControls.UI.RadButton();
-            this.radDateTimePicker3 = new Telerik.WinControls.UI.RadDateTimePicker();
+            this.home_lu_school = new Telerik.WinControls.UI.RadDropDownList();
+            this.home_lu_searchbydate = new Telerik.WinControls.UI.RadButton();
+            this.home_dtp_enddate = new Telerik.WinControls.UI.RadDateTimePicker();
             this.radLabel22 = new Telerik.WinControls.UI.RadLabel();
-            this.radDropDownList1 = new Telerik.WinControls.UI.RadDropDownList();
             this.radLabel23 = new Telerik.WinControls.UI.RadLabel();
-            this.radDateTimePicker2 = new Telerik.WinControls.UI.RadDateTimePicker();
+            this.home_dtp_startdate = new Telerik.WinControls.UI.RadDateTimePicker();
             this.radLabel24 = new Telerik.WinControls.UI.RadLabel();
-            this.radTextBox2 = new Telerik.WinControls.UI.RadTextBox();
+            this.home_lu_venue = new Telerik.WinControls.UI.RadTextBox();
             this.rpv_notes = new Telerik.WinControls.UI.RadPageViewPage();
             this.radGroupBox11 = new Telerik.WinControls.UI.RadGroupBox();
             this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
@@ -175,6 +271,7 @@
             this.acc_tb_id = new Telerik.WinControls.UI.RadTextBox();
             this.acc_cb_schoolorg = new Telerik.WinControls.UI.RadDropDownList();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
+            this.home_btn_refreshgrid = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             this.rpv_main.SuspendLayout();
@@ -185,14 +282,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.home_rgv_eventdata.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox12)).BeginInit();
             this.radGroupBox12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.home_lu_school)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.home_lu_searchbydate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.home_dtp_enddate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radDropDownList1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.home_dtp_startdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.home_lu_venue)).BeginInit();
             this.rpv_notes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox11)).BeginInit();
             this.radGroupBox11.SuspendLayout();
@@ -273,6 +370,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.acc_tb_id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.acc_cb_schoolorg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.home_btn_refreshgrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -285,7 +383,7 @@
             this.radPageView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radPageView1.Location = new System.Drawing.Point(0, 0);
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.rpv_main;
+            this.radPageView1.SelectedPage = this.rpv_events;
             this.radPageView1.Size = new System.Drawing.Size(1310, 634);
             this.radPageView1.TabIndex = 0;
             this.radPageView1.Text = "radPageView1";
@@ -306,22 +404,27 @@
             // radGroupBox14
             // 
             this.radGroupBox14.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox14.HeaderText = "radGroupBox14";
-            this.radGroupBox14.Location = new System.Drawing.Point(0, 362);
+            this.radGroupBox14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.radGroupBox14.HeaderText = "Help";
+            this.radGroupBox14.Location = new System.Drawing.Point(0, 376);
             this.radGroupBox14.Name = "radGroupBox14";
-            this.radGroupBox14.Size = new System.Drawing.Size(295, 167);
+            this.radGroupBox14.Size = new System.Drawing.Size(338, 153);
             this.radGroupBox14.TabIndex = 2;
-            this.radGroupBox14.Text = "radGroupBox14";
+            this.radGroupBox14.Text = "Help";
             this.radGroupBox14.ThemeName = "VisualStudio2012Dark";
             // 
             // radGroupBox13
             // 
             this.radGroupBox13.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.radGroupBox13.Controls.Add(this.home_rgv_eventdata);
             this.radGroupBox13.HeaderText = "Events";
-            this.radGroupBox13.Location = new System.Drawing.Point(301, 99);
+            this.radGroupBox13.Location = new System.Drawing.Point(344, 99);
             this.radGroupBox13.Name = "radGroupBox13";
-            this.radGroupBox13.Size = new System.Drawing.Size(999, 430);
+            this.radGroupBox13.Size = new System.Drawing.Size(956, 430);
             this.radGroupBox13.TabIndex = 1;
             this.radGroupBox13.Text = "Events";
             this.radGroupBox13.ThemeName = "VisualStudio2012Dark";
@@ -341,10 +444,10 @@
             this.home_rgv_eventdata.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.home_rgv_eventdata.MasterTemplate.EnableGrouping = false;
             this.home_rgv_eventdata.MasterTemplate.ShowRowHeaderColumn = false;
-            this.home_rgv_eventdata.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.home_rgv_eventdata.MasterTemplate.ViewDefinition = tableViewDefinition7;
             this.home_rgv_eventdata.Name = "home_rgv_eventdata";
             this.home_rgv_eventdata.ReadOnly = true;
-            this.home_rgv_eventdata.Size = new System.Drawing.Size(995, 410);
+            this.home_rgv_eventdata.Size = new System.Drawing.Size(952, 410);
             this.home_rgv_eventdata.TabIndex = 0;
             this.home_rgv_eventdata.Text = "radGridView3";
             this.home_rgv_eventdata.ThemeName = "VisualStudio2012Dark";
@@ -352,114 +455,202 @@
             // radGroupBox12
             // 
             this.radGroupBox12.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox12.Controls.Add(this.radButton1);
-            this.radGroupBox12.Controls.Add(this.radDateTimePicker3);
+            this.radGroupBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.radGroupBox12.Controls.Add(this.home_btn_refreshgrid);
+            this.radGroupBox12.Controls.Add(this.home_lu_school);
+            this.radGroupBox12.Controls.Add(this.home_lu_searchbydate);
+            this.radGroupBox12.Controls.Add(this.home_dtp_enddate);
             this.radGroupBox12.Controls.Add(this.radLabel22);
-            this.radGroupBox12.Controls.Add(this.radDropDownList1);
             this.radGroupBox12.Controls.Add(this.radLabel23);
-            this.radGroupBox12.Controls.Add(this.radDateTimePicker2);
+            this.radGroupBox12.Controls.Add(this.home_dtp_startdate);
             this.radGroupBox12.Controls.Add(this.radLabel24);
-            this.radGroupBox12.Controls.Add(this.radTextBox2);
-            this.radGroupBox12.HeaderText = "radGroupBox12";
+            this.radGroupBox12.Controls.Add(this.home_lu_venue);
+            this.radGroupBox12.HeaderText = "Filters";
             this.radGroupBox12.Location = new System.Drawing.Point(3, 99);
             this.radGroupBox12.Name = "radGroupBox12";
-            this.radGroupBox12.Size = new System.Drawing.Size(292, 257);
+            this.radGroupBox12.Size = new System.Drawing.Size(335, 271);
             this.radGroupBox12.TabIndex = 0;
-            this.radGroupBox12.Text = "radGroupBox12";
+            this.radGroupBox12.Text = "Filters";
             this.radGroupBox12.ThemeName = "VisualStudio2012Dark";
             // 
-            // radButton1
+            // home_lu_school
             // 
-            this.radButton1.Location = new System.Drawing.Point(84, 155);
-            this.radButton1.Name = "radButton1";
-            this.radButton1.Size = new System.Drawing.Size(110, 26);
-            this.radButton1.TabIndex = 19;
-            this.radButton1.Text = "Search by Date";
-            this.radButton1.ThemeName = "VisualStudio2012Dark";
+            radListDataItem118.Text = "School of Accountancy and Management";
+            radListDataItem119.Text = "School of Dentistry";
+            radListDataItem120.Text = "School of Education—Liberal Arts—Music—Social Work";
+            radListDataItem121.Text = "School of Medical Technology";
+            radListDataItem122.Text = "School of Nursing";
+            radListDataItem123.Text = "School of Nutrition and Hospitality Management";
+            radListDataItem124.Text = "School of Optometry";
+            radListDataItem125.Text = "School of Pharmacy";
+            radListDataItem126.Text = "School of Science and Technology";
+            radListDataItem127.Text = "School of Graduate School";
+            radListDataItem128.Text = "School of Senior High School (Grades 11 & 12)";
+            radListDataItem129.Text = "Community Outreach Movement Proactive Student Services (COMPASS)";
+            radListDataItem130.Text = "Dramatic Guild (DG)";
+            radListDataItem131.Text = "English Guild";
+            radListDataItem132.Text = "Honors Society (HonSoc)";
+            radListDataItem133.Text = "International Students Association (ISA)";
+            radListDataItem134.Text = "Math Club";
+            radListDataItem135.Text = "Oratorical and Debate Society (ORADES)";
+            radListDataItem136.Text = "Photographers Club (Photo Club)";
+            radListDataItem137.Text = "Red Cross Youth (RCY)";
+            radListDataItem138.Text = "Science Club";
+            radListDataItem139.Text = "Student Catholic Action (SCA)";
+            radListDataItem140.Text = "Social Sciences Society (SSS)";
+            radListDataItem141.Text = "CEU Student Chapter of the American Society of Microbiology";
+            radListDataItem142.Text = "CEU Marketing Society (CEMARS)";
+            radListDataItem143.Text = "Junior Financial Executives (JFINEX)";
+            radListDataItem144.Text = "Junior Philippine Institute of Accountants (JPIA)";
+            radListDataItem145.Text = "Management Students Association (MASA)";
+            radListDataItem146.Text = "Dental Clinicians Club (DCC)";
+            radListDataItem147.Text = "Philippine Dental Students Association (PDSA)";
+            radListDataItem148.Text = "Association of Tourism Students (ATS)";
+            radListDataItem149.Text = "Association of Hotel & Restaurants Management Students (AHRMS)";
+            radListDataItem150.Text = "Philippine Association of Nutritionists (PAN-DELTA)";
+            radListDataItem151.Text = "Philippine Nursing Research Society (PNRS)";
+            radListDataItem152.Text = "Optometry Clinicians Club (OCC)";
+            radListDataItem153.Text = "Junior Philippine Pharmacists Association (JPPhA)";
+            radListDataItem154.Text = "CEU Psychology Society (Psych Soc)";
+            radListDataItem155.Text = "Junior Philippine Computer Society (JPCS)";
+            radListDataItem156.Text = "Philippine Society of Medical Technology Students (PHISMETS)";
+            radListDataItem157.Text = "CEU Communication Arts Society (CoMaSoc)";
+            radListDataItem158.Text = "Junior Social Work Association of the Philippines (JSWAP) ";
+            this.home_lu_school.Items.Add(radListDataItem118);
+            this.home_lu_school.Items.Add(radListDataItem119);
+            this.home_lu_school.Items.Add(radListDataItem120);
+            this.home_lu_school.Items.Add(radListDataItem121);
+            this.home_lu_school.Items.Add(radListDataItem122);
+            this.home_lu_school.Items.Add(radListDataItem123);
+            this.home_lu_school.Items.Add(radListDataItem124);
+            this.home_lu_school.Items.Add(radListDataItem125);
+            this.home_lu_school.Items.Add(radListDataItem126);
+            this.home_lu_school.Items.Add(radListDataItem127);
+            this.home_lu_school.Items.Add(radListDataItem128);
+            this.home_lu_school.Items.Add(radListDataItem129);
+            this.home_lu_school.Items.Add(radListDataItem130);
+            this.home_lu_school.Items.Add(radListDataItem131);
+            this.home_lu_school.Items.Add(radListDataItem132);
+            this.home_lu_school.Items.Add(radListDataItem133);
+            this.home_lu_school.Items.Add(radListDataItem134);
+            this.home_lu_school.Items.Add(radListDataItem135);
+            this.home_lu_school.Items.Add(radListDataItem136);
+            this.home_lu_school.Items.Add(radListDataItem137);
+            this.home_lu_school.Items.Add(radListDataItem138);
+            this.home_lu_school.Items.Add(radListDataItem139);
+            this.home_lu_school.Items.Add(radListDataItem140);
+            this.home_lu_school.Items.Add(radListDataItem141);
+            this.home_lu_school.Items.Add(radListDataItem142);
+            this.home_lu_school.Items.Add(radListDataItem143);
+            this.home_lu_school.Items.Add(radListDataItem144);
+            this.home_lu_school.Items.Add(radListDataItem145);
+            this.home_lu_school.Items.Add(radListDataItem146);
+            this.home_lu_school.Items.Add(radListDataItem147);
+            this.home_lu_school.Items.Add(radListDataItem148);
+            this.home_lu_school.Items.Add(radListDataItem149);
+            this.home_lu_school.Items.Add(radListDataItem150);
+            this.home_lu_school.Items.Add(radListDataItem151);
+            this.home_lu_school.Items.Add(radListDataItem152);
+            this.home_lu_school.Items.Add(radListDataItem153);
+            this.home_lu_school.Items.Add(radListDataItem154);
+            this.home_lu_school.Items.Add(radListDataItem155);
+            this.home_lu_school.Items.Add(radListDataItem156);
+            this.home_lu_school.Items.Add(radListDataItem157);
+            this.home_lu_school.Items.Add(radListDataItem158);
+            this.home_lu_school.Location = new System.Drawing.Point(30, 223);
+            this.home_lu_school.Name = "home_lu_school";
+            this.home_lu_school.Size = new System.Drawing.Size(282, 24);
+            this.home_lu_school.TabIndex = 20;
+            this.home_lu_school.ThemeName = "VisualStudio2012Dark";
+            this.home_lu_school.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.home_lu_school_SelectedIndexChanged);
             // 
-            // radDateTimePicker3
+            // home_lu_searchbydate
             // 
-            this.radDateTimePicker3.CustomFormat = "MM/d/yyyy";
-            this.radDateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.radDateTimePicker3.Location = new System.Drawing.Point(60, 125);
-            this.radDateTimePicker3.MinimumSize = new System.Drawing.Size(0, 24);
-            this.radDateTimePicker3.Name = "radDateTimePicker3";
+            this.home_lu_searchbydate.Location = new System.Drawing.Point(110, 167);
+            this.home_lu_searchbydate.Name = "home_lu_searchbydate";
+            this.home_lu_searchbydate.Size = new System.Drawing.Size(110, 26);
+            this.home_lu_searchbydate.TabIndex = 19;
+            this.home_lu_searchbydate.Text = "Search by Date";
+            this.home_lu_searchbydate.ThemeName = "VisualStudio2012Dark";
+            this.home_lu_searchbydate.Click += new System.EventHandler(this.home_lu_searchbydate_Click);
+            // 
+            // home_dtp_enddate
+            // 
+            this.home_dtp_enddate.CustomFormat = "MM/d/yyyy";
+            this.home_dtp_enddate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.home_dtp_enddate.Location = new System.Drawing.Point(85, 137);
+            this.home_dtp_enddate.MinimumSize = new System.Drawing.Size(0, 24);
+            this.home_dtp_enddate.Name = "home_dtp_enddate";
             // 
             // 
             // 
-            this.radDateTimePicker3.RootElement.MinSize = new System.Drawing.Size(0, 24);
-            this.radDateTimePicker3.Size = new System.Drawing.Size(149, 24);
-            this.radDateTimePicker3.TabIndex = 18;
-            this.radDateTimePicker3.TabStop = false;
-            this.radDateTimePicker3.Text = "09/19/2016";
-            this.radDateTimePicker3.ThemeName = "VisualStudio2012Dark";
-            this.radDateTimePicker3.Value = new System.DateTime(2016, 9, 19, 10, 39, 50, 697);
+            this.home_dtp_enddate.RootElement.MinSize = new System.Drawing.Size(0, 24);
+            this.home_dtp_enddate.Size = new System.Drawing.Size(149, 24);
+            this.home_dtp_enddate.TabIndex = 18;
+            this.home_dtp_enddate.TabStop = false;
+            this.home_dtp_enddate.Text = "09/19/2016";
+            this.home_dtp_enddate.ThemeName = "VisualStudio2012Dark";
+            this.home_dtp_enddate.Value = new System.DateTime(2016, 9, 19, 10, 39, 50, 697);
             // 
             // radLabel22
             // 
-            this.radLabel22.Location = new System.Drawing.Point(94, 191);
+            this.radLabel22.Location = new System.Drawing.Point(119, 199);
             this.radLabel22.Name = "radLabel22";
             this.radLabel22.Size = new System.Drawing.Size(91, 18);
             this.radLabel22.TabIndex = 17;
             this.radLabel22.Text = "Search by School";
             this.radLabel22.ThemeName = "VisualStudio2012Dark";
             // 
-            // radDropDownList1
-            // 
-            this.radDropDownList1.Location = new System.Drawing.Point(19, 215);
-            this.radDropDownList1.Name = "radDropDownList1";
-            this.radDropDownList1.Size = new System.Drawing.Size(230, 24);
-            this.radDropDownList1.TabIndex = 16;
-            this.radDropDownList1.ThemeName = "VisualStudio2012Dark";
-            // 
             // radLabel23
             // 
-            this.radLabel23.Location = new System.Drawing.Point(104, 71);
+            this.radLabel23.Location = new System.Drawing.Point(129, 83);
             this.radLabel23.Name = "radLabel23";
             this.radLabel23.Size = new System.Drawing.Size(81, 18);
             this.radLabel23.TabIndex = 15;
             this.radLabel23.Text = "Search by Date";
             this.radLabel23.ThemeName = "VisualStudio2012Dark";
             // 
-            // radDateTimePicker2
+            // home_dtp_startdate
             // 
-            this.radDateTimePicker2.CustomFormat = "MM/d/yyyy";
-            this.radDateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.radDateTimePicker2.Location = new System.Drawing.Point(60, 95);
-            this.radDateTimePicker2.MinimumSize = new System.Drawing.Size(0, 24);
-            this.radDateTimePicker2.Name = "radDateTimePicker2";
+            this.home_dtp_startdate.CustomFormat = "MM/d/yyyy";
+            this.home_dtp_startdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.home_dtp_startdate.Location = new System.Drawing.Point(85, 107);
+            this.home_dtp_startdate.MinimumSize = new System.Drawing.Size(0, 24);
+            this.home_dtp_startdate.Name = "home_dtp_startdate";
             // 
             // 
             // 
-            this.radDateTimePicker2.RootElement.MinSize = new System.Drawing.Size(0, 24);
-            this.radDateTimePicker2.Size = new System.Drawing.Size(149, 24);
-            this.radDateTimePicker2.TabIndex = 14;
-            this.radDateTimePicker2.TabStop = false;
-            this.radDateTimePicker2.Text = "09/19/2016";
-            this.radDateTimePicker2.ThemeName = "VisualStudio2012Dark";
-            this.radDateTimePicker2.Value = new System.DateTime(2016, 9, 19, 10, 39, 50, 697);
+            this.home_dtp_startdate.RootElement.MinSize = new System.Drawing.Size(0, 24);
+            this.home_dtp_startdate.Size = new System.Drawing.Size(149, 24);
+            this.home_dtp_startdate.TabIndex = 14;
+            this.home_dtp_startdate.TabStop = false;
+            this.home_dtp_startdate.Text = "09/19/2016";
+            this.home_dtp_startdate.ThemeName = "VisualStudio2012Dark";
+            this.home_dtp_startdate.Value = new System.DateTime(2016, 9, 19, 10, 39, 50, 697);
             // 
             // radLabel24
             // 
-            this.radLabel24.Location = new System.Drawing.Point(95, 21);
+            this.radLabel24.Location = new System.Drawing.Point(120, 29);
             this.radLabel24.Name = "radLabel24";
             this.radLabel24.Size = new System.Drawing.Size(90, 18);
             this.radLabel24.TabIndex = 13;
             this.radLabel24.Text = "Search by Venue";
             this.radLabel24.ThemeName = "VisualStudio2012Dark";
             // 
-            // radTextBox2
+            // home_lu_venue
             // 
-            this.radTextBox2.Location = new System.Drawing.Point(19, 45);
-            this.radTextBox2.MinimumSize = new System.Drawing.Size(0, 24);
-            this.radTextBox2.Name = "radTextBox2";
+            this.home_lu_venue.Location = new System.Drawing.Point(30, 53);
+            this.home_lu_venue.MinimumSize = new System.Drawing.Size(0, 24);
+            this.home_lu_venue.Name = "home_lu_venue";
             // 
             // 
             // 
-            this.radTextBox2.RootElement.MinSize = new System.Drawing.Size(0, 24);
-            this.radTextBox2.Size = new System.Drawing.Size(230, 24);
-            this.radTextBox2.TabIndex = 12;
-            this.radTextBox2.ThemeName = "VisualStudio2012Dark";
+            this.home_lu_venue.RootElement.MinSize = new System.Drawing.Size(0, 24);
+            this.home_lu_venue.Size = new System.Drawing.Size(282, 24);
+            this.home_lu_venue.TabIndex = 12;
+            this.home_lu_venue.ThemeName = "VisualStudio2012Dark";
+            this.home_lu_venue.TextChanged += new System.EventHandler(this.home_lu_venue_TextChanged);
             // 
             // rpv_notes
             // 
@@ -568,7 +759,7 @@
             // 
             // 
             this.radGridView2.MasterTemplate.AllowAddNewRow = false;
-            this.radGridView2.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.radGridView2.MasterTemplate.ViewDefinition = tableViewDefinition8;
             this.radGridView2.Name = "radGridView2";
             this.radGridView2.ReadOnly = true;
             this.radGridView2.Size = new System.Drawing.Size(805, 191);
@@ -637,6 +828,78 @@
             // 
             this.evt_dtp_endtime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.evt_dtp_endtime.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            radListDataItem159.Text = "06:00";
+            radListDataItem160.Text = "06:30";
+            radListDataItem161.Text = "07:00";
+            radListDataItem162.Text = "07:30";
+            radListDataItem163.Text = "08:00";
+            radListDataItem164.Text = "08:30";
+            radListDataItem165.Text = "09:00";
+            radListDataItem166.Text = "09:30";
+            radListDataItem167.Text = "10:00";
+            radListDataItem168.Text = "10:30";
+            radListDataItem169.Text = "11:00";
+            radListDataItem170.Text = "11:30";
+            radListDataItem171.Text = "12:00";
+            radListDataItem172.Text = "12:30";
+            radListDataItem173.Text = "13:00";
+            radListDataItem174.Text = "13:30";
+            radListDataItem175.Text = "14:00";
+            radListDataItem176.Text = "14:30";
+            radListDataItem177.Text = "15:00";
+            radListDataItem178.Text = "15:30";
+            radListDataItem179.Text = "16:00";
+            radListDataItem180.Text = "16:30";
+            radListDataItem181.Text = "17:00";
+            radListDataItem182.Text = "17:30";
+            radListDataItem183.Text = "18:00";
+            radListDataItem184.Text = "18:30";
+            radListDataItem185.Text = "19:00";
+            radListDataItem186.Text = "19:30";
+            radListDataItem187.Text = "20:00";
+            radListDataItem188.Text = "20:30";
+            radListDataItem189.Text = "21:00";
+            this.evt_dtp_endtime.Items.Add(radListDataItem159);
+            this.evt_dtp_endtime.Items.Add(radListDataItem160);
+            this.evt_dtp_endtime.Items.Add(radListDataItem161);
+            this.evt_dtp_endtime.Items.Add(radListDataItem162);
+            this.evt_dtp_endtime.Items.Add(radListDataItem163);
+            this.evt_dtp_endtime.Items.Add(radListDataItem164);
+            this.evt_dtp_endtime.Items.Add(radListDataItem165);
+            this.evt_dtp_endtime.Items.Add(radListDataItem166);
+            this.evt_dtp_endtime.Items.Add(radListDataItem167);
+            this.evt_dtp_endtime.Items.Add(radListDataItem168);
+            this.evt_dtp_endtime.Items.Add(radListDataItem169);
+            this.evt_dtp_endtime.Items.Add(radListDataItem170);
+            this.evt_dtp_endtime.Items.Add(radListDataItem171);
+            this.evt_dtp_endtime.Items.Add(radListDataItem172);
+            this.evt_dtp_endtime.Items.Add(radListDataItem173);
+            this.evt_dtp_endtime.Items.Add(radListDataItem174);
+            this.evt_dtp_endtime.Items.Add(radListDataItem175);
+            this.evt_dtp_endtime.Items.Add(radListDataItem176);
+            this.evt_dtp_endtime.Items.Add(radListDataItem177);
+            this.evt_dtp_endtime.Items.Add(radListDataItem178);
+            this.evt_dtp_endtime.Items.Add(radListDataItem179);
+            this.evt_dtp_endtime.Items.Add(radListDataItem180);
+            this.evt_dtp_endtime.Items.Add(radListDataItem181);
+            this.evt_dtp_endtime.Items.Add(radListDataItem182);
+            this.evt_dtp_endtime.Items.Add(radListDataItem183);
+            this.evt_dtp_endtime.Items.Add(radListDataItem184);
+            this.evt_dtp_endtime.Items.Add(radListDataItem185);
+            this.evt_dtp_endtime.Items.Add(radListDataItem186);
+            this.evt_dtp_endtime.Items.Add(radListDataItem187);
+            this.evt_dtp_endtime.Items.Add(radListDataItem188);
+            this.evt_dtp_endtime.Items.Add(radListDataItem189);
+            this.evt_dtp_endtime.Location = new System.Drawing.Point(329, 77);
+            this.evt_dtp_endtime.Name = "evt_dtp_endtime";
+            this.evt_dtp_endtime.Size = new System.Drawing.Size(105, 24);
+            this.evt_dtp_endtime.TabIndex = 24;
+            this.evt_dtp_endtime.ThemeName = "VisualStudio2012Dark";
+            // 
+            // evt_dtp_starttime
+            // 
+            this.evt_dtp_starttime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.evt_dtp_starttime.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             radListDataItem1.Text = "06:00";
             radListDataItem2.Text = "06:30";
             radListDataItem3.Text = "07:00";
@@ -668,112 +931,40 @@
             radListDataItem29.Text = "20:00";
             radListDataItem30.Text = "20:30";
             radListDataItem31.Text = "21:00";
-            this.evt_dtp_endtime.Items.Add(radListDataItem1);
-            this.evt_dtp_endtime.Items.Add(radListDataItem2);
-            this.evt_dtp_endtime.Items.Add(radListDataItem3);
-            this.evt_dtp_endtime.Items.Add(radListDataItem4);
-            this.evt_dtp_endtime.Items.Add(radListDataItem5);
-            this.evt_dtp_endtime.Items.Add(radListDataItem6);
-            this.evt_dtp_endtime.Items.Add(radListDataItem7);
-            this.evt_dtp_endtime.Items.Add(radListDataItem8);
-            this.evt_dtp_endtime.Items.Add(radListDataItem9);
-            this.evt_dtp_endtime.Items.Add(radListDataItem10);
-            this.evt_dtp_endtime.Items.Add(radListDataItem11);
-            this.evt_dtp_endtime.Items.Add(radListDataItem12);
-            this.evt_dtp_endtime.Items.Add(radListDataItem13);
-            this.evt_dtp_endtime.Items.Add(radListDataItem14);
-            this.evt_dtp_endtime.Items.Add(radListDataItem15);
-            this.evt_dtp_endtime.Items.Add(radListDataItem16);
-            this.evt_dtp_endtime.Items.Add(radListDataItem17);
-            this.evt_dtp_endtime.Items.Add(radListDataItem18);
-            this.evt_dtp_endtime.Items.Add(radListDataItem19);
-            this.evt_dtp_endtime.Items.Add(radListDataItem20);
-            this.evt_dtp_endtime.Items.Add(radListDataItem21);
-            this.evt_dtp_endtime.Items.Add(radListDataItem22);
-            this.evt_dtp_endtime.Items.Add(radListDataItem23);
-            this.evt_dtp_endtime.Items.Add(radListDataItem24);
-            this.evt_dtp_endtime.Items.Add(radListDataItem25);
-            this.evt_dtp_endtime.Items.Add(radListDataItem26);
-            this.evt_dtp_endtime.Items.Add(radListDataItem27);
-            this.evt_dtp_endtime.Items.Add(radListDataItem28);
-            this.evt_dtp_endtime.Items.Add(radListDataItem29);
-            this.evt_dtp_endtime.Items.Add(radListDataItem30);
-            this.evt_dtp_endtime.Items.Add(radListDataItem31);
-            this.evt_dtp_endtime.Location = new System.Drawing.Point(329, 77);
-            this.evt_dtp_endtime.Name = "evt_dtp_endtime";
-            this.evt_dtp_endtime.Size = new System.Drawing.Size(105, 24);
-            this.evt_dtp_endtime.TabIndex = 24;
-            this.evt_dtp_endtime.ThemeName = "VisualStudio2012Dark";
-            // 
-            // evt_dtp_starttime
-            // 
-            this.evt_dtp_starttime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.evt_dtp_starttime.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            radListDataItem32.Text = "06:00";
-            radListDataItem33.Text = "06:30";
-            radListDataItem34.Text = "07:00";
-            radListDataItem35.Text = "07:30";
-            radListDataItem36.Text = "08:00";
-            radListDataItem37.Text = "08:30";
-            radListDataItem38.Text = "09:00";
-            radListDataItem39.Text = "09:30";
-            radListDataItem40.Text = "10:00";
-            radListDataItem41.Text = "10:30";
-            radListDataItem42.Text = "11:00";
-            radListDataItem43.Text = "11:30";
-            radListDataItem44.Text = "12:00";
-            radListDataItem45.Text = "12:30";
-            radListDataItem46.Text = "13:00";
-            radListDataItem47.Text = "13:30";
-            radListDataItem48.Text = "14:00";
-            radListDataItem49.Text = "14:30";
-            radListDataItem50.Text = "15:00";
-            radListDataItem51.Text = "15:30";
-            radListDataItem52.Text = "16:00";
-            radListDataItem53.Text = "16:30";
-            radListDataItem54.Text = "17:00";
-            radListDataItem55.Text = "17:30";
-            radListDataItem56.Text = "18:00";
-            radListDataItem57.Text = "18:30";
-            radListDataItem58.Text = "19:00";
-            radListDataItem59.Text = "19:30";
-            radListDataItem60.Text = "20:00";
-            radListDataItem61.Text = "20:30";
-            radListDataItem62.Text = "21:00";
-            this.evt_dtp_starttime.Items.Add(radListDataItem32);
-            this.evt_dtp_starttime.Items.Add(radListDataItem33);
-            this.evt_dtp_starttime.Items.Add(radListDataItem34);
-            this.evt_dtp_starttime.Items.Add(radListDataItem35);
-            this.evt_dtp_starttime.Items.Add(radListDataItem36);
-            this.evt_dtp_starttime.Items.Add(radListDataItem37);
-            this.evt_dtp_starttime.Items.Add(radListDataItem38);
-            this.evt_dtp_starttime.Items.Add(radListDataItem39);
-            this.evt_dtp_starttime.Items.Add(radListDataItem40);
-            this.evt_dtp_starttime.Items.Add(radListDataItem41);
-            this.evt_dtp_starttime.Items.Add(radListDataItem42);
-            this.evt_dtp_starttime.Items.Add(radListDataItem43);
-            this.evt_dtp_starttime.Items.Add(radListDataItem44);
-            this.evt_dtp_starttime.Items.Add(radListDataItem45);
-            this.evt_dtp_starttime.Items.Add(radListDataItem46);
-            this.evt_dtp_starttime.Items.Add(radListDataItem47);
-            this.evt_dtp_starttime.Items.Add(radListDataItem48);
-            this.evt_dtp_starttime.Items.Add(radListDataItem49);
-            this.evt_dtp_starttime.Items.Add(radListDataItem50);
-            this.evt_dtp_starttime.Items.Add(radListDataItem51);
-            this.evt_dtp_starttime.Items.Add(radListDataItem52);
-            this.evt_dtp_starttime.Items.Add(radListDataItem53);
-            this.evt_dtp_starttime.Items.Add(radListDataItem54);
-            this.evt_dtp_starttime.Items.Add(radListDataItem55);
-            this.evt_dtp_starttime.Items.Add(radListDataItem56);
-            this.evt_dtp_starttime.Items.Add(radListDataItem57);
-            this.evt_dtp_starttime.Items.Add(radListDataItem58);
-            this.evt_dtp_starttime.Items.Add(radListDataItem59);
-            this.evt_dtp_starttime.Items.Add(radListDataItem60);
-            this.evt_dtp_starttime.Items.Add(radListDataItem61);
-            this.evt_dtp_starttime.Items.Add(radListDataItem62);
-            this.evt_dtp_starttime.Location = new System.Drawing.Point(128, 77);
+            this.evt_dtp_starttime.Items.Add(radListDataItem1);
+            this.evt_dtp_starttime.Items.Add(radListDataItem2);
+            this.evt_dtp_starttime.Items.Add(radListDataItem3);
+            this.evt_dtp_starttime.Items.Add(radListDataItem4);
+            this.evt_dtp_starttime.Items.Add(radListDataItem5);
+            this.evt_dtp_starttime.Items.Add(radListDataItem6);
+            this.evt_dtp_starttime.Items.Add(radListDataItem7);
+            this.evt_dtp_starttime.Items.Add(radListDataItem8);
+            this.evt_dtp_starttime.Items.Add(radListDataItem9);
+            this.evt_dtp_starttime.Items.Add(radListDataItem10);
+            this.evt_dtp_starttime.Items.Add(radListDataItem11);
+            this.evt_dtp_starttime.Items.Add(radListDataItem12);
+            this.evt_dtp_starttime.Items.Add(radListDataItem13);
+            this.evt_dtp_starttime.Items.Add(radListDataItem14);
+            this.evt_dtp_starttime.Items.Add(radListDataItem15);
+            this.evt_dtp_starttime.Items.Add(radListDataItem16);
+            this.evt_dtp_starttime.Items.Add(radListDataItem17);
+            this.evt_dtp_starttime.Items.Add(radListDataItem18);
+            this.evt_dtp_starttime.Items.Add(radListDataItem19);
+            this.evt_dtp_starttime.Items.Add(radListDataItem20);
+            this.evt_dtp_starttime.Items.Add(radListDataItem21);
+            this.evt_dtp_starttime.Items.Add(radListDataItem22);
+            this.evt_dtp_starttime.Items.Add(radListDataItem23);
+            this.evt_dtp_starttime.Items.Add(radListDataItem24);
+            this.evt_dtp_starttime.Items.Add(radListDataItem25);
+            this.evt_dtp_starttime.Items.Add(radListDataItem26);
+            this.evt_dtp_starttime.Items.Add(radListDataItem27);
+            this.evt_dtp_starttime.Items.Add(radListDataItem28);
+            this.evt_dtp_starttime.Items.Add(radListDataItem29);
+            this.evt_dtp_starttime.Items.Add(radListDataItem30);
+            this.evt_dtp_starttime.Items.Add(radListDataItem31);
+            this.evt_dtp_starttime.Location = new System.Drawing.Point(123, 77);
             this.evt_dtp_starttime.Name = "evt_dtp_starttime";
-            this.evt_dtp_starttime.Size = new System.Drawing.Size(105, 24);
+            this.evt_dtp_starttime.Size = new System.Drawing.Size(128, 24);
             this.evt_dtp_starttime.TabIndex = 23;
             this.evt_dtp_starttime.ThemeName = "VisualStudio2012Dark";
             // 
@@ -854,6 +1045,14 @@
             // 
             // evt_cb_remarks
             // 
+            radListDataItem32.Text = "Cancelled";
+            radListDataItem33.Text = "Moved Date";
+            radListDataItem34.Text = "Moved Location";
+            radListDataItem35.Text = "Finished";
+            this.evt_cb_remarks.Items.Add(radListDataItem32);
+            this.evt_cb_remarks.Items.Add(radListDataItem33);
+            this.evt_cb_remarks.Items.Add(radListDataItem34);
+            this.evt_cb_remarks.Items.Add(radListDataItem35);
             this.evt_cb_remarks.Location = new System.Drawing.Point(900, 19);
             this.evt_cb_remarks.Name = "evt_cb_remarks";
             this.evt_cb_remarks.Size = new System.Drawing.Size(125, 24);
@@ -888,6 +1087,88 @@
             // 
             // evt_cb_schoolorg
             // 
+            radListDataItem36.Text = "School of Accountancy and Management";
+            radListDataItem37.Text = "School of Dentistry";
+            radListDataItem38.Text = "School of Education—Liberal Arts—Music—Social Work";
+            radListDataItem39.Text = "School of Medical Technology";
+            radListDataItem40.Text = "School of Nursing";
+            radListDataItem41.Text = "School of Nutrition and Hospitality Management";
+            radListDataItem42.Text = "School of Optometry";
+            radListDataItem43.Text = "School of Pharmacy";
+            radListDataItem44.Text = "School of Science and Technology";
+            radListDataItem45.Text = "School of Graduate School";
+            radListDataItem46.Text = "School of Senior High School (Grades 11 & 12)";
+            radListDataItem47.Text = "Community Outreach Movement Proactive Student Services (COMPASS)";
+            radListDataItem48.Text = "Dramatic Guild (DG)";
+            radListDataItem49.Text = "English Guild";
+            radListDataItem50.Text = "Honors Society (HonSoc)";
+            radListDataItem51.Text = "International Students Association (ISA)";
+            radListDataItem52.Text = "Math Club";
+            radListDataItem53.Text = "Oratorical and Debate Society (ORADES)";
+            radListDataItem54.Text = "Photographers Club (Photo Club)";
+            radListDataItem55.Text = "Red Cross Youth (RCY)";
+            radListDataItem56.Text = "Science Club";
+            radListDataItem57.Text = "Student Catholic Action (SCA)";
+            radListDataItem58.Text = "Social Sciences Society (SSS)";
+            radListDataItem59.Text = "CEU Student Chapter of the American Society of Microbiology";
+            radListDataItem60.Text = "CEU Marketing Society (CEMARS)";
+            radListDataItem61.Text = "Junior Financial Executives (JFINEX)";
+            radListDataItem62.Text = "Junior Philippine Institute of Accountants (JPIA)";
+            radListDataItem63.Text = "Management Students Association (MASA)";
+            radListDataItem64.Text = "Dental Clinicians Club (DCC)";
+            radListDataItem65.Text = "Philippine Dental Students Association (PDSA)";
+            radListDataItem66.Text = "Association of Tourism Students (ATS)";
+            radListDataItem190.Text = "Association of Hotel & Restaurants Management Students (AHRMS)";
+            radListDataItem191.Text = "Philippine Association of Nutritionists (PAN-DELTA)";
+            radListDataItem192.Text = "Philippine Nursing Research Society (PNRS)";
+            radListDataItem193.Text = "Optometry Clinicians Club (OCC)";
+            radListDataItem194.Text = "Junior Philippine Pharmacists Association (JPPhA)";
+            radListDataItem195.Text = "CEU Psychology Society (Psych Soc)";
+            radListDataItem196.Text = "Junior Philippine Computer Society (JPCS)";
+            radListDataItem197.Text = "Philippine Society of Medical Technology Students (PHISMETS)";
+            radListDataItem198.Text = "CEU Communication Arts Society (CoMaSoc)";
+            radListDataItem199.Text = "Junior Social Work Association of the Philippines (JSWAP) ";
+            this.evt_cb_schoolorg.Items.Add(radListDataItem36);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem37);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem38);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem39);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem40);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem41);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem42);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem43);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem44);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem45);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem46);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem47);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem48);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem49);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem50);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem51);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem52);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem53);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem54);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem55);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem56);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem57);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem58);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem59);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem60);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem61);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem62);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem63);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem64);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem65);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem66);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem190);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem191);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem192);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem193);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem194);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem195);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem196);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem197);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem198);
+            this.evt_cb_schoolorg.Items.Add(radListDataItem199);
             this.evt_cb_schoolorg.Location = new System.Drawing.Point(534, 51);
             this.evt_cb_schoolorg.Name = "evt_cb_schoolorg";
             this.evt_cb_schoolorg.Size = new System.Drawing.Size(278, 24);
@@ -922,6 +1203,12 @@
             // 
             // evt_cb_noa
             // 
+            radListDataItem67.Text = "Academic Related";
+            radListDataItem68.Text = "Co/Extra-Curricular Activity";
+            radListDataItem69.Text = "Community Outreach Program";
+            this.evt_cb_noa.Items.Add(radListDataItem67);
+            this.evt_cb_noa.Items.Add(radListDataItem68);
+            this.evt_cb_noa.Items.Add(radListDataItem69);
             this.evt_cb_noa.Location = new System.Drawing.Point(122, 137);
             this.evt_cb_noa.Name = "evt_cb_noa";
             this.evt_cb_noa.Size = new System.Drawing.Size(331, 24);
@@ -939,6 +1226,20 @@
             // 
             // evt_cb_kpi
             // 
+            radListDataItem70.Text = "IGA";
+            radListDataItem71.Text = "CSA";
+            radListDataItem72.Text = "LTS";
+            radListDataItem73.Text = "SDP";
+            radListDataItem74.Text = "SRA";
+            radListDataItem75.Text = "COA";
+            radListDataItem76.Text = "HWP";
+            this.evt_cb_kpi.Items.Add(radListDataItem70);
+            this.evt_cb_kpi.Items.Add(radListDataItem71);
+            this.evt_cb_kpi.Items.Add(radListDataItem72);
+            this.evt_cb_kpi.Items.Add(radListDataItem73);
+            this.evt_cb_kpi.Items.Add(radListDataItem74);
+            this.evt_cb_kpi.Items.Add(radListDataItem75);
+            this.evt_cb_kpi.Items.Add(radListDataItem76);
             this.evt_cb_kpi.Location = new System.Drawing.Point(122, 107);
             this.evt_cb_kpi.Name = "evt_cb_kpi";
             this.evt_cb_kpi.Size = new System.Drawing.Size(331, 24);
@@ -1041,7 +1342,7 @@
             this.evt_rgv_events.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.evt_rgv_events.MasterTemplate.EnableGrouping = false;
             this.evt_rgv_events.MasterTemplate.ShowRowHeaderColumn = false;
-            this.evt_rgv_events.MasterTemplate.ViewDefinition = tableViewDefinition3;
+            this.evt_rgv_events.MasterTemplate.ViewDefinition = tableViewDefinition9;
             this.evt_rgv_events.Name = "evt_rgv_events";
             this.evt_rgv_events.ReadOnly = true;
             this.evt_rgv_events.Size = new System.Drawing.Size(1044, 197);
@@ -1374,6 +1675,16 @@
             this.radLabel1.Text = "School/Organization:";
             this.radLabel1.ThemeName = "VisualStudio2012Dark";
             // 
+            // home_btn_refreshgrid
+            // 
+            this.home_btn_refreshgrid.Location = new System.Drawing.Point(258, 21);
+            this.home_btn_refreshgrid.Name = "home_btn_refreshgrid";
+            this.home_btn_refreshgrid.Size = new System.Drawing.Size(72, 26);
+            this.home_btn_refreshgrid.TabIndex = 21;
+            this.home_btn_refreshgrid.Text = "Refresh";
+            this.home_btn_refreshgrid.ThemeName = "VisualStudio2012Dark";
+            this.home_btn_refreshgrid.Click += new System.EventHandler(this.home_btn_refreshgrid_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1399,14 +1710,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox12)).EndInit();
             this.radGroupBox12.ResumeLayout(false);
             this.radGroupBox12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.home_lu_school)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.home_lu_searchbydate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.home_dtp_enddate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radDropDownList1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.home_dtp_startdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.home_lu_venue)).EndInit();
             this.rpv_notes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox11)).EndInit();
             this.radGroupBox11.ResumeLayout(false);
@@ -1491,6 +1802,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.acc_tb_id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.acc_cb_schoolorg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.home_btn_refreshgrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -1569,16 +1881,17 @@
         private Telerik.WinControls.UI.RadGroupBox radGroupBox13;
         private Telerik.WinControls.UI.RadGridView home_rgv_eventdata;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox12;
-        private Telerik.WinControls.UI.RadButton radButton1;
-        private Telerik.WinControls.UI.RadDateTimePicker radDateTimePicker3;
+        private Telerik.WinControls.UI.RadButton home_lu_searchbydate;
+        private Telerik.WinControls.UI.RadDateTimePicker home_dtp_enddate;
         private Telerik.WinControls.UI.RadLabel radLabel22;
-        private Telerik.WinControls.UI.RadDropDownList radDropDownList1;
         private Telerik.WinControls.UI.RadLabel radLabel23;
-        private Telerik.WinControls.UI.RadDateTimePicker radDateTimePicker2;
+        private Telerik.WinControls.UI.RadDateTimePicker home_dtp_startdate;
         private Telerik.WinControls.UI.RadLabel radLabel24;
-        private Telerik.WinControls.UI.RadTextBox radTextBox2;
+        private Telerik.WinControls.UI.RadTextBox home_lu_venue;
         internal Telerik.WinControls.UI.RadDropDownList evt_dtp_endtime;
         internal Telerik.WinControls.UI.RadDropDownList evt_dtp_starttime;
         private Telerik.WinControls.UI.RadButton evt_btn_eventid;
+        private Telerik.WinControls.UI.RadDropDownList home_lu_school;
+        private Telerik.WinControls.UI.RadButton home_btn_refreshgrid;
     }
 }

@@ -45,9 +45,12 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
             evt_load_datafromgrid();
             evt_dtp_date.Value = System.DateTime.Now;
             evt_tb_eventno.Enabled = false;
+            addalllocsrange();
 
             //Home
             home_load_datafromgrid();
+            home_dtp_startdate.Value = System.DateTime.Now;
+            home_dtp_enddate.Value = System.DateTime.Now;
         }
 
         //Account Management Code loading all existing accounts in Listbox
@@ -264,6 +267,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
         //Account Management Code Clearing all fields
         private void acc_btn_clear_Click(object sender, EventArgs e) {
             acc_clearall_fields();
+            acc_load_existing_accounts();
         }
 
         //Account Management Code Clearing all fields main code
@@ -280,7 +284,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
             acc_tb_retypepassword.Text = "";
             acc_cb_usertype.Text = "";
             acc_cb_schoolorg.Text = "";
-
+          
         }
 
 
@@ -338,6 +342,51 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
 
         private void evt_btn_eventid_Click(object sender, EventArgs e) {
             auto_generate_eventid();
+        }
+
+        public void addalllocsrange() {
+
+           string[] locationlist = new string [] { "CARMEN DE LUNA (CDL)",
+            "Multimedia Instructional Room (MIR)",
+            "LIBRADA AVELINO HALL (LAH)",
+            "Chapel/Adoration Chapel",
+            "Executive Meeting Room (EMR)",
+            "LAH Seminar Room #1",
+            "LAH Seminar Room #2",
+            "LAH Seminar Room #3",
+            "GENEROSA DE LEON SCIENCE CENTER (GDLSC)",
+            "Bulwagang Maestra Osang (BMO)",
+            "SOFIA DE VEYRA HALL (SDVH)",
+            "SDV Conference Room (SDVCR)",
+            "SDV Lanai",
+            "FELISA FRANCISCO HALL (FFH)",
+            "Assembly Hall (3rd Flr)",
+            "MARIA VILLACERAN HALL (MVH)",
+            "LA Auditorium",
+            "MVH Lanai",
+            "DIONISIO C. TIONGCO (DCT)",
+            "Student Activity Center (Ground flr)",
+            "Student Activity Center (Second flr)",
+            "PILAR HIDALGO LIM HALL (PHL)",
+            "PHL Lanai",
+            "TECHNOLOGY CENTER",
+            "TechCenter Gym",
+            "TechCenter Lanai with Lights",
+            "FGH DENTRISTRY",
+            "FGH Lanai",
+            "INFORMATION SCIENCE CENTER",
+            "Friends Cafe",
+            "ISC Mezzanine #1",
+            "ISC Mezzanine #2",
+            "DentScience Lanai",
+            "GYM (Classroom)",
+            "North Quadrangle",
+            "South Quadrangle" };
+
+            evt_cb_venue.Items.AddRange(locationlist);
+            
+
+           
         }
 
 
@@ -507,6 +556,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
                             conn.Dispose();
                             evt_load_datafromgrid();
                             home_load_datafromgrid();
+                            auto_generate_eventid();
                         }
                     }
                 }
@@ -628,6 +678,8 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
             }
         }
 
+
+        //STARTING HERE IS Home Codes
         public void home_load_datafromgrid() {
             conn = new MySqlConnection();
             conn.ConnectionString = connstring;
@@ -662,6 +714,113 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
 
             }
         }
+
+        private void home_lu_venue_TextChanged(object sender, EventArgs e) {
+            //Future addition is the delay time
+
+            conn.ConnectionString = connstring;
+            MySqlDataAdapter sda = new MySqlDataAdapter();
+            DataTable dbdataset = new DataTable();
+            BindingSource bsource = new BindingSource();
+
+            try {
+                conn.Open();
+                query = "SELECT eventid as 'Event ID',  DATE_FORMAT(date,'%M %d %Y') as 'Date', events as 'Events', location as 'Venue', TIME_FORMAT(starttime, '%H:%i') as 'Start Time', TIME_FORMAT(endtime, '%H:%i') as 'End Time', school as 'School',kpi as 'KPI',noa as 'NOA',remarks as 'Remarks' from events";
+                command = new MySqlCommand(query, conn);
+                sda.SelectCommand = command;
+                sda.Fill(dbdataset);
+                bsource.DataSource = dbdataset;
+                home_rgv_eventdata.DataSource = bsource;
+                sda.Update(dbdataset);
+                conn.Close();
+
+            }
+
+            catch(Exception ex) {
+                RadMessageBox.Show(this, ex.Message, "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
+            }
+
+            finally {
+                conn.Dispose();
+            }
+
+
+            DataView DV = new DataView(dbdataset);
+            DV.RowFilter = string.Format("Venue Like'%{0}%'", home_lu_venue.Text);
+            home_rgv_eventdata.DataSource = DV;
+        }
+
+        private void home_lu_searchbydate_Click(object sender, EventArgs e) {
+            conn.ConnectionString = connstring;
+            MySqlDataAdapter sda = new MySqlDataAdapter();
+            DataTable dbdataset = new DataTable();
+            BindingSource bsource = new BindingSource();
+
+            try {
+                conn.Open();
+                query = "SELECT eventid as 'Event ID',  DATE_FORMAT(date,'%M %d %Y') as 'Date', events as 'Events', location as 'Venue', TIME_FORMAT(starttime, '%H:%i') as 'Start Time', TIME_FORMAT(endtime, '%H:%i') as 'End Time', school as 'School',kpi as 'KPI',noa as 'NOA',remarks as 'Remarks' from events WHERE date BETWEEN @startdate AND @enddate";
+                command = new MySqlCommand(query, conn);
+                command.Parameters.AddWithValue("startdate", home_dtp_startdate.Value.ToString("yyyy-MM-dd"));
+                command.Parameters.AddWithValue("enddate", home_dtp_enddate.Value.ToString("yyyy-MM-dd"));
+                sda.SelectCommand = command;
+                sda.Fill(dbdataset);
+                bsource.DataSource = dbdataset;
+                home_rgv_eventdata.DataSource = bsource;
+                sda.Update(dbdataset);
+                conn.Close();
+
+            }
+
+            catch(Exception ex) {
+                RadMessageBox.Show(this, ex.Message, "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
+            }
+
+            finally {
+                conn.Dispose();
+            }
+        }
+
+        private void home_lu_school_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e) {
+            conn.ConnectionString = connstring;
+            MySqlDataAdapter sda = new MySqlDataAdapter();
+            DataTable dbdataset = new DataTable();
+            BindingSource bsource = new BindingSource();
+
+            try {
+                conn.Open();
+                query = "SELECT eventid as 'Event ID',  DATE_FORMAT(date,'%M %d %Y') as 'Date', events as 'Events', location as 'Venue', TIME_FORMAT(starttime, '%H:%i') as 'Start Time', TIME_FORMAT(endtime, '%H:%i') as 'End Time', school as 'School',kpi as 'KPI',noa as 'NOA',remarks as 'Remarks' from events";
+                command = new MySqlCommand(query, conn);
+                sda.SelectCommand = command;
+                sda.Fill(dbdataset);
+                bsource.DataSource = dbdataset;
+                home_rgv_eventdata.DataSource = bsource;
+                sda.Update(dbdataset);
+                conn.Close();
+
+            }
+
+            catch(Exception ex) {
+                RadMessageBox.Show(this, ex.Message, "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
+            }
+
+            finally {
+                conn.Dispose();
+            }
+
+
+            DataView DV = new DataView(dbdataset);
+            DV.RowFilter = string.Format("School Like'%{0}%'", home_lu_school.Text);
+            home_rgv_eventdata.DataSource = DV;
+        }
+
+        private void home_btn_refreshgrid_Click(object sender, EventArgs e) {
+            home_load_datafromgrid();
+        }
+
+
+
+
+
 
 
 
