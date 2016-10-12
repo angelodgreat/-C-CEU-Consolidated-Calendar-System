@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.log_btn_bypass = new Telerik.WinControls.UI.RadButton();
             this.log_lbl_status = new Telerik.WinControls.UI.RadLabel();
@@ -150,6 +151,7 @@
             this.ClientSize = new System.Drawing.Size(365, 200);
             this.Controls.Add(this.radGroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Login";
             // 
