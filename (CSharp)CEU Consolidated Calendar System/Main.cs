@@ -827,9 +827,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
                 this.Dispose();
                 login.Show();
             }
-            else {
-                e.Cancel = true;
-            }
+           
 
         }
 

@@ -165,11 +165,9 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
         private void Login_FormClosing(object sender, FormClosingEventArgs e) {
             closeYN = RadMessageBox.Show(this, "Are you sure you want to quit?", "CEU Consolidated Calendar", MessageBoxButtons.YesNo, RadMessageIcon.Exclamation);
             if(closeYN == DialogResult.Yes) {
-                this.Dispose();
+                System.Environment.Exit(1);
             }
-            else {
-                e.Cancel = true;
-            }
+          
         }
     }
 }
