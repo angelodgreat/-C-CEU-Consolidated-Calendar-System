@@ -871,7 +871,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
             closeYN = RadMessageBox.Show(this, "Are you sure you want to Log-Out?", "CEU Consolidated Calendar", MessageBoxButtons.YesNo, RadMessageIcon.Exclamation);
             if(closeYN == DialogResult.Yes) {
                 this.Dispose();
-                login.Show();
+                login.ShowDialog();
             }
            
 

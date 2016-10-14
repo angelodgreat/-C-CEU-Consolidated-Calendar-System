@@ -145,7 +145,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
                     log_tb_username.Select();
 
                     if(looper == 1) {
-                        main.Show();
+                        main.ShowDialog();
                         this.Hide();
                     }
                     else {
@@ -163,26 +163,26 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
         }
 
         private void log_btn_bypass_Click(object sender, EventArgs e) {
-            Login log = new Login();
-            log.Dispose();
-            Main main = new Main();
-         
-            main.Show();
            
+            Main main = new Main();
+
+
+            this.Hide();
+            main.ShowDialog();
+            
         }
 
       
         private void log_btn_connection_Click(object sender, EventArgs e) {
             DBConnection dbcon = new DBConnection();
            
-            dbcon.Show();
-            this.Hide();         
+            dbcon.ShowDialog();
+            this.Hide();
 
         }
 
-        private void Login_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            System.Environment.Exit(0);
+        private void Login_FormClosing(object sender, FormClosingEventArgs e) {
+            this.Dispose();
         }
     }
 }

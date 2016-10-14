@@ -384,7 +384,7 @@
             this.radPageView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radPageView1.Location = new System.Drawing.Point(0, 0);
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.rpv_accounts;
+            this.radPageView1.SelectedPage = this.rpv_main;
             this.radPageView1.Size = new System.Drawing.Size(1310, 634);
             this.radPageView1.TabIndex = 0;
             this.radPageView1.Text = "radPageView1";
@@ -1382,7 +1382,7 @@
             this.radGroupBox5.HeaderText = "Accounts";
             this.radGroupBox5.Location = new System.Drawing.Point(3, 3);
             this.radGroupBox5.Name = "radGroupBox5";
-            this.radGroupBox5.Size = new System.Drawing.Size(1297, 127);
+            this.radGroupBox5.Size = new System.Drawing.Size(1308, 140);
             this.radGroupBox5.TabIndex = 1;
             this.radGroupBox5.Text = "Accounts";
             this.radGroupBox5.ThemeName = "VisualStudio2012Dark";
@@ -1392,7 +1392,7 @@
             this.acc_rlv_accounts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.acc_rlv_accounts.Location = new System.Drawing.Point(2, 18);
             this.acc_rlv_accounts.Name = "acc_rlv_accounts";
-            this.acc_rlv_accounts.Size = new System.Drawing.Size(1293, 107);
+            this.acc_rlv_accounts.Size = new System.Drawing.Size(1304, 120);
             this.acc_rlv_accounts.TabIndex = 0;
             this.acc_rlv_accounts.Text = "radListControl1";
             this.acc_rlv_accounts.ThemeName = "VisualStudio2012Dark";
@@ -1407,9 +1407,9 @@
             this.radGroupBox1.Controls.Add(this.radGroupBox3);
             this.radGroupBox1.Controls.Add(this.radGroupBox2);
             this.radGroupBox1.HeaderText = "Register Form";
-            this.radGroupBox1.Location = new System.Drawing.Point(5, 134);
+            this.radGroupBox1.Location = new System.Drawing.Point(5, 147);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(1293, 463);
+            this.radGroupBox1.Size = new System.Drawing.Size(1304, 463);
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.Text = "Register Form";
             this.radGroupBox1.ThemeName = "VisualStudio2012Dark";
@@ -1426,7 +1426,7 @@
             this.radGroupBox4.HeaderText = "Controls";
             this.radGroupBox4.Location = new System.Drawing.Point(21, 324);
             this.radGroupBox4.Name = "radGroupBox4";
-            this.radGroupBox4.Size = new System.Drawing.Size(1241, 74);
+            this.radGroupBox4.Size = new System.Drawing.Size(1252, 74);
             this.radGroupBox4.TabIndex = 1;
             this.radGroupBox4.Text = "Controls";
             this.radGroupBox4.ThemeName = "VisualStudio2012Dark";
@@ -1434,7 +1434,7 @@
             // acc_btn_clear
             // 
             this.acc_btn_clear.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.acc_btn_clear.Location = new System.Drawing.Point(62, 18);
+            this.acc_btn_clear.Location = new System.Drawing.Point(68, 18);
             this.acc_btn_clear.Name = "acc_btn_clear";
             this.acc_btn_clear.Size = new System.Drawing.Size(173, 38);
             this.acc_btn_clear.TabIndex = 11;
@@ -1445,7 +1445,7 @@
             // acc_btn_delete
             // 
             this.acc_btn_delete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.acc_btn_delete.Location = new System.Drawing.Point(241, 18);
+            this.acc_btn_delete.Location = new System.Drawing.Point(247, 18);
             this.acc_btn_delete.Name = "acc_btn_delete";
             this.acc_btn_delete.Size = new System.Drawing.Size(173, 38);
             this.acc_btn_delete.TabIndex = 10;
@@ -1456,7 +1456,7 @@
             // acc_btn_update
             // 
             this.acc_btn_update.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.acc_btn_update.Location = new System.Drawing.Point(885, 18);
+            this.acc_btn_update.Location = new System.Drawing.Point(891, 18);
             this.acc_btn_update.Name = "acc_btn_update";
             this.acc_btn_update.Size = new System.Drawing.Size(173, 38);
             this.acc_btn_update.TabIndex = 9;
@@ -1467,7 +1467,7 @@
             // acc_btn_save
             // 
             this.acc_btn_save.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.acc_btn_save.Location = new System.Drawing.Point(1064, 18);
+            this.acc_btn_save.Location = new System.Drawing.Point(1070, 18);
             this.acc_btn_save.Name = "acc_btn_save";
             this.acc_btn_save.Size = new System.Drawing.Size(173, 38);
             this.acc_btn_save.TabIndex = 8;
@@ -1491,7 +1491,7 @@
             this.radGroupBox3.HeaderText = "Account Information";
             this.radGroupBox3.Location = new System.Drawing.Point(21, 169);
             this.radGroupBox3.Name = "radGroupBox3";
-            this.radGroupBox3.Size = new System.Drawing.Size(1241, 149);
+            this.radGroupBox3.Size = new System.Drawing.Size(1252, 149);
             this.radGroupBox3.TabIndex = 1;
             this.radGroupBox3.Text = "Account Information";
             this.radGroupBox3.ThemeName = "VisualStudio2012Dark";
@@ -1597,7 +1597,7 @@
             this.radGroupBox2.HeaderText = "Personal Information";
             this.radGroupBox2.Location = new System.Drawing.Point(21, 15);
             this.radGroupBox2.Name = "radGroupBox2";
-            this.radGroupBox2.Size = new System.Drawing.Size(1241, 148);
+            this.radGroupBox2.Size = new System.Drawing.Size(1252, 148);
             this.radGroupBox2.TabIndex = 1;
             this.radGroupBox2.Text = "Personal Information";
             this.radGroupBox2.ThemeName = "VisualStudio2012Dark";
@@ -1698,8 +1698,10 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student Affairs Office Consolidated Calendar";
             this.ThemeName = "VisualStudio2012Dark";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).EndInit();

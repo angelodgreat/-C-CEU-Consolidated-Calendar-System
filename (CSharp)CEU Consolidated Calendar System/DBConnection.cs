@@ -61,30 +61,34 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
                 }
                 Properties.Settings.Default.Save();
 
-                //CONNSTRING IMMEDIATELY NOT WORKING
-              //  gb.applyconstringImmediately();
+           
                 login.timerandstatus(false);
                 Process.Start(Application.ExecutablePath);
-                System.Environment.Exit(0);
+                System.Environment.Exit(1);
 
 
 
 
             } else {
+                login.Show();
+                this.Dispose();
 
-                
-            
+
+
+
 
             }
         }
 
-        private void DBConnection_FormClosed(object sender, FormClosedEventArgs e) {
-            this.Dispose();
+        private void DBConnection_FormClosing(object sender, FormClosingEventArgs e) {
+
             Login login = new Login();
             login.Show();
+            this.Dispose();
+
+
+
 
         }
-
-      
     }
 }

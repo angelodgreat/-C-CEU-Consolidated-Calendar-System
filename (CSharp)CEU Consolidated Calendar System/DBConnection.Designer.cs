@@ -242,8 +242,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DBConnection";
             this.ThemeName = "VisualStudio2012Dark";
-           
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DBConnection_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DBConnection_FormClosing);
             this.Load += new System.EventHandler(this.DBConnection_Load);
             ((System.ComponentModel.ISupportInitialize)(this.db_btn_save)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RadGroupBox1)).EndInit();
