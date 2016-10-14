@@ -9,16 +9,17 @@ using Telerik.WinControls;
 using MySql.Data.MySqlClient;
 using Telerik.WinControls.UI;
 using System.Security.AccessControl;
+using System.Diagnostics;
 
 namespace _CSharp_CEU_Consolidated_Calendar_System
 {
     public partial class DBConnection : Telerik.WinControls.UI.RadForm
     {
-     
+
+        globalvariables gb = new globalvariables();
 
         MySqlConnection conn;
-        MySqlCommand command = Globals.command;
-        MySqlDataReader reader = Globals.reader;
+     
       
        
 
@@ -38,8 +39,8 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
 
         private void db_btn_save_Click(object sender, EventArgs e) {
             Login login = new Login();
-            globalvariables g = new globalvariables();
-           
+          
+            
 
             DBSettingChange = RadMessageBox.Show(this, "Are you sure you want to apply the new settings?" + Environment.NewLine + Environment.NewLine + "If you are not the network administrator it is advisable to choose "+"No"+"","Database Settings", MessageBoxButtons.YesNo, RadMessageIcon.Exclamation);
 
@@ -49,29 +50,41 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
                 Properties.Settings.Default.server = db_tb_server.Text;
                 Properties.Settings.Default.port = db_tb_port.Text;
                 Properties.Settings.Default.database = db_tb_database.Text;
-              
-                
-                if((string.IsNullOrEmpty(db_tb_username.Text) | (string.IsNullOrEmpty(db_tb_password.Text)))){
+               
 
+                if ((string.IsNullOrEmpty(db_tb_username.Text) | (string.IsNullOrEmpty(db_tb_password.Text)))){
+                    
                 } else {
                     Properties.Settings.Default.username = Actions.Encrypt(db_tb_username.Text);
                     Properties.Settings.Default.password = Actions.Encrypt(db_tb_password.Text);
+                    Properties.Settings.Default.Save();
                 }
                 Properties.Settings.Default.Save();
+
                 //CONNSTRING IMMEDIATELY NOT WORKING
-                Globals.applyconstringImmediately();
+              //  gb.applyconstringImmediately();
                 login.timerandstatus(false);
-               
-                this.Dispose();
-                login.Show();
-              
+                Process.Start(Application.ExecutablePath);
+                System.Environment.Exit(0);
+
+
+
+
             } else {
-                this.Dispose();
+
+                
+            
+
             }
         }
 
         private void DBConnection_FormClosed(object sender, FormClosedEventArgs e) {
             this.Dispose();
+            Login login = new Login();
+            login.Show();
+
         }
+
+      
     }
 }

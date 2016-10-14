@@ -14,14 +14,15 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
     public partial class Login : Telerik.WinControls.UI.RadForm {
         MySqlConnection conn;
         int db_is_deadCount = 0;
-        string connstring = Globals.connstring;
+       
         globalvariables gb = new globalvariables();
         
        
         string query;
         bool a;
-        MySqlCommand command = Globals.command;
-        MySqlDataReader reader = Globals.reader;
+
+       
+       
 
         DialogResult closeYN;
 
@@ -76,8 +77,9 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
             a = new bool();
             a = false;
             conn = new MySqlConnection();
-            conn.ConnectionString = connstring;
+            conn.ConnectionString = gb.connstring;
 
+            
             try {
                 conn.Open();
                 a = true;
@@ -104,6 +106,8 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
 
         private void log_btn_login_Click(object sender, EventArgs e) {
             Main main = new Main();
+            MySqlCommand command = gb.command;
+            MySqlDataReader reader = gb.reader;
 
             try {
                 int looper = 0;
@@ -120,7 +124,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
 
 
 
-                    conn.ConnectionString = connstring;
+                    conn.ConnectionString = gb.connstring;
                     conn.Open();
 
                     query = "SELECT * from accounts WHERE username=@username AND password=@password";
@@ -159,25 +163,26 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
         }
 
         private void log_btn_bypass_Click(object sender, EventArgs e) {
+            Login log = new Login();
+            log.Dispose();
             Main main = new Main();
-
-            main.Show();
-            this.Hide();
-        }
-
-        private void Login_FormClosing(object sender, FormClosingEventArgs e) {
          
-                System.Environment.Exit(1);
-    
-          
+            main.Show();
+           
         }
 
+      
         private void log_btn_connection_Click(object sender, EventArgs e) {
             DBConnection dbcon = new DBConnection();
            
             dbcon.Show();
             this.Hide();         
 
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            System.Environment.Exit(0);
         }
     }
 }

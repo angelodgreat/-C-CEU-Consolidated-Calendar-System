@@ -384,7 +384,7 @@
             this.radPageView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radPageView1.Location = new System.Drawing.Point(0, 0);
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.rpv_events;
+            this.radPageView1.SelectedPage = this.rpv_accounts;
             this.radPageView1.Size = new System.Drawing.Size(1310, 634);
             this.radPageView1.TabIndex = 0;
             this.radPageView1.Text = "radPageView1";

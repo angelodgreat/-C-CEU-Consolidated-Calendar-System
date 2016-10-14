@@ -11,13 +11,14 @@ using Telerik.WinControls.UI;
 
 
 namespace _CSharp_CEU_Consolidated_Calendar_System {
+    
+    
     public partial class Main : Telerik.WinControls.UI.RadForm {
         MySqlConnection conn;
-        MySqlCommand command = Globals.command;
-        MySqlDataReader reader = Globals.reader;
-        string connstring = Globals.connstring;
+        globalvariables gb = new globalvariables();
+       
         string query;
-
+        
 
         DialogResult addYN;
         DialogResult delYN;
@@ -53,8 +54,12 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
         //Account Management Code loading all existing accounts in Listbox
 
         public void acc_load_existing_accounts() {
+
             conn = new MySqlConnection();
-            conn.ConnectionString = connstring;
+            MySqlCommand command = gb.command;
+            conn.ConnectionString = gb.connstring;
+
+
             MySqlDataReader reader = default(MySqlDataReader);
 
             if(conn.State == ConnectionState.Open) {
@@ -88,7 +93,10 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
 
         private void acc_btn_save_Click(object sender, EventArgs e) {
             conn = new MySqlConnection();
-            conn.ConnectionString = connstring;
+
+            MySqlCommand command = gb.command;
+            conn.ConnectionString = gb.connstring;
+
             MySqlDataReader reader = default(MySqlDataReader);
 
             if(conn.State == ConnectionState.Open) {
@@ -168,7 +176,10 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
 
         private void acc_btn_update_Click(object sender, EventArgs e) {
             conn = new MySqlConnection();
-            conn.ConnectionString = connstring;
+
+            MySqlCommand command = gb.command;
+            conn.ConnectionString = gb.connstring;
+
             MySqlDataReader reader = default(MySqlDataReader);
 
             if(conn.State == ConnectionState.Open) {
@@ -220,7 +231,10 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
         private void acc_btn_delete_Click(object sender, EventArgs e) {
             {
                 conn = new MySqlConnection();
-                conn.ConnectionString = connstring;
+
+                MySqlCommand command = gb.command;
+                conn.ConnectionString = gb.connstring;
+
                 MySqlDataReader reader = default(MySqlDataReader);
 
                 if(conn.State == ConnectionState.Open) {
@@ -288,8 +302,10 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
         //Account Management Code selected index change
         private void acc_rlv_accounts_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e) {
             conn = new MySqlConnection();
-            conn.ConnectionString = connstring;
-            command = new MySqlCommand();
+
+            MySqlCommand command = gb.command;
+            conn.ConnectionString = gb.connstring;
+
             MySqlDataReader reader = default(MySqlDataReader);
 
             if(conn.State == ConnectionState.Open) {
@@ -389,7 +405,10 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
 
         public void evt_load_datafromgrid() {
             conn = new MySqlConnection();
-            conn.ConnectionString = connstring;
+
+            MySqlCommand command = gb.command;
+            conn.ConnectionString = gb.connstring;
+
             MySqlDataReader reader = default(MySqlDataReader);
             DataTable dbdataset = new DataTable();
             BindingSource bsource = new BindingSource();
@@ -458,6 +477,8 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
 
         private void evt_btn_save_Click(object sender, EventArgs e) {
 
+            conn = new MySqlConnection();
+
             if(conn.State == ConnectionState.Open) {
                 conn.Close();
             }
@@ -466,9 +487,12 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
 
             reserveYN = RadMessageBox.Show(this, "Are you sure you want to reserve?", "CEU Consolidated Calendar", MessageBoxButtons.YesNo, RadMessageIcon.Question);
             if(reserveYN == DialogResult.Yes) {
-                conn.ConnectionString = connstring;
 
-                if((string.IsNullOrEmpty(evt_cb_kpi.Text)) | (string.IsNullOrEmpty(evt_cb_noa.Text)) | (string.IsNullOrEmpty(evt_cb_venue.Text)) | (string.IsNullOrEmpty(evt_cb_schoolorg.Text)) | (string.IsNullOrEmpty(evt_rtb_event.Text)) | (string.IsNullOrEmpty(evt_dtp_endtime.Text)) | (string.IsNullOrEmpty(evt_dtp_starttime.Text))) {
+                MySqlDataReader reader = gb.reader;
+                MySqlCommand command = gb.command;
+                conn.ConnectionString = gb.connstring;
+
+                if ((string.IsNullOrEmpty(evt_cb_kpi.Text)) | (string.IsNullOrEmpty(evt_cb_noa.Text)) | (string.IsNullOrEmpty(evt_cb_venue.Text)) | (string.IsNullOrEmpty(evt_cb_schoolorg.Text)) | (string.IsNullOrEmpty(evt_rtb_event.Text)) | (string.IsNullOrEmpty(evt_dtp_endtime.Text)) | (string.IsNullOrEmpty(evt_dtp_starttime.Text))) {
                     RadMessageBox.Show(this, "Please fill all fields!", "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
                 }
                 else {
@@ -563,7 +587,11 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
 
         private void evt_btn_update_Click(object sender, EventArgs e) {
             conn = new MySqlConnection();
-            conn.ConnectionString = connstring;
+
+            
+            MySqlCommand command = gb.command;
+            conn.ConnectionString = gb.connstring;
+
             MySqlDataReader reader = default(MySqlDataReader);
 
             if(conn.State == ConnectionState.Open) {
@@ -624,9 +652,13 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
         private void evt_btn_delete_Click(object sender, EventArgs e) {
             try {
                 conn = new MySqlConnection();
-                conn.ConnectionString = connstring;
 
-                if(conn.State == ConnectionState.Open) {
+              
+                MySqlDataReader reader = gb.reader;
+                MySqlCommand command = gb.command;
+                conn.ConnectionString = gb.connstring;
+
+                if (conn.State == ConnectionState.Open) {
                     conn.Close();
                 }
 
@@ -679,7 +711,11 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
         //STARTING HERE IS Home Codes
         public void home_load_datafromgrid() {
             conn = new MySqlConnection();
-            conn.ConnectionString = connstring;
+
+          
+            MySqlCommand command = gb.command;
+            conn.ConnectionString = gb.connstring;
+
             MySqlDataReader reader = default(MySqlDataReader);
             DataTable dbdataset = new DataTable();
             BindingSource bsource = new BindingSource();
@@ -714,8 +750,12 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
 
         private void home_lu_venue_TextChanged(object sender, EventArgs e) {
             //Future addition is the delay time
+            conn = new MySqlConnection();
 
-            conn.ConnectionString = connstring;
+            MySqlDataReader reader = gb.reader;
+            MySqlCommand command = gb.command;
+            conn.ConnectionString = gb.connstring;
+
             MySqlDataAdapter sda = new MySqlDataAdapter();
             DataTable dbdataset = new DataTable();
             BindingSource bsource = new BindingSource();
@@ -748,7 +788,12 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
         }
 
         private void home_lu_searchbydate_Click(object sender, EventArgs e) {
-            conn.ConnectionString = connstring;
+            conn = new MySqlConnection();
+
+            MySqlDataReader reader = gb.reader;
+            MySqlCommand command = gb.command;
+            conn.ConnectionString = gb.connstring;
+
             MySqlDataAdapter sda = new MySqlDataAdapter();
             DataTable dbdataset = new DataTable();
             BindingSource bsource = new BindingSource();
@@ -778,7 +823,13 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
         }
 
         private void home_lu_school_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e) {
-            conn.ConnectionString = connstring;
+            conn = new MySqlConnection();
+
+
+            MySqlDataReader reader = gb.reader;
+            MySqlCommand command = gb.command;
+            conn.ConnectionString = gb.connstring;
+
             MySqlDataAdapter sda = new MySqlDataAdapter();
             DataTable dbdataset = new DataTable();
             BindingSource bsource = new BindingSource();
