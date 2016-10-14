@@ -145,8 +145,9 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
                     log_tb_username.Select();
 
                     if(looper == 1) {
-                        main.ShowDialog();
                         this.Hide();
+                        main.ShowDialog();
+                       
                     }
                     else {
                         RadMessageBox.Show(this, "Incorrect Username or Password.", "CEU Consolidated Calendar", MessageBoxButtons.OK, RadMessageIcon.Error);
@@ -175,14 +176,14 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
       
         private void log_btn_connection_Click(object sender, EventArgs e) {
             DBConnection dbcon = new DBConnection();
-           
-            dbcon.ShowDialog();
             this.Hide();
+            dbcon.ShowDialog();
+           
 
         }
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e) {
-            this.Dispose();
+            Application.Exit();
         }
     }
 }

@@ -405,7 +405,7 @@
             this.radPageView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radPageView1.Location = new System.Drawing.Point(0, 0);
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.rpv_main;
+            this.radPageView1.SelectedPage = this.rpv_accounts;
             this.radPageView1.Size = new System.Drawing.Size(1543, 719);
             this.radPageView1.TabIndex = 0;
             this.radPageView1.Text = "radPageView1";
@@ -1775,6 +1775,7 @@
             // 
             // radLabel25
             // 
+            this.radLabel25.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.radLabel25.Location = new System.Drawing.Point(344, 629);
             this.radLabel25.Name = "radLabel25";
             this.radLabel25.Size = new System.Drawing.Size(503, 52);
@@ -1784,7 +1785,8 @@
             // 
             // radLabel26
             // 
-            this.radLabel26.Location = new System.Drawing.Point(714, 629);
+            this.radLabel26.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.radLabel26.Location = new System.Drawing.Point(344, 629);
             this.radLabel26.Name = "radLabel26";
             this.radLabel26.Size = new System.Drawing.Size(503, 52);
             this.radLabel26.TabIndex = 19;
@@ -1793,7 +1795,8 @@
             // 
             // radLabel27
             // 
-            this.radLabel27.Location = new System.Drawing.Point(251, 629);
+            this.radLabel27.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.radLabel27.Location = new System.Drawing.Point(344, 629);
             this.radLabel27.Name = "radLabel27";
             this.radLabel27.Size = new System.Drawing.Size(503, 52);
             this.radLabel27.TabIndex = 20;
@@ -1802,7 +1805,8 @@
             // 
             // radLabel28
             // 
-            this.radLabel28.Location = new System.Drawing.Point(350, 629);
+            this.radLabel28.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.radLabel28.Location = new System.Drawing.Point(344, 629);
             this.radLabel28.Name = "radLabel28";
             this.radLabel28.Size = new System.Drawing.Size(503, 52);
             this.radLabel28.TabIndex = 20;
