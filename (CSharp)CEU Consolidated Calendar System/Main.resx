@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="radLabel25.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;span style="font-size: 14pt"&gt;Developer: Christian Angelo R. Umali              &lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 14pt"&gt;Contact No: 09177396352           Email: umali1302321@ceu.edu.ph&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="radLabel26.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;span style="font-size: 14pt"&gt;Developer: Christian Angelo R. Umali              &lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 14pt"&gt;Contact No: 09177396352           Email: umali1302321@ceu.edu.ph&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="radLabel27.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;span style="font-size: 14pt"&gt;Developer: Christian Angelo R. Umali              &lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 14pt"&gt;Contact No: 09177396352           Email: umali1302321@ceu.edu.ph&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="radLabel28.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;span style="font-size: 14pt"&gt;Developer: Christian Angelo R. Umali              &lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 14pt"&gt;Contact No: 09177396352           Email: umali1302321@ceu.edu.ph&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
