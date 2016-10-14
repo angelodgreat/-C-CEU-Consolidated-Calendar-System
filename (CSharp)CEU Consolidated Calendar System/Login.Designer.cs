@@ -40,6 +40,7 @@
             this.log_tb_username = new Telerik.WinControls.UI.RadTextBox();
             this.log_timer = new System.Windows.Forms.Timer(this.components);
             this.visualStudio2012DarkTheme1 = new Telerik.WinControls.Themes.VisualStudio2012DarkTheme();
+            this.log_btn_connection = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.log_btn_bypass)).BeginInit();
@@ -49,6 +50,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.log_tb_password)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.log_tb_username)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.log_btn_connection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +65,7 @@
             this.radGroupBox1.Controls.Add(this.log_tb_password);
             this.radGroupBox1.Controls.Add(this.log_tb_username);
             this.radGroupBox1.HeaderText = "Login";
-            this.radGroupBox1.Location = new System.Drawing.Point(12, 12);
+            this.radGroupBox1.Location = new System.Drawing.Point(12, 82);
             this.radGroupBox1.Name = "radGroupBox1";
             this.radGroupBox1.Size = new System.Drawing.Size(341, 176);
             this.radGroupBox1.TabIndex = 2;
@@ -144,11 +146,22 @@
             this.log_tb_username.TabIndex = 0;
             this.log_tb_username.ThemeName = "VisualStudio2012Dark";
             // 
+            // log_btn_connection
+            // 
+            this.log_btn_connection.Image = global::_CSharp_CEU_Consolidated_Calendar_System.Properties.Resources.settings;
+            this.log_btn_connection.Location = new System.Drawing.Point(284, 12);
+            this.log_btn_connection.Name = "log_btn_connection";
+            this.log_btn_connection.Size = new System.Drawing.Size(64, 64);
+            this.log_btn_connection.TabIndex = 0;
+            this.log_btn_connection.TabStop = false;
+            this.log_btn_connection.Click += new System.EventHandler(this.log_btn_connection_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(365, 200);
+            this.ClientSize = new System.Drawing.Size(364, 265);
+            this.Controls.Add(this.log_btn_connection);
             this.Controls.Add(this.radGroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -173,6 +186,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.log_tb_password)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.log_tb_username)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.log_btn_connection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -189,5 +203,6 @@
         private Telerik.WinControls.Themes.VisualStudio2012DarkTheme visualStudio2012DarkTheme1;
         private Telerik.WinControls.UI.RadLabel log_lbl_status;
         private Telerik.WinControls.UI.RadButton log_btn_bypass;
+        private System.Windows.Forms.PictureBox log_btn_connection;
     }
 }

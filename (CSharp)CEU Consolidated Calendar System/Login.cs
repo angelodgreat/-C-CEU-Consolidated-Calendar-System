@@ -15,6 +15,9 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
         MySqlConnection conn;
         int db_is_deadCount = 0;
         string connstring = Globals.connstring;
+        globalvariables gb = new globalvariables();
+        
+       
         string query;
         bool a;
         MySqlCommand command = Globals.command;
@@ -30,9 +33,9 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
         }
 
         private void Login_Load(object sender, EventArgs e) {
-            timerandstatus();
+            timerandstatus(false);
             ThemeResolutionService.ApplicationThemeName = "VisualStudio2012Dark";
-           
+          
         }
 
         // private void btn_testconnection_Click(object sender, EventArgs e)
@@ -67,7 +70,7 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
 
         //}
 
-        public void timerandstatus() {
+        public void timerandstatus(Boolean retry) {
             log_timer.Enabled = true;
 
             a = new bool();
@@ -163,11 +166,18 @@ namespace _CSharp_CEU_Consolidated_Calendar_System
         }
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e) {
-            closeYN = RadMessageBox.Show(this, "Are you sure you want to quit?", "CEU Consolidated Calendar", MessageBoxButtons.YesNo, RadMessageIcon.Exclamation);
-            if(closeYN == DialogResult.Yes) {
+         
                 System.Environment.Exit(1);
-            }
+    
           
+        }
+
+        private void log_btn_connection_Click(object sender, EventArgs e) {
+            DBConnection dbcon = new DBConnection();
+           
+            dbcon.Show();
+            this.Hide();         
+
         }
     }
 }

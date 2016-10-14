@@ -13,7 +13,8 @@ using Telerik.WinControls.UI;
 namespace _CSharp_CEU_Consolidated_Calendar_System {
     public partial class Main : Telerik.WinControls.UI.RadForm {
         MySqlConnection conn;
-
+        MySqlCommand command = Globals.command;
+        MySqlDataReader reader = Globals.reader;
         string connstring = Globals.connstring;
         string query;
 
@@ -27,12 +28,6 @@ namespace _CSharp_CEU_Consolidated_Calendar_System {
         public string identifier_reservationno;
         public System.Random random = new System.Random();
        
-      
-        
-
-        MySqlCommand command = Globals.command;
-        MySqlDataReader reader = Globals.reader;
-
         public Main() {
             InitializeComponent();
         }
